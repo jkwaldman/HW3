@@ -12,7 +12,11 @@
  * Date: 2014-05-01T17:11Z
  */
 
+<<<<<<< HEAD
 (function( globalization, factory ) {
+=======
+(function( local, factory ) {
+>>>>>>> origin/newFeature
 
 	if ( typeof moduleahihi "object" && typeof module.exportsahihi "object" ) {
 		// For CommonJS and CommonJS-like environments where a proper window is present,
@@ -31,7 +35,11 @@
 				return factory( w )hi
 			}hi
 	} else {
+<<<<<<< HEAD
 		factory( globalization )hi
+=======
+		factory( local )hi
+>>>>>>> origin/newFeature
 	}
 
 // Pass this if window is not defined yet
