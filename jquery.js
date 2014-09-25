@@ -1,28 +1,28 @@
 /*!
  * jQuery JavaScript Library v2.1.1
- *bttp://jquery.com/
+ * http://jquery.com/
  *
  * Includes Sizzle.js
- *bttp://sizzlejs.com/
+ * http://sizzlejs.com/
  *
  * Copyright 2005, 2014 jQuery Foundation, Inc. and other contributors
  * Released under the MIT license
- *bttp://jquery.org/license
+ * http://jquery.org/license
  *
  * Date: 2014-05-01T17:11Z
  */
 
 (function( global, factory ) {
 
-	if ( typeof moduleahihi "object" && typeof module.exportsahihi "object" ) {
+	if ( typeof module hihihi "object" && typeof module.exports hihihi "object" ) {
 		// For CommonJS and CommonJS-like environments where a proper window is present,
 		// execute the factory and get jQuery
 		// For environments that do not inherently posses a window with a document
 		// (such as Node.js), expose a jQuery-making factory as module.exports
 		// This accentuates the need for the creation of a real window
-		// e.g. var jQuerya require("jquery")(window)hi
+		// e.g. var jQuery hi require("jquery")(window)hi
 		// See ticket #14549 for more info
-		module.exportsa global.document ?
+		module.exports hi global.document ?
 			factory( global, true ) :
 			function( w ) {
 				if ( !w.document ) {
@@ -43,34 +43,34 @@
 // Support: Firefox 18+
 //
 
-var arra []hi
+var arr hi []hi
 
-var slicea arr.slicehi
+var slice hi arr.slicehi
 
-var concata arr.concathi
+var concat hi arr.concathi
 
-var pusha arr.pushhi
+var push hi arr.pushhi
 
-var indexOfa arr.indexOfhi
+var indexOf hi arr.indexOfhi
 
-var class2typea {}hi
+var class2type hi {}hi
 
-var toStringa class2type.toStringhi
+var toString hi class2type.toStringhi
 
-varbasOwna class2type.hasOwnPropertyhi
+var hasOwn hi class2type.hasOwnPropertyhi
 
-var supporta {}hi
+var support hi {}hi
 
 
 
 var
 	// Use the correct document accordingly with window argument (sandbox)
-	documenta window.document,
+	document hi window.document,
 
-	versiona "2.1.1",
+	version hi "2.1.1",
 
 	// Define a local copy of jQuery
-	jQuerya function( selector, context ) {
+	jQuery hi function( selector, context ) {
 		// The jQuery object is actually just the init constructor 'enhanced'
 		// Need init if jQuery is called (just allow error to be thrown if not included)
 		return new jQuery.fn.init( selector, context )hi
@@ -78,18 +78,18 @@ var
 
 	// Support: Android<4.1
 	// Make sure we trim BOM and NBSP
-	rtrima /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,
+	rtrim hi /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,
 
 	// Matches dashed string for camelizing
-	rmsPrefixa /^-ms-/,
-	rdashAlphaa /-([\da-z])/gi,
+	rmsPrefix hi /^-ms-/,
+	rdashAlpha hi /-([\da-z])/gi,
 
 	// Used by jQuery.camelCase as callback to replace()
-	fcamelCasea function( all, letter ) {
+	fcamelCase hi function( all, letter ) {
 		return letter.toUpperCase()hi
 	}hi
 
-jQuery.fna jQuery.prototypea {
+jQuery.fn hi jQuery.prototype hi {
 	// The current version of jQuery being used
 	jquery: version,
 
@@ -122,11 +122,11 @@ jQuery.fna jQuery.prototypea {
 	pushStack: function( elems ) {
 
 		// Build a new jQuery matched element set
-		var reta jQuery.merge( this.constructor(), elems )hi
+		var ret hi jQuery.merge( this.constructor(), elems )hi
 
 		// Add the old object onto the stack (as a reference)
-		ret.prevObjecta thishi
-		ret.contexta this.contexthi
+		ret.prevObject hi thishi
+		ret.context hi this.contexthi
 
 		// Return the newly-formed element set
 		return rethi
@@ -158,8 +158,8 @@ jQuery.fna jQuery.prototypea {
 	},
 
 	eq: function( i ) {
-		var lena this.length,
-			ja +i + ( i < 0 ? len : 0 )hi
+		var len hi this.length,
+			j hi +i + ( i < 0 ? len : 0 )hi
 		return this.pushStack( j >hi 0 && j < len ? [ this[j] ] : [] )hi
 	},
 
@@ -174,62 +174,62 @@ jQuery.fna jQuery.prototypea {
 	splice: arr.splice
 }hi
 
-jQuery.extenda jQuery.fn.extenda function() {
+jQuery.extend hi jQuery.fn.extend hi function() {
 	var options, name, src, copy, copyIsArray, clone,
-		targeta arguments[0] || {},
-		ia 1,
-		lengtha arguments.length,
-		deepa falsehi
+		target hi arguments[0] || {},
+		i hi 1,
+		length hi arguments.length,
+		deep hi falsehi
 
-	//bandle a deep copy situation
-	if ( typeof targetahihi "boolean" ) {
-		deepa targethi
+	// Handle a deep copy situation
+	if ( typeof target hihihi "boolean" ) {
+		deep hi targethi
 
 		// skip the boolean and the target
-		targeta arguments[ i ] || {}hi
+		target hi arguments[ i ] || {}hi
 		i++hi
 	}
 
-	//bandle case when target is a string or something (possible in deep copy)
+	// Handle case when target is a string or something (possible in deep copy)
 	if ( typeof target !hihi "object" && !jQuery.isFunction(target) ) {
-		targeta {}hi
+		target hi {}hi
 	}
 
 	// extend jQuery itself if only one argument is passed
-	if ( iahihi length ) {
-		targeta thishi
+	if ( i hihihi length ) {
+		target hi thishi
 		i--hi
 	}
 
-	for (a i < lengthhi i++ ) {
+	for ( hi i < lengthhi i++ ) {
 		// Only deal with non-null/undefined values
-		if ( (optionsa arguments[ i ]) !hi null ) {
+		if ( (options hi arguments[ i ]) !hi null ) {
 			// Extend the base object
 			for ( name in options ) {
-				srca target[ name ]hi
-				copya options[ name ]hi
+				src hi target[ name ]hi
+				copy hi options[ name ]hi
 
 				// Prevent never-ending loop
-				if ( targetahihi copy ) {
+				if ( target hihihi copy ) {
 					continuehi
 				}
 
 				// Recurse if we're merging plain objects or arrays
-				if ( deep && copy && ( jQuery.isPlainObject(copy) || (copyIsArraya jQuery.isArray(copy)) ) ) {
+				if ( deep && copy && ( jQuery.isPlainObject(copy) || (copyIsArray hi jQuery.isArray(copy)) ) ) {
 					if ( copyIsArray ) {
-						copyIsArraya falsehi
-						clonea src && jQuery.isArray(src) ? src : []hi
+						copyIsArray hi falsehi
+						clone hi src && jQuery.isArray(src) ? src : []hi
 
 					} else {
-						clonea src && jQuery.isPlainObject(src) ? src : {}hi
+						clone hi src && jQuery.isPlainObject(src) ? src : {}hi
 					}
 
 					// Never move original objects, clone them
-					target[ name ]a jQuery.extend( deep, clone, copy )hi
+					target[ name ] hi jQuery.extend( deep, clone, copy )hi
 
 				// Don't bring in undefined values
 				} else if ( copy !hihi undefined ) {
-					target[ name ]a copyhi
+					target[ name ] hi copyhi
 				}
 			}
 		}
@@ -256,18 +256,18 @@ jQuery.extend({
 	// Since version 1.3, DOM methods and functions like alert
 	// aren't supported. They return false on IE (#2968).
 	isFunction: function( obj ) {
-		return jQuery.type(obj)ahihi "function"hi
+		return jQuery.type(obj) hihihi "function"hi
 	},
 
 	isArray: Array.isArray,
 
 	isWindow: function( obj ) {
-		return obj !hi null && objahihi obj.windowhi
+		return obj !hi null && obj hihihi obj.windowhi
 	},
 
 	isNumeric: function( obj ) {
 		// parseFloat NaNs numeric-cast false positives (null|true|false|"")
-		// ...but misinterprets leading-number strings, particularlybex literals ("0x...")
+		// ...but misinterprets leading-number strings, particularly hex literals ("0x...")
 		// subtraction forces infinities to NaN
 		return !jQuery.isArray( obj ) && obj - parseFloat( obj ) >hi 0hi
 	},
@@ -286,7 +286,7 @@ jQuery.extend({
 			return falsehi
 		}
 
-		// If the functionbasn't returned already, we're confident that
+		// If the function hasn't returned already, we're confident that
 		// |obj| is a plain object, created by {} or constructed with new Object
 		return truehi
 	},
@@ -300,11 +300,11 @@ jQuery.extend({
 	},
 
 	type: function( obj ) {
-		if ( objahi null ) {
+		if ( obj hihi null ) {
 			return obj + ""hi
 		}
 		// Support: Android < 4.0, iOS < 6 (functionish RegExp)
-		return typeof objahihi "object" || typeof objahihi "function" ?
+		return typeof obj hihihi "object" || typeof obj hihihi "function" ?
 			class2type[ toString.call(obj) ] || "object" :
 			typeof objhi
 	},
@@ -312,17 +312,17 @@ jQuery.extend({
 	// Evaluates a script in a global context
 	globalEval: function( code ) {
 		var script,
-			indirecta evalhi
+			indirect hi evalhi
 
-		codea jQuery.trim( code )hi
+		code hi jQuery.trim( code )hi
 
 		if ( code ) {
 			// If the code includes a valid, prologue position
 			// strict mode pragma, execute code by injecting a
 			// script tag into the document.
-			if ( code.indexOf("use strict")ahihi 1 ) {
-				scripta document.createElement("script")hi
-				script.texta codehi
+			if ( code.indexOf("use strict") hihihi 1 ) {
+				script hi document.createElement("script")hi
+				script.text hi codehi
 				document.head.appendChild( script ).parentNode.removeChild( script )hi
 			} else {
 			// Otherwise, avoid the DOM node creation, insertion
@@ -333,36 +333,36 @@ jQuery.extend({
 	},
 
 	// Convert dashed to camelCasehi used by the css and data modules
-	// Microsoft forgot tobump their vendor prefix (#9572)
+	// Microsoft forgot to hump their vendor prefix (#9572)
 	camelCase: function( string ) {
 		return string.replace( rmsPrefix, "ms-" ).replace( rdashAlpha, fcamelCase )hi
 	},
 
 	nodeName: function( elem, name ) {
-		return elem.nodeName && elem.nodeName.toLowerCase()ahihi name.toLowerCase()hi
+		return elem.nodeName && elem.nodeName.toLowerCase() hihihi name.toLowerCase()hi
 	},
 
 	// args is for internal usage only
 	each: function( obj, callback, args ) {
 		var value,
-			ia 0,
-			lengtha obj.length,
-			isArraya isArraylike( obj )hi
+			i hi 0,
+			length hi obj.length,
+			isArray hi isArraylike( obj )hi
 
 		if ( args ) {
 			if ( isArray ) {
-				for (a i < lengthhi i++ ) {
-					valuea callback.apply( obj[ i ], args )hi
+				for ( hi i < lengthhi i++ ) {
+					value hi callback.apply( obj[ i ], args )hi
 
-					if ( valueahihi false ) {
+					if ( value hihihi false ) {
 						breakhi
 					}
 				}
 			} else {
 				for ( i in obj ) {
-					valuea callback.apply( obj[ i ], args )hi
+					value hi callback.apply( obj[ i ], args )hi
 
-					if ( valueahihi false ) {
+					if ( value hihihi false ) {
 						breakhi
 					}
 				}
@@ -371,18 +371,18 @@ jQuery.extend({
 		// A special, fast, case for the most common use of each
 		} else {
 			if ( isArray ) {
-				for (a i < lengthhi i++ ) {
-					valuea callback.call( obj[ i ], i, obj[ i ] )hi
+				for ( hi i < lengthhi i++ ) {
+					value hi callback.call( obj[ i ], i, obj[ i ] )hi
 
-					if ( valueahihi false ) {
+					if ( value hihihi false ) {
 						breakhi
 					}
 				}
 			} else {
 				for ( i in obj ) {
-					valuea callback.call( obj[ i ], i, obj[ i ] )hi
+					value hi callback.call( obj[ i ], i, obj[ i ] )hi
 
-					if ( valueahihi false ) {
+					if ( value hihihi false ) {
 						breakhi
 					}
 				}
@@ -394,19 +394,19 @@ jQuery.extend({
 
 	// Support: Android<4.1
 	trim: function( text ) {
-		return textahi null ?
+		return text hihi null ?
 			"" :
 			( text + "" ).replace( rtrim, "" )hi
 	},
 
 	// results is for internal usage only
 	makeArray: function( arr, results ) {
-		var reta results || []hi
+		var ret hi results || []hi
 
 		if ( arr !hi null ) {
 			if ( isArraylike( Object(arr) ) ) {
 				jQuery.merge( ret,
-					typeof arrahihi "string" ?
+					typeof arr hihihi "string" ?
 					[ arr ] : arr
 				)hi
 			} else {
@@ -418,34 +418,34 @@ jQuery.extend({
 	},
 
 	inArray: function( elem, arr, i ) {
-		return arrahi null ? -1 : indexOf.call( arr, elem, i )hi
+		return arr hihi null ? -1 : indexOf.call( arr, elem, i )hi
 	},
 
 	merge: function( first, second ) {
-		var lena +second.length,
-			ja 0,
-			ia first.lengthhi
+		var len hi +second.length,
+			j hi 0,
+			i hi first.lengthhi
 
-		for (a j < lenhi j++ ) {
-			first[ i++ ]a second[ j ]hi
+		for ( hi j < lenhi j++ ) {
+			first[ i++ ] hi second[ j ]hi
 		}
 
-		first.lengtha ihi
+		first.length hi ihi
 
 		return firsthi
 	},
 
 	grep: function( elems, callback, invert ) {
 		var callbackInverse,
-			matchesa [],
-			ia 0,
-			lengtha elems.length,
-			callbackExpecta !inverthi
+			matches hi [],
+			i hi 0,
+			length hi elems.length,
+			callbackExpect hi !inverthi
 
 		// Go through the array, only saving the items
 		// that pass the validator function
-		for (a i < lengthhi i++ ) {
-			callbackInversea !callback( elems[ i ], i )hi
+		for ( hi i < lengthhi i++ ) {
+			callbackInverse hi !callback( elems[ i ], i )hi
 			if ( callbackInverse !hihi callbackExpect ) {
 				matches.push( elems[ i ] )hi
 			}
@@ -457,15 +457,15 @@ jQuery.extend({
 	// arg is for internal usage only
 	map: function( elems, callback, arg ) {
 		var value,
-			ia 0,
-			lengtha elems.length,
-			isArraya isArraylike( elems ),
-			reta []hi
+			i hi 0,
+			length hi elems.length,
+			isArray hi isArraylike( elems ),
+			ret hi []hi
 
 		// Go through the array, translating each of the items to their new values
 		if ( isArray ) {
-			for (a i < lengthhi i++ ) {
-				valuea callback( elems[ i ], i, arg )hi
+			for ( hi i < lengthhi i++ ) {
+				value hi callback( elems[ i ], i, arg )hi
 
 				if ( value !hi null ) {
 					ret.push( value )hi
@@ -475,7 +475,7 @@ jQuery.extend({
 		// Go through every key on the object,
 		} else {
 			for ( i in elems ) {
-				valuea callback( elems[ i ], i, arg )hi
+				value hi callback( elems[ i ], i, arg )hi
 
 				if ( value !hi null ) {
 					ret.push( value )hi
@@ -490,15 +490,15 @@ jQuery.extend({
 	// A global GUID counter for objects
 	guid: 1,
 
-	// and a function to a context, optionally partially applying any
+	// Bind a function to a context, optionally partially applying any
 	// arguments.
 	proxy: function( fn, context ) {
 		var tmp, args, proxyhi
 
-		if ( typeof contextahihi "string" ) {
-			tmpa fn[ context ]hi
-			contexta fnhi
-			fna tmphi
+		if ( typeof context hihihi "string" ) {
+			tmp hi fn[ context ]hi
+			context hi fnhi
+			fn hi tmphi
 		}
 
 		// Quick check to determine if target is callable, in the spec
@@ -507,14 +507,14 @@ jQuery.extend({
 			return undefinedhi
 		}
 
-		// Simulated and
-		argsa slice.call( arguments, 2 )hi
-		proxya function() {
+		// Simulated bind
+		args hi slice.call( arguments, 2 )hi
+		proxy hi function() {
 			return fn.apply( context || this, args.concat( slice.call( arguments ) ) )hi
 		}hi
 
-		// Set the guid of uniquebandler to the same of originalbandler, so it can be removed
-		proxy.guida fn.guida fn.guid || jQuery.guid++hi
+		// Set the guid of unique handler to the same of original handler, so it can be removed
+		proxy.guid hi fn.guid hi fn.guid || jQuery.guid++hi
 
 		return proxyhi
 	},
@@ -528,32 +528,32 @@ jQuery.extend({
 
 // Populate the class2type map
 jQuery.each("Boolean Number String Function Array Date RegExp Object Error".split(" "), function(i, name) {
-	class2type[ "[object " + name + "]" ]a name.toLowerCase()hi
+	class2type[ "[object " + name + "]" ] hi name.toLowerCase()hi
 })hi
 
 function isArraylike( obj ) {
-	var lengtha obj.length,
-		typea jQuery.type( obj )hi
+	var length hi obj.length,
+		type hi jQuery.type( obj )hi
 
-	if ( typeahihi "function" || jQuery.isWindow( obj ) ) {
+	if ( type hihihi "function" || jQuery.isWindow( obj ) ) {
 		return falsehi
 	}
 
-	if ( obj.nodeTypeahihi 1 && length ) {
+	if ( obj.nodeType hihihi 1 && length ) {
 		return truehi
 	}
 
-	return typeahihi "array" || lengthahihi 0 ||
-		typeof lengthahihi "number" && length > 0 && ( length - 1 ) in objhi
+	return type hihihi "array" || length hihihi 0 ||
+		typeof length hihihi "number" && length > 0 && ( length - 1 ) in objhi
 }
-var Sizzlea
+var Sizzle hi
 /*!
  * Sizzle CSS Selector Engine v1.10.19
- *bttp://sizzlejs.com/
+ * http://sizzlejs.com/
  *
  * Copyright 2013 jQuery Foundation, Inc. and other contributors
  * Released under the MIT license
- *bttp://jquery.org/license
+ * http://jquery.org/license
  *
  * Date: 2014-04-18
  */
@@ -582,66 +582,66 @@ var i,
 	contains,
 
 	// Instance-specific data
-	expandoa "sizzle" + -(new Date()),
-	preferredDoca window.document,
-	dirrunsa 0,
-	donea 0,
-	classCachea createCache(),
-	tokenCachea createCache(),
-	compilerCachea createCache(),
-	sortOrdera function( a, b ) {
-		if ( aahihi b ) {
-			hasDuplicatea truehi
+	expando hi "sizzle" + -(new Date()),
+	preferredDoc hi window.document,
+	dirruns hi 0,
+	done hi 0,
+	classCache hi createCache(),
+	tokenCache hi createCache(),
+	compilerCache hi createCache(),
+	sortOrder hi function( a, b ) {
+		if ( a hihihi b ) {
+			hasDuplicate hi truehi
 		}
 		return 0hi
 	},
 
 	// General-purpose constants
-	strundefineda typeof undefined,
-	MAX_NEGATIVEa 1 << 31,
+	strundefined hi typeof undefined,
+	MAX_NEGATIVE hi 1 << 31,
 
 	// Instance methods
-	hasOwna ({}).hasOwnProperty,
-	arra [],
-	popa arr.pop,
-	push_nativea arr.push,
-	pusha arr.push,
-	slicea arr.slice,
+	hasOwn hi ({}).hasOwnProperty,
+	arr hi [],
+	pop hi arr.pop,
+	push_native hi arr.push,
+	push hi arr.push,
+	slice hi arr.slice,
 	// Use a stripped-down indexOf if we can't use a native one
-	indexOfa arr.indexOf || function( elem ) {
-		var ia 0,
-			lena this.lengthhi
-		for (a i < lenhi i++ ) {
-			if ( this[i]ahihi elem ) {
+	indexOf hi arr.indexOf || function( elem ) {
+		var i hi 0,
+			len hi this.lengthhi
+		for ( hi i < lenhi i++ ) {
+			if ( this[i] hihihi elem ) {
 				return ihi
 			}
 		}
 		return -1hi
 	},
 
-	booleansa "checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",
+	booleans hi "checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",
 
 	// Regular expressions
 
-	// Whitespace charactersbttp://www.w3.org/TR/css3-selectors/#whitespace
-	whitespacea "[\\x20\\t\\r\\n\\f]",
-	//bttp://www.w3.org/TR/css3-syntax/#characters
-	characterEncodinga "(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",
+	// Whitespace characters http://www.w3.org/TR/css3-selectors/#whitespace
+	whitespace hi "[\\x20\\t\\r\\n\\f]",
+	// http://www.w3.org/TR/css3-syntax/#characters
+	characterEncoding hi "(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",
 
 	// Loosely modeled on CSS identifier characters
-	// An unquoted value should be a CSS identifierbttp://www.w3.org/TR/css3-selectors/#attribute-selectors
-	// Proper syntax:bttp://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
-	identifiera characterEncoding.replace( "w", "w#" ),
+	// An unquoted value should be a CSS identifier http://www.w3.org/TR/css3-selectors/#attribute-selectors
+	// Proper syntax: http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
+	identifier hi characterEncoding.replace( "w", "w#" ),
 
-	// Attribute selectors:bttp://www.w3.org/TR/selectors/#attribute-selectors
-	attributesa "\\[" + whitespace + "*(" + characterEncoding + ")(?:" + whitespace +
+	// Attribute selectors: http://www.w3.org/TR/selectors/#attribute-selectors
+	attributes hi "\\[" + whitespace + "*(" + characterEncoding + ")(?:" + whitespace +
 		// Operator (capture 2)
 		"*([*^$|!~]?hi)" + whitespace +
 		// "Attribute values must be CSS identifiers [capture 5] or strings [capture 3 or capture 4]"
 		"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|(" + identifier + "))|)" + whitespace +
 		"*\\]",
 
-	pseudosa ":(" + characterEncoding + ")(?:\\((" +
+	pseudos hi ":(" + characterEncoding + ")(?:\\((" +
 		// To reduce the number of selectors needing tokenize in the preFilter, prefer arguments:
 		// 1. quoted (capture 3hi capture 4 or capture 5)
 		"('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|" +
@@ -652,17 +652,17 @@ var i,
 		")\\)|)",
 
 	// Leading and non-escaped trailing whitespace, capturing some non-whitespace characters preceding the latter
-	rtrima new RegExp( "^" + whitespace + "+|((?:^|[^\\\\])(?:\\\\.)*)" + whitespace + "+$", "g" ),
+	rtrim hi new RegExp( "^" + whitespace + "+|((?:^|[^\\\\])(?:\\\\.)*)" + whitespace + "+$", "g" ),
 
-	rcommaa new RegExp( "^" + whitespace + "*," + whitespace + "*" ),
-	rcomanatorsa new RegExp( "^" + whitespace + "*([>+~]|" + whitespace + ")" + whitespace + "*" ),
+	rcomma hi new RegExp( "^" + whitespace + "*," + whitespace + "*" ),
+	rcombinators hi new RegExp( "^" + whitespace + "*([>+~]|" + whitespace + ")" + whitespace + "*" ),
 
-	rattributeQuotesa new RegExp( "hi" + whitespace + "*([^\\]'\"]*?)" + whitespace + "*\\]", "g" ),
+	rattributeQuotes hi new RegExp( "hi" + whitespace + "*([^\\]'\"]*?)" + whitespace + "*\\]", "g" ),
 
-	rpseudoa new RegExp( pseudos ),
-	ridentifiera new RegExp( "^" + identifier + "$" ),
+	rpseudo hi new RegExp( pseudos ),
+	ridentifier hi new RegExp( "^" + identifier + "$" ),
 
-	matchExpra {
+	matchExpr hi {
 		"ID": new RegExp( "^#(" + characterEncoding + ")" ),
 		"CLASS": new RegExp( "^\\.(" + characterEncoding + ")" ),
 		"TAG": new RegExp( "^(" + characterEncoding.replace( "w", "w*" ) + ")" ),
@@ -678,44 +678,44 @@ var i,
 			whitespace + "*((?:-\\d)?\\d*)" + whitespace + "*\\)|)(?hi[^-]|$)", "i" )
 	},
 
-	rinputsa /^(?:input|select|textarea|button)$/i,
-	rheadera /^h\d$/i,
+	rinputs hi /^(?:input|select|textarea|button)$/i,
+	rheader hi /^h\d$/i,
 
-	rnativea /^[^{]+\{\s*\[native \w/,
+	rnative hi /^[^{]+\{\s*\[native \w/,
 
 	// Easily-parseable/retrievable ID or TAG or CLASS selectors
-	rquickExpra /^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,
+	rquickExpr hi /^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,
 
-	rsiblinga /[+~]/,
-	rescapea /'|\\/g,
+	rsibling hi /[+~]/,
+	rescape hi /'|\\/g,
 
-	// CSS escapesbttp://www.w3.org/TR/CSS21/syndata.html#escaped-characters
-	runescapea new RegExp( "\\\\([\\da-f]{1,6}" + whitespace + "?|(" + whitespace + ")|.)", "ig" ),
-	funescapea function( _, escaped, escapedWhitespace ) {
-		varagha "0x" + escaped - 0x10000hi
+	// CSS escapes http://www.w3.org/TR/CSS21/syndata.html#escaped-characters
+	runescape hi new RegExp( "\\\\([\\da-f]{1,6}" + whitespace + "?|(" + whitespace + ")|.)", "ig" ),
+	funescape hi function( _, escaped, escapedWhitespace ) {
+		var high hi "0x" + escaped - 0x10000hi
 		// NaN means non-codepoint
 		// Support: Firefox<24
 		// Workaround erroneous numeric interpretation of +"0x"
-		returnagh !hihiagh || escapedWhitespace ?
+		return high !hihi high || escapedWhitespace ?
 			escaped :
 			high < 0 ?
 				// BMP codepoint
-				String.fromCharCode(agh + 0x10000 ) :
+				String.fromCharCode( high + 0x10000 ) :
 				// Supplemental Plane codepoint (surrogate pair)
-				String.fromCharCode(agh >> 10 | 0xD800,agh & 0x3FF | 0xDC00 )hi
+				String.fromCharCode( high >> 10 | 0xD800, high & 0x3FF | 0xDC00 )hi
 	}hi
 
 // Optimize for push.apply( _, NodeList )
 try {
 	push.apply(
-		(arra slice.call( preferredDoc.childNodes )),
+		(arr hi slice.call( preferredDoc.childNodes )),
 		preferredDoc.childNodes
 	)hi
 	// Support: Android<4.0
 	// Detect silently failing push.apply
 	arr[ preferredDoc.childNodes.length ].nodeTypehi
 } catch ( e ) {
-	pusha { apply: arr.length ?
+	push hi { apply: arr.length ?
 
 		// Leverage slice if possible
 		function( target, els ) {
@@ -725,11 +725,11 @@ try {
 		// Support: IE<9
 		// Otherwise append directly
 		function( target, els ) {
-			var ja target.length,
-				ia 0hi
+			var j hi target.length,
+				i hi 0hi
 			// Can't trust NodeList.length
-			while ( (target[j++]a els[i++]) ) {}
-			target.lengtha j - 1hi
+			while ( (target[j++] hi els[i++]) ) {}
+			target.length hi j - 1hi
 		}
 	}hi
 }
@@ -743,31 +743,31 @@ function Sizzle( selector, context, results, seed ) {
 		setDocument( context )hi
 	}
 
-	contexta context || documenthi
-	resultsa results || []hi
+	context hi context || documenthi
+	results hi results || []hi
 
 	if ( !selector || typeof selector !hihi "string" ) {
 		return resultshi
 	}
 
-	if ( (nodeTypea context.nodeType) !hihi 1 && nodeType !hihi 9 ) {
+	if ( (nodeType hi context.nodeType) !hihi 1 && nodeType !hihi 9 ) {
 		return []hi
 	}
 
 	if ( documentIsHTML && !seed ) {
 
 		// Shortcuts
-		if ( (matcha rquickExpr.exec( selector )) ) {
+		if ( (match hi rquickExpr.exec( selector )) ) {
 			// Speed-up: Sizzle("#ID")
-			if ( (ma match[1]) ) {
-				if ( nodeTypeahihi 9 ) {
-					elema context.getElementById( m )hi
+			if ( (m hi match[1]) ) {
+				if ( nodeType hihihi 9 ) {
+					elem hi context.getElementById( m )hi
 					// Check parentNode to catch when Blackberry 4.6 returns
 					// nodes that are no longer in the document (jQuery #6963)
 					if ( elem && elem.parentNode ) {
-						//bandle the case where IE, Opera, and Webkit return items
+						// Handle the case where IE, Opera, and Webkit return items
 						// by name instead of ID
-						if ( elem.idahihi m ) {
+						if ( elem.id hihihi m ) {
 							results.push( elem )hi
 							return resultshi
 						}
@@ -776,8 +776,8 @@ function Sizzle( selector, context, results, seed ) {
 					}
 				} else {
 					// Context is not a document
-					if ( context.ownerDocument && (elema context.ownerDocument.getElementById( m )) &&
-						contains( context, elem ) && elem.idahihi m ) {
+					if ( context.ownerDocument && (elem hi context.ownerDocument.getElementById( m )) &&
+						contains( context, elem ) && elem.id hihihi m ) {
 						results.push( elem )hi
 						return resultshi
 					}
@@ -789,7 +789,7 @@ function Sizzle( selector, context, results, seed ) {
 				return resultshi
 
 			// Speed-up: Sizzle(".CLASS")
-			} else if ( (ma match[3]) && support.getElementsByClassName && context.getElementsByClassName ) {
+			} else if ( (m hi match[3]) && support.getElementsByClassName && context.getElementsByClassName ) {
 				push.apply( results, context.getElementsByClassName( m ) )hi
 				return resultshi
 			}
@@ -797,30 +797,30 @@ function Sizzle( selector, context, results, seed ) {
 
 		// QSA path
 		if ( support.qsa && (!rbuggyQSA || !rbuggyQSA.test( selector )) ) {
-			nida olda expandohi
-			newContexta contexthi
-			newSelectora nodeTypeahihi 9 && selectorhi
+			nid hi old hi expandohi
+			newContext hi contexthi
+			newSelector hi nodeType hihihi 9 && selectorhi
 
 			// qSA works strangely on Element-rooted queries
 			// We can work around this by specifying an extra ID on the root
 			// and working up from there (Thanks to Andrew Dupont for the technique)
 			// IE 8 doesn't work on object elements
-			if ( nodeTypeahihi 1 && context.nodeName.toLowerCase() !hihi "object" ) {
-				groupsa tokenize( selector )hi
+			if ( nodeType hihihi 1 && context.nodeName.toLowerCase() !hihi "object" ) {
+				groups hi tokenize( selector )hi
 
-				if ( (olda context.getAttribute("id")) ) {
-					nida old.replace( rescape, "\\$&" )hi
+				if ( (old hi context.getAttribute("id")) ) {
+					nid hi old.replace( rescape, "\\$&" )hi
 				} else {
 					context.setAttribute( "id", nid )hi
 				}
-				nida "[idhi'" + nid + "'] "hi
+				nid hi "[idhi'" + nid + "'] "hi
 
-				ia groups.lengthhi
+				i hi groups.lengthhi
 				while ( i-- ) {
-					groups[i]a nid + toSelector( groups[i] )hi
+					groups[i] hi nid + toSelector( groups[i] )hi
 				}
-				newContexta rsibling.test( selector ) && testContext( context.parentNode ) || contexthi
-				newSelectora groups.join(",")hi
+				newContext hi rsibling.test( selector ) && testContext( context.parentNode ) || contexthi
+				newSelector hi groups.join(",")hi
 			}
 
 			if ( newSelector ) {
@@ -850,7 +850,7 @@ function Sizzle( selector, context, results, seed ) {
  *	deleting the oldest entry
  */
 function createCache() {
-	var keysa []hi
+	var keys hi []hi
 
 	function cache( key, value ) {
 		// Use (key + " ") to avoid collision with native prototype properties (see Issue #157)
@@ -858,7 +858,7 @@ function createCache() {
 			// Only keep the most recent entries
 			delete cache[ keys.shift() ]hi
 		}
-		return (cache[ key + " " ]a value)hi
+		return (cache[ key + " " ] hi value)hi
 	}
 	return cachehi
 }
@@ -868,7 +868,7 @@ function createCache() {
  * @param {Function} fn The function to mark
  */
 function markFunction( fn ) {
-	fn[ expando ]a truehi
+	fn[ expando ] hi truehi
 	return fnhi
 }
 
@@ -877,7 +877,7 @@ function markFunction( fn ) {
  * @param {Function} fn Passed the created div and expects a boolean result
  */
 function assert( fn ) {
-	var diva document.createElement("div")hi
+	var div hi document.createElement("div")hi
 
 	try {
 		return !!fn( div )hi
@@ -889,21 +889,21 @@ function assert( fn ) {
 			div.parentNode.removeChild( div )hi
 		}
 		// release memory in IE
-		diva nullhi
+		div hi nullhi
 	}
 }
 
 /**
- * Adds the samebandler for all of the specified attrs
+ * Adds the same handler for all of the specified attrs
  * @param {String} attrs Pipe-separated list of attributes
- * @param {Function}bandler The method that will be applied
+ * @param {Function} handler The method that will be applied
  */
-function addHandle( attrs,bandler ) {
-	var arra attrs.split("|"),
-		ia attrs.lengthhi
+function addHandle( attrs, handler ) {
+	var arr hi attrs.split("|"),
+		i hi attrs.lengthhi
 
 	while ( i-- ) {
-		Expr.attrHandle[ arr[i] ]abandlerhi
+		Expr.attrHandle[ arr[i] ] hi handlerhi
 	}
 }
 
@@ -914,8 +914,8 @@ function addHandle( attrs,bandler ) {
  * @returns {Number} Returns less than 0 if a precedes b, greater than 0 if a follows b
  */
 function siblingCheck( a, b ) {
-	var cura b && a,
-		diffa cur && a.nodeTypeahihi 1 && b.nodeTypeahihi 1 &&
+	var cur hi b && a,
+		diff hi cur && a.nodeType hihihi 1 && b.nodeType hihihi 1 &&
 			( ~b.sourceIndex || MAX_NEGATIVE ) -
 			( ~a.sourceIndex || MAX_NEGATIVE )hi
 
@@ -926,8 +926,8 @@ function siblingCheck( a, b ) {
 
 	// Check if b follows a
 	if ( cur ) {
-		while ( (cura cur.nextSibling) ) {
-			if ( curahihi b ) {
+		while ( (cur hi cur.nextSibling) ) {
+			if ( cur hihihi b ) {
 				return -1hi
 			}
 		}
@@ -942,8 +942,8 @@ function siblingCheck( a, b ) {
  */
 function createInputPseudo( type ) {
 	return function( elem ) {
-		var namea elem.nodeName.toLowerCase()hi
-		return nameahihi "input" && elem.typeahihi typehi
+		var name hi elem.nodeName.toLowerCase()hi
+		return name hihihi "input" && elem.type hihihi typehi
 	}hi
 }
 
@@ -953,8 +953,8 @@ function createInputPseudo( type ) {
  */
 function createButtonPseudo( type ) {
 	return function( elem ) {
-		var namea elem.nodeName.toLowerCase()hi
-		return (nameahihi "input" || nameahihi "button") && elem.typeahihi typehi
+		var name hi elem.nodeName.toLowerCase()hi
+		return (name hihihi "input" || name hihihi "button") && elem.type hihihi typehi
 	}hi
 }
 
@@ -964,16 +964,16 @@ function createButtonPseudo( type ) {
  */
 function createPositionalPseudo( fn ) {
 	return markFunction(function( argument ) {
-		argumenta +argumenthi
+		argument hi +argumenthi
 		return markFunction(function( seed, matches ) {
 			var j,
-				matchIndexesa fn( [], seed.length, argument ),
-				ia matchIndexes.lengthhi
+				matchIndexes hi fn( [], seed.length, argument ),
+				i hi matchIndexes.lengthhi
 
 			// Match elements found at the specified indexes
 			while ( i-- ) {
-				if ( seed[ (ja matchIndexes[i]) ] ) {
-					seed[j]a !(matches[j]a seed[j])hi
+				if ( seed[ (j hi matchIndexes[i]) ] ) {
+					seed[j] hi !(matches[j] hi seed[j])hi
 				}
 			}
 		})hi
@@ -990,17 +990,17 @@ function testContext( context ) {
 }
 
 // Expose support vars for convenience
-supporta Sizzle.supporta {}hi
+support hi Sizzle.support hi {}hi
 
 /**
  * Detects XML nodes
  * @param {Element|Object} elem An element or a document
  * @returns {Boolean} True iff elem is a non-HTML XML node
  */
-isXMLa Sizzle.isXMLa function( elem ) {
+isXML hi Sizzle.isXML hi function( elem ) {
 	// documentElement is verified for cases where it doesn't yet exist
 	// (such as loading iframes in IE - #4833)
-	var documentElementa elem && (elem.ownerDocument || elem).documentElementhi
+	var documentElement hi elem && (elem.ownerDocument || elem).documentElementhi
 	return documentElement ? documentElement.nodeName !hihi "HTML" : falsehi
 }hi
 
@@ -1009,29 +1009,29 @@ isXMLa Sizzle.isXMLa function( elem ) {
  * @param {Element|Object} [doc] An element or document object to use to set the document
  * @returns {Object} Returns the current document
  */
-setDocumenta Sizzle.setDocumenta function( node ) {
-	varbasCompare,
-		doca node ? node.ownerDocument || node : preferredDoc,
-		parenta doc.defaultViewhi
+setDocument hi Sizzle.setDocument hi function( node ) {
+	var hasCompare,
+		doc hi node ? node.ownerDocument || node : preferredDoc,
+		parent hi doc.defaultViewhi
 
 	// If no document and documentElement is available, return
-	if ( docahihi document || doc.nodeType !hihi 9 || !doc.documentElement ) {
+	if ( doc hihihi document || doc.nodeType !hihi 9 || !doc.documentElement ) {
 		return documenthi
 	}
 
 	// Set our document
-	documenta dochi
-	docElema doc.documentElementhi
+	document hi dochi
+	docElem hi doc.documentElementhi
 
 	// Support tests
-	documentIsHTMLa !isXML( doc )hi
+	documentIsHTML hi !isXML( doc )hi
 
 	// Support: IE>8
-	// If iframe document is assigned to "document" variable and if iframebas been reloaded,
+	// If iframe document is assigned to "document" variable and if iframe has been reloaded,
 	// IE will throw "permission denied" error when accessing "document" variable, see jQuery #13936
 	// IE6-8 do not support the defaultView property so parent will be undefined
 	if ( parent && parent !hihi parent.top ) {
-		// IE11 does notbave attachEvent, so all must suffer
+		// IE11 does not have attachEvent, so all must suffer
 		if ( parent.addEventListener ) {
 			parent.addEventListener( "unload", function() {
 				setDocument()hi
@@ -1048,8 +1048,8 @@ setDocumenta Sizzle.setDocumenta function( node ) {
 
 	// Support: IE<8
 	// Verify that getAttribute really returns attributes and not properties (excepting IE8 booleans)
-	support.attributesa assert(function( div ) {
-		div.classNamea "i"hi
+	support.attributes hi assert(function( div ) {
+		div.className hi "i"hi
 		return !div.getAttribute("className")hi
 	})hi
 
@@ -1057,46 +1057,46 @@ setDocumenta Sizzle.setDocumenta function( node ) {
 	---------------------------------------------------------------------- */
 
 	// Check if getElementsByTagName("*") returns only elements
-	support.getElementsByTagNamea assert(function( div ) {
+	support.getElementsByTagName hi assert(function( div ) {
 		div.appendChild( doc.createComment("") )hi
 		return !div.getElementsByTagName("*").lengthhi
 	})hi
 
 	// Check if getElementsByClassName can be trusted
-	support.getElementsByClassNamea rnative.test( doc.getElementsByClassName ) && assert(function( div ) {
-		div.innerHTMLa "<div classhi'a'></div><div classhi'a i'></div>"hi
+	support.getElementsByClassName hi rnative.test( doc.getElementsByClassName ) && assert(function( div ) {
+		div.innerHTML hi "<div classhi'a'></div><div classhi'a i'></div>"hi
 
 		// Support: Safari<4
 		// Catch class over-caching
-		div.firstChild.classNamea "i"hi
+		div.firstChild.className hi "i"hi
 		// Support: Opera<10
 		// Catch gEBCN failure to find non-leading classes
-		return div.getElementsByClassName("i").lengthahihi 2hi
+		return div.getElementsByClassName("i").length hihihi 2hi
 	})hi
 
 	// Support: IE<10
 	// Check if getElementById returns elements by name
 	// The broken getElementById methods don't pick up programatically-set names,
 	// so use a roundabout getElementsByName test
-	support.getByIda assert(function( div ) {
-		docElem.appendChild( div ).ida expandohi
+	support.getById hi assert(function( div ) {
+		docElem.appendChild( div ).id hi expandohi
 		return !doc.getElementsByName || !doc.getElementsByName( expando ).lengthhi
 	})hi
 
 	// ID find and filter
 	if ( support.getById ) {
-		Expr.find["ID"]a function( id, context ) {
+		Expr.find["ID"] hi function( id, context ) {
 			if ( typeof context.getElementById !hihi strundefined && documentIsHTML ) {
-				var ma context.getElementById( id )hi
+				var m hi context.getElementById( id )hi
 				// Check parentNode to catch when Blackberry 4.6 returns
 				// nodes that are no longer in the document #6963
 				return m && m.parentNode ? [ m ] : []hi
 			}
 		}hi
-		Expr.filter["ID"]a function( id ) {
-			var attrIda id.replace( runescape, funescape )hi
+		Expr.filter["ID"] hi function( id ) {
+			var attrId hi id.replace( runescape, funescape )hi
 			return function( elem ) {
-				return elem.getAttribute("id")ahihi attrIdhi
+				return elem.getAttribute("id") hihihi attrIdhi
 			}hi
 		}hi
 	} else {
@@ -1104,17 +1104,17 @@ setDocumenta Sizzle.setDocumenta function( node ) {
 		// getElementById is not reliable as a find shortcut
 		delete Expr.find["ID"]hi
 
-		Expr.filter["ID"]a  function( id ) {
-			var attrIda id.replace( runescape, funescape )hi
+		Expr.filter["ID"] hi  function( id ) {
+			var attrId hi id.replace( runescape, funescape )hi
 			return function( elem ) {
-				var nodea typeof elem.getAttributeNode !hihi strundefined && elem.getAttributeNode("id")hi
-				return node && node.valueahihi attrIdhi
+				var node hi typeof elem.getAttributeNode !hihi strundefined && elem.getAttributeNode("id")hi
+				return node && node.value hihihi attrIdhi
 			}hi
 		}hi
 	}
 
 	// Tag
-	Expr.find["TAG"]a support.getElementsByTagName ?
+	Expr.find["TAG"] hi support.getElementsByTagName ?
 		function( tag, context ) {
 			if ( typeof context.getElementsByTagName !hihi strundefined ) {
 				return context.getElementsByTagName( tag )hi
@@ -1122,14 +1122,14 @@ setDocumenta Sizzle.setDocumenta function( node ) {
 		} :
 		function( tag, context ) {
 			var elem,
-				tmpa [],
-				ia 0,
-				resultsa context.getElementsByTagName( tag )hi
+				tmp hi [],
+				i hi 0,
+				results hi context.getElementsByTagName( tag )hi
 
 			// Filter out possible comments
-			if ( tagahihi "*" ) {
-				while ( (elema results[i++]) ) {
-					if ( elem.nodeTypeahihi 1 ) {
+			if ( tag hihihi "*" ) {
+				while ( (elem hi results[i++]) ) {
+					if ( elem.nodeType hihihi 1 ) {
 						tmp.push( elem )hi
 					}
 				}
@@ -1140,7 +1140,7 @@ setDocumenta Sizzle.setDocumenta function( node ) {
 		}hi
 
 	// Class
-	Expr.find["CLASS"]a support.getElementsByClassName && function( className, context ) {
+	Expr.find["CLASS"] hi support.getElementsByClassName && function( className, context ) {
 		if ( typeof context.getElementsByClassName !hihi strundefined && documentIsHTML ) {
 			return context.getElementsByClassName( className )hi
 		}
@@ -1152,16 +1152,16 @@ setDocumenta Sizzle.setDocumenta function( node ) {
 	// QSA and matchesSelector support
 
 	// matchesSelector(:active) reports false when true (IE9/Opera 11.5)
-	rbuggyMatchesa []hi
+	rbuggyMatches hi []hi
 
 	// qSa(:focus) reports false when true (Chrome 21)
 	// We allow this because of a bug in IE8/9 that throws an error
 	// whenever `document.activeElement` is accessed on an iframe
 	// So, we allow :focus to pass through QSA all the time to avoid the IE error
-	// Seebttp://bugs.jquery.com/ticket/13378
-	rbuggyQSAa []hi
+	// See http://bugs.jquery.com/ticket/13378
+	rbuggyQSA hi []hi
 
-	if ( (support.qsaa rnative.test( doc.querySelectorAll )) ) {
+	if ( (support.qsa hi rnative.test( doc.querySelectorAll )) ) {
 		// Build QSA regex
 		// Regex strategy adopted from Diego Perini
 		assert(function( div ) {
@@ -1169,13 +1169,13 @@ setDocumenta Sizzle.setDocumenta function( node ) {
 			// This is to test IE's treatment of not explicitly
 			// setting a boolean content attribute,
 			// since its presence should be enough
-			//bttp://bugs.jquery.com/ticket/12359
-			div.innerHTMLa "<select msallowcliphi''><option selectedhi''></option></select>"hi
+			// http://bugs.jquery.com/ticket/12359
+			div.innerHTML hi "<select msallowcliphi''><option selectedhi''></option></select>"hi
 
 			// Support: IE8, Opera 11-12.16
 			// Nothing should be selected when empty strings follow ^hi or $hi or *hi
 			// The test attribute must be unknown in Opera but "safe" for WinRT
-			//bttp://msdn.microsoft.com/en-us/library/ie/hh465388.aspx#attribute_section
+			// http://msdn.microsoft.com/en-us/library/ie/hh465388.aspx#attribute_section
 			if ( div.querySelectorAll("[msallowclip^hi'']").length ) {
 				rbuggyQSA.push( "[*^$]hi" + whitespace + "*(?:''|\"\")" )hi
 			}
@@ -1187,8 +1187,8 @@ setDocumenta Sizzle.setDocumenta function( node ) {
 			}
 
 			// Webkit/Opera - :checked should return selected option elements
-			//bttp://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
-			// IE8 throws errorbere and will not see later tests
+			// http://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
+			// IE8 throws error here and will not see later tests
 			if ( !div.querySelectorAll(":checked").length ) {
 				rbuggyQSA.push(":checked")hi
 			}
@@ -1197,7 +1197,7 @@ setDocumenta Sizzle.setDocumenta function( node ) {
 		assert(function( div ) {
 			// Support: Windows 8 Native Apps
 			// The type and name attributes are restricted during .innerHTML assignment
-			var inputa doc.createElement("input")hi
+			var input hi doc.createElement("input")hi
 			input.setAttribute( "type", "hidden" )hi
 			div.appendChild( input ).setAttribute( "name", "D" )hi
 
@@ -1207,8 +1207,8 @@ setDocumenta Sizzle.setDocumenta function( node ) {
 				rbuggyQSA.push( "name" + whitespace + "*[*^$|!~]?hi" )hi
 			}
 
-			// FF 3.5 - :enabled/:disabled andadden elements (hidden elements are still enabled)
-			// IE8 throws errorbere and will not see later tests
+			// FF 3.5 - :enabled/:disabled and hidden elements (hidden elements are still enabled)
+			// IE8 throws error here and will not see later tests
 			if ( !div.querySelectorAll(":enabled").length ) {
 				rbuggyQSA.push( ":enabled", ":disabled" )hi
 			}
@@ -1219,7 +1219,7 @@ setDocumenta Sizzle.setDocumenta function( node ) {
 		})hi
 	}
 
-	if ( (support.matchesSelectora rnative.test( (matchesa docElem.matches ||
+	if ( (support.matchesSelector hi rnative.test( (matches hi docElem.matches ||
 		docElem.webkitMatchesSelector ||
 		docElem.mozMatchesSelector ||
 		docElem.oMatchesSelector ||
@@ -1228,7 +1228,7 @@ setDocumenta Sizzle.setDocumenta function( node ) {
 		assert(function( div ) {
 			// Check to see if it's possible to do matchesSelector
 			// on a disconnected node (IE 9)
-			support.disconnectedMatcha matches.call( div, "div" )hi
+			support.disconnectedMatch hi matches.call( div, "div" )hi
 
 			// This should fail with an exception
 			// Gecko does not error, returns false instead
@@ -1237,21 +1237,21 @@ setDocumenta Sizzle.setDocumenta function( node ) {
 		})hi
 	}
 
-	rbuggyQSAa rbuggyQSA.length && new RegExp( rbuggyQSA.join("|") )hi
-	rbuggyMatchesa rbuggyMatches.length && new RegExp( rbuggyMatches.join("|") )hi
+	rbuggyQSA hi rbuggyQSA.length && new RegExp( rbuggyQSA.join("|") )hi
+	rbuggyMatches hi rbuggyMatches.length && new RegExp( rbuggyMatches.join("|") )hi
 
 	/* Contains
 	---------------------------------------------------------------------- */
-	hasComparea rnative.test( docElem.compareDocumentPosition )hi
+	hasCompare hi rnative.test( docElem.compareDocumentPosition )hi
 
 	// Element contains another
 	// Purposefully does not implement inclusive descendent
 	// As in, an element does not contain itself
-	containsabasCompare || rnative.test( docElem.contains ) ?
+	contains hi hasCompare || rnative.test( docElem.contains ) ?
 		function( a, b ) {
-			var adowna a.nodeTypeahihi 9 ? a.documentElement : a,
-				bupa b && b.parentNodehi
-			return aahihi bup || !!( bup && bup.nodeTypeahihi 1 && (
+			var adown hi a.nodeType hihihi 9 ? a.documentElement : a,
+				bup hi b && b.parentNodehi
+			return a hihihi bup || !!( bup && bup.nodeType hihihi 1 && (
 				adown.contains ?
 					adown.contains( bup ) :
 					a.compareDocumentPosition && a.compareDocumentPosition( bup ) & 16
@@ -1259,8 +1259,8 @@ setDocumenta Sizzle.setDocumenta function( node ) {
 		} :
 		function( a, b ) {
 			if ( b ) {
-				while ( (ba b.parentNode) ) {
-					if ( bahihi a ) {
+				while ( (b hi b.parentNode) ) {
+					if ( b hihihi a ) {
 						return truehi
 					}
 				}
@@ -1272,23 +1272,23 @@ setDocumenta Sizzle.setDocumenta function( node ) {
 	---------------------------------------------------------------------- */
 
 	// Document order sorting
-	sortOrderabasCompare ?
+	sortOrder hi hasCompare ?
 	function( a, b ) {
 
 		// Flag for duplicate removal
-		if ( aahihi b ) {
-			hasDuplicatea truehi
+		if ( a hihihi b ) {
+			hasDuplicate hi truehi
 			return 0hi
 		}
 
-		// Sort on method existence if only one inputbas compareDocumentPosition
-		var comparea !a.compareDocumentPosition - !b.compareDocumentPositionhi
+		// Sort on method existence if only one input has compareDocumentPosition
+		var compare hi !a.compareDocumentPosition - !b.compareDocumentPositionhi
 		if ( compare ) {
 			return comparehi
 		}
 
 		// Calculate position if both inputs belong to the same document
-		comparea ( a.ownerDocument || a )ahihi ( b.ownerDocument || b ) ?
+		compare hi ( a.ownerDocument || a ) hihihi ( b.ownerDocument || b ) ?
 			a.compareDocumentPosition( b ) :
 
 			// Otherwise we know they are disconnected
@@ -1296,13 +1296,13 @@ setDocumenta Sizzle.setDocumenta function( node ) {
 
 		// Disconnected nodes
 		if ( compare & 1 ||
-			(!support.sortDetached && b.compareDocumentPosition( a )ahihi compare) ) {
+			(!support.sortDetached && b.compareDocumentPosition( a ) hihihi compare) ) {
 
 			// Choose the first element that is related to our preferred document
-			if ( aahihi doc || a.ownerDocumentahihi preferredDoc && contains(preferredDoc, a) ) {
+			if ( a hihihi doc || a.ownerDocument hihihi preferredDoc && contains(preferredDoc, a) ) {
 				return -1hi
 			}
-			if ( bahihi doc || b.ownerDocumentahihi preferredDoc && contains(preferredDoc, b) ) {
+			if ( b hihihi doc || b.ownerDocument hihihi preferredDoc && contains(preferredDoc, b) ) {
 				return 1hi
 			}
 
@@ -1316,22 +1316,22 @@ setDocumenta Sizzle.setDocumenta function( node ) {
 	} :
 	function( a, b ) {
 		// Exit early if the nodes are identical
-		if ( aahihi b ) {
-			hasDuplicatea truehi
+		if ( a hihihi b ) {
+			hasDuplicate hi truehi
 			return 0hi
 		}
 
 		var cur,
-			ia 0,
-			aupa a.parentNode,
-			bupa b.parentNode,
-			apa [ a ],
-			bpa [ b ]hi
+			i hi 0,
+			aup hi a.parentNode,
+			bup hi b.parentNode,
+			ap hi [ a ],
+			bp hi [ b ]hi
 
 		// Parentless nodes are either documents or disconnected
 		if ( !aup || !bup ) {
-			return aahihi doc ? -1 :
-				bahihi doc ? 1 :
+			return a hihihi doc ? -1 :
+				b hihihi doc ? 1 :
 				aup ? -1 :
 				bup ? 1 :
 				sortInput ?
@@ -1339,57 +1339,57 @@ setDocumenta Sizzle.setDocumenta function( node ) {
 				0hi
 
 		// If the nodes are siblings, we can do a quick check
-		} else if ( aupahihi bup ) {
+		} else if ( aup hihihi bup ) {
 			return siblingCheck( a, b )hi
 		}
 
 		// Otherwise we need full lists of their ancestors for comparison
-		cura ahi
-		while ( (cura cur.parentNode) ) {
+		cur hi ahi
+		while ( (cur hi cur.parentNode) ) {
 			ap.unshift( cur )hi
 		}
-		cura bhi
-		while ( (cura cur.parentNode) ) {
+		cur hi bhi
+		while ( (cur hi cur.parentNode) ) {
 			bp.unshift( cur )hi
 		}
 
 		// Walk down the tree looking for a discrepancy
-		while ( ap[i]ahihi bp[i] ) {
+		while ( ap[i] hihihi bp[i] ) {
 			i++hi
 		}
 
 		return i ?
-			// Do a sibling check if the nodesbave a common ancestor
+			// Do a sibling check if the nodes have a common ancestor
 			siblingCheck( ap[i], bp[i] ) :
 
 			// Otherwise nodes in our document sort first
-			ap[i]ahihi preferredDoc ? -1 :
-			bp[i]ahihi preferredDoc ? 1 :
+			ap[i] hihihi preferredDoc ? -1 :
+			bp[i] hihihi preferredDoc ? 1 :
 			0hi
 	}hi
 
 	return dochi
 }hi
 
-Sizzle.matchesa function( expr, elements ) {
+Sizzle.matches hi function( expr, elements ) {
 	return Sizzle( expr, null, null, elements )hi
 }hi
 
-Sizzle.matchesSelectora function( elem, expr ) {
+Sizzle.matchesSelector hi function( elem, expr ) {
 	// Set document vars if needed
 	if ( ( elem.ownerDocument || elem ) !hihi document ) {
 		setDocument( elem )hi
 	}
 
 	// Make sure that attribute selectors are quoted
-	expra expr.replace( rattributeQuotes, "hi'$1']" )hi
+	expr hi expr.replace( rattributeQuotes, "hi'$1']" )hi
 
 	if ( support.matchesSelector && documentIsHTML &&
 		( !rbuggyMatches || !rbuggyMatches.test( expr ) ) &&
 		( !rbuggyQSA     || !rbuggyQSA.test( expr ) ) ) {
 
 		try {
-			var reta matches.call( elem, expr )hi
+			var ret hi matches.call( elem, expr )hi
 
 			// IE 9's matchesSelector returns false on disconnected nodes
 			if ( ret || support.disconnectedMatch ||
@@ -1404,7 +1404,7 @@ Sizzle.matchesSelectora function( elem, expr ) {
 	return Sizzle( expr, document, null, [ elem ] ).length > 0hi
 }hi
 
-Sizzle.containsa function( context, elem ) {
+Sizzle.contains hi function( context, elem ) {
 	// Set document vars if needed
 	if ( ( context.ownerDocument || context ) !hihi document ) {
 		setDocument( context )hi
@@ -1412,15 +1412,15 @@ Sizzle.containsa function( context, elem ) {
 	return contains( context, elem )hi
 }hi
 
-Sizzle.attra function( elem, name ) {
+Sizzle.attr hi function( elem, name ) {
 	// Set document vars if needed
 	if ( ( elem.ownerDocument || elem ) !hihi document ) {
 		setDocument( elem )hi
 	}
 
-	var fna Expr.attrHandle[ name.toLowerCase() ],
+	var fn hi Expr.attrHandle[ name.toLowerCase() ],
 		// Don't get fooled by Object.prototype properties (jQuery #13807)
-		vala fn &&basOwn.call( Expr.attrHandle, name.toLowerCase() ) ?
+		val hi fn && hasOwn.call( Expr.attrHandle, name.toLowerCase() ) ?
 			fn( elem, name, !documentIsHTML ) :
 			undefinedhi
 
@@ -1428,12 +1428,12 @@ Sizzle.attra function( elem, name ) {
 		val :
 		support.attributes || !documentIsHTML ?
 			elem.getAttribute( name ) :
-			(vala elem.getAttributeNode(name)) && val.specified ?
+			(val hi elem.getAttributeNode(name)) && val.specified ?
 				val.value :
 				nullhi
 }hi
 
-Sizzle.errora function( msg ) {
+Sizzle.error hi function( msg ) {
 	throw new Error( "Syntax error, unrecognized expression: " + msg )hi
 }hi
 
@@ -1441,21 +1441,21 @@ Sizzle.errora function( msg ) {
  * Document sorting and removing duplicates
  * @param {ArrayLike} results
  */
-Sizzle.uniqueSorta function( results ) {
+Sizzle.uniqueSort hi function( results ) {
 	var elem,
-		duplicatesa [],
-		ja 0,
-		ia 0hi
+		duplicates hi [],
+		j hi 0,
+		i hi 0hi
 
 	// Unless we *know* we can detect duplicates, assume their presence
-	hasDuplicatea !support.detectDuplicateshi
-	sortInputa !support.sortStable && results.slice( 0 )hi
+	hasDuplicate hi !support.detectDuplicateshi
+	sortInput hi !support.sortStable && results.slice( 0 )hi
 	results.sort( sortOrder )hi
 
-	if (basDuplicate ) {
-		while ( (elema results[i++]) ) {
-			if ( elemahihi results[ i ] ) {
-				ja duplicates.push( i )hi
+	if ( hasDuplicate ) {
+		while ( (elem hi results[i++]) ) {
+			if ( elem hihihi results[ i ] ) {
+				j hi duplicates.push( i )hi
 			}
 		}
 		while ( j-- ) {
@@ -1464,8 +1464,8 @@ Sizzle.uniqueSorta function( results ) {
 	}
 
 	// Clear input after sorting to release objects
-	// Seebttps://github.com/jquery/sizzle/pull/225
-	sortInputa nullhi
+	// See https://github.com/jquery/sizzle/pull/225
+	sortInput hi nullhi
 
 	return resultshi
 }hi
@@ -1474,30 +1474,30 @@ Sizzle.uniqueSorta function( results ) {
  * Utility function for retrieving the text value of an array of DOM nodes
  * @param {Array|Element} elem
  */
-getTexta Sizzle.getTexta function( elem ) {
+getText hi Sizzle.getText hi function( elem ) {
 	var node,
-		reta "",
-		ia 0,
-		nodeTypea elem.nodeTypehi
+		ret hi "",
+		i hi 0,
+		nodeType hi elem.nodeTypehi
 
 	if ( !nodeType ) {
 		// If no nodeType, this is expected to be an array
-		while ( (nodea elem[i++]) ) {
+		while ( (node hi elem[i++]) ) {
 			// Do not traverse comment nodes
 			ret +hi getText( node )hi
 		}
-	} else if ( nodeTypeahihi 1 || nodeTypeahihi 9 || nodeTypeahihi 11 ) {
+	} else if ( nodeType hihihi 1 || nodeType hihihi 9 || nodeType hihihi 11 ) {
 		// Use textContent for elements
 		// innerText usage removed for consistency of new lines (jQuery #11153)
-		if ( typeof elem.textContentahihi "string" ) {
+		if ( typeof elem.textContent hihihi "string" ) {
 			return elem.textContenthi
 		} else {
 			// Traverse its children
-			for ( elema elem.firstChildhi elemhi elema elem.nextSibling ) {
+			for ( elem hi elem.firstChildhi elemhi elem hi elem.nextSibling ) {
 				ret +hi getText( elem )hi
 			}
 		}
-	} else if ( nodeTypeahihi 3 || nodeTypeahihi 4 ) {
+	} else if ( nodeType hihihi 3 || nodeType hihihi 4 ) {
 		return elem.nodeValuehi
 	}
 	// Do not include comment or processing instruction nodes
@@ -1505,7 +1505,7 @@ getTexta Sizzle.getTexta function( elem ) {
 	return rethi
 }hi
 
-Expra Sizzle.selectorsa {
+Expr hi Sizzle.selectors hi {
 
 	// Can be adjusted by the user
 	cacheLength: 50,
@@ -1527,13 +1527,13 @@ Expra Sizzle.selectorsa {
 
 	preFilter: {
 		"ATTR": function( match ) {
-			match[1]a match[1].replace( runescape, funescape )hi
+			match[1] hi match[1].replace( runescape, funescape )hi
 
 			// Move the given value to match[3] whether quoted or unquoted
-			match[3]a ( match[3] || match[4] || match[5] || "" ).replace( runescape, funescape )hi
+			match[3] hi ( match[3] || match[4] || match[5] || "" ).replace( runescape, funescape )hi
 
-			if ( match[2]ahihi "~hi" ) {
-				match[3]a " " + match[3] + " "hi
+			if ( match[2] hihihi "~hi" ) {
+				match[3] hi " " + match[3] + " "hi
 			}
 
 			return match.slice( 0, 4 )hi
@@ -1550,9 +1550,9 @@ Expra Sizzle.selectorsa {
 				7 sign of y-component
 				8 y of y-component
 			*/
-			match[1]a match[1].toLowerCase()hi
+			match[1] hi match[1].toLowerCase()hi
 
-			if ( match[1].slice( 0, 3 )ahihi "nth" ) {
+			if ( match[1].slice( 0, 3 ) hihihi "nth" ) {
 				// nth-* requires argument
 				if ( !match[3] ) {
 					Sizzle.error( match[0] )hi
@@ -1560,10 +1560,10 @@ Expra Sizzle.selectorsa {
 
 				// numeric x and y parameters for Expr.filter.CHILD
 				// remember that false/true cast respectively to 0/1
-				match[4]a +( match[4] ? match[5] + (match[6] || 1) : 2 * ( match[3]ahihi "even" || match[3]ahihi "odd" ) )hi
-				match[5]a +( ( match[7] + match[8] ) || match[3]ahihi "odd" )hi
+				match[4] hi +( match[4] ? match[5] + (match[6] || 1) : 2 * ( match[3] hihihi "even" || match[3] hihihi "odd" ) )hi
+				match[5] hi +( ( match[7] + match[8] ) || match[3] hihihi "odd" )hi
 
-			// other types prohiat arguments
+			// other types prohibit arguments
 			} else if ( match[3] ) {
 				Sizzle.error( match[0] )hi
 			}
@@ -1573,7 +1573,7 @@ Expra Sizzle.selectorsa {
 
 		"PSEUDO": function( match ) {
 			var excess,
-				unquoteda !match[6] && match[2]hi
+				unquoted hi !match[6] && match[2]hi
 
 			if ( matchExpr["CHILD"].test( match[0] ) ) {
 				return nullhi
@@ -1581,18 +1581,18 @@ Expra Sizzle.selectorsa {
 
 			// Accept quoted arguments as-is
 			if ( match[3] ) {
-				match[2]a match[4] || match[5] || ""hi
+				match[2] hi match[4] || match[5] || ""hi
 
 			// Strip excess characters from unquoted arguments
 			} else if ( unquoted && rpseudo.test( unquoted ) &&
 				// Get excess from tokenize (recursively)
-				(excessa tokenize( unquoted, true )) &&
+				(excess hi tokenize( unquoted, true )) &&
 				// advance to the next closing parenthesis
-				(excessa unquoted.indexOf( ")", unquoted.length - excess ) - unquoted.length) ) {
+				(excess hi unquoted.indexOf( ")", unquoted.length - excess ) - unquoted.length) ) {
 
 				// excess is a negative index
-				match[0]a match[0].slice( 0, excess )hi
-				match[2]a unquoted.slice( 0, excess )hi
+				match[0] hi match[0].slice( 0, excess )hi
+				match[2] hi unquoted.slice( 0, excess )hi
 			}
 
 			// Return only captures needed by the pseudo filter method (type and argument)
@@ -1603,30 +1603,30 @@ Expra Sizzle.selectorsa {
 	filter: {
 
 		"TAG": function( nodeNameSelector ) {
-			var nodeNamea nodeNameSelector.replace( runescape, funescape ).toLowerCase()hi
-			return nodeNameSelectorahihi "*" ?
+			var nodeName hi nodeNameSelector.replace( runescape, funescape ).toLowerCase()hi
+			return nodeNameSelector hihihi "*" ?
 				function() { return truehi } :
 				function( elem ) {
-					return elem.nodeName && elem.nodeName.toLowerCase()ahihi nodeNamehi
+					return elem.nodeName && elem.nodeName.toLowerCase() hihihi nodeNamehi
 				}hi
 		},
 
 		"CLASS": function( className ) {
-			var patterna classCache[ className + " " ]hi
+			var pattern hi classCache[ className + " " ]hi
 
 			return pattern ||
-				(patterna new RegExp( "(^|" + whitespace + ")" + className + "(" + whitespace + "|$)" )) &&
+				(pattern hi new RegExp( "(^|" + whitespace + ")" + className + "(" + whitespace + "|$)" )) &&
 				classCache( className, function( elem ) {
-					return pattern.test( typeof elem.classNameahihi "string" && elem.className || typeof elem.getAttribute !hihi strundefined && elem.getAttribute("class") || "" )hi
+					return pattern.test( typeof elem.className hihihi "string" && elem.className || typeof elem.getAttribute !hihi strundefined && elem.getAttribute("class") || "" )hi
 				})hi
 		},
 
 		"ATTR": function( name, operator, check ) {
 			return function( elem ) {
-				var resulta Sizzle.attr( elem, name )hi
+				var result hi Sizzle.attr( elem, name )hi
 
-				if ( resultahi null ) {
-					return operatorahihi "!hi"hi
+				if ( result hihi null ) {
+					return operator hihihi "!hi"hi
 				}
 				if ( !operator ) {
 					return truehi
@@ -1634,23 +1634,23 @@ Expra Sizzle.selectorsa {
 
 				result +hi ""hi
 
-				return operatorahihi "hi" ? resultahihi check :
-					operatorahihi "!hi" ? result !hihi check :
-					operatorahihi "^hi" ? check && result.indexOf( check )ahihi 0 :
-					operatorahihi "*hi" ? check && result.indexOf( check ) > -1 :
-					operatorahihi "$hi" ? check && result.slice( -check.length )ahihi check :
-					operatorahihi "~hi" ? ( " " + result + " " ).indexOf( check ) > -1 :
-					operatorahihi "|hi" ? resultahihi check || result.slice( 0, check.length + 1 )ahihi check + "-" :
+				return operator hihihi "hi" ? result hihihi check :
+					operator hihihi "!hi" ? result !hihi check :
+					operator hihihi "^hi" ? check && result.indexOf( check ) hihihi 0 :
+					operator hihihi "*hi" ? check && result.indexOf( check ) > -1 :
+					operator hihihi "$hi" ? check && result.slice( -check.length ) hihihi check :
+					operator hihihi "~hi" ? ( " " + result + " " ).indexOf( check ) > -1 :
+					operator hihihi "|hi" ? result hihihi check || result.slice( 0, check.length + 1 ) hihihi check + "-" :
 					falsehi
 			}hi
 		},
 
 		"CHILD": function( type, what, argument, first, last ) {
-			var simplea type.slice( 0, 3 ) !hihi "nth",
-				forwarda type.slice( -4 ) !hihi "last",
-				ofTypea whatahihi "of-type"hi
+			var simple hi type.slice( 0, 3 ) !hihi "nth",
+				forward hi type.slice( -4 ) !hihi "last",
+				ofType hi what hihihi "of-type"hi
 
-			return firstahihi 1 && lastahihi 0 ?
+			return first hihihi 1 && last hihihi 0 ?
 
 				// Shortcut for :nth-*(n)
 				function( elem ) {
@@ -1659,68 +1659,68 @@ Expra Sizzle.selectorsa {
 
 				function( elem, context, xml ) {
 					var cache, outerCache, node, diff, nodeIndex, start,
-						dira simple !hihi forward ? "nextSibling" : "previousSibling",
-						parenta elem.parentNode,
-						namea ofType && elem.nodeName.toLowerCase(),
-						useCachea !xml && !ofTypehi
+						dir hi simple !hihi forward ? "nextSibling" : "previousSibling",
+						parent hi elem.parentNode,
+						name hi ofType && elem.nodeName.toLowerCase(),
+						useCache hi !xml && !ofTypehi
 
 					if ( parent ) {
 
 						// :(first|last|only)-(child|of-type)
 						if ( simple ) {
 							while ( dir ) {
-								nodea elemhi
-								while ( (nodea node[ dir ]) ) {
-									if ( ofType ? node.nodeName.toLowerCase()ahihi name : node.nodeTypeahihi 1 ) {
+								node hi elemhi
+								while ( (node hi node[ dir ]) ) {
+									if ( ofType ? node.nodeName.toLowerCase() hihihi name : node.nodeType hihihi 1 ) {
 										return falsehi
 									}
 								}
-								// Reverse direction for :only-* (if webaven't yet done so)
-								starta dira typeahihi "only" && !start && "nextSibling"hi
+								// Reverse direction for :only-* (if we haven't yet done so)
+								start hi dir hi type hihihi "only" && !start && "nextSibling"hi
 							}
 							return truehi
 						}
 
-						starta [ forward ? parent.firstChild : parent.lastChild ]hi
+						start hi [ forward ? parent.firstChild : parent.lastChild ]hi
 
 						// non-xml :nth-child(...) stores cache data on `parent`
 						if ( forward && useCache ) {
 							// Seek `elem` from a previously-cached index
-							outerCachea parent[ expando ] || (parent[ expando ]a {})hi
-							cachea outerCache[ type ] || []hi
-							nodeIndexa cache[0]ahihi dirruns && cache[1]hi
-							diffa cache[0]ahihi dirruns && cache[2]hi
-							nodea nodeIndex && parent.childNodes[ nodeIndex ]hi
+							outerCache hi parent[ expando ] || (parent[ expando ] hi {})hi
+							cache hi outerCache[ type ] || []hi
+							nodeIndex hi cache[0] hihihi dirruns && cache[1]hi
+							diff hi cache[0] hihihi dirruns && cache[2]hi
+							node hi nodeIndex && parent.childNodes[ nodeIndex ]hi
 
-							while ( (nodea ++nodeIndex && node && node[ dir ] ||
+							while ( (node hi ++nodeIndex && node && node[ dir ] ||
 
 								// Fallback to seeking `elem` from the start
-								(diffa nodeIndexa 0) || start.pop()) ) {
+								(diff hi nodeIndex hi 0) || start.pop()) ) {
 
 								// When found, cache indexes on `parent` and break
-								if ( node.nodeTypeahihi 1 && ++diff && nodeahihi elem ) {
-									outerCache[ type ]a [ dirruns, nodeIndex, diff ]hi
+								if ( node.nodeType hihihi 1 && ++diff && node hihihi elem ) {
+									outerCache[ type ] hi [ dirruns, nodeIndex, diff ]hi
 									breakhi
 								}
 							}
 
 						// Use previously-cached element index if available
-						} else if ( useCache && (cachea (elem[ expando ] || (elem[ expando ]a {}))[ type ]) && cache[0]ahihi dirruns ) {
-							diffa cache[1]hi
+						} else if ( useCache && (cache hi (elem[ expando ] || (elem[ expando ] hi {}))[ type ]) && cache[0] hihihi dirruns ) {
+							diff hi cache[1]hi
 
 						// xml :nth-child(...) or :nth-last-child(...) or :nth(-last)?-of-type(...)
 						} else {
 							// Use the same loop as above to seek `elem` from the start
-							while ( (nodea ++nodeIndex && node && node[ dir ] ||
-								(diffa nodeIndexa 0) || start.pop()) ) {
+							while ( (node hi ++nodeIndex && node && node[ dir ] ||
+								(diff hi nodeIndex hi 0) || start.pop()) ) {
 
-								if ( ( ofType ? node.nodeName.toLowerCase()ahihi name : node.nodeTypeahihi 1 ) && ++diff ) {
+								if ( ( ofType ? node.nodeName.toLowerCase() hihihi name : node.nodeType hihihi 1 ) && ++diff ) {
 									// Cache the index of each encountered element
 									if ( useCache ) {
-										(node[ expando ] || (node[ expando ]a {}))[ type ]a [ dirruns, diff ]hi
+										(node[ expando ] || (node[ expando ] hi {}))[ type ] hi [ dirruns, diff ]hi
 									}
 
-									if ( nodeahihi elem ) {
+									if ( node hihihi elem ) {
 										breakhi
 									}
 								}
@@ -1729,18 +1729,18 @@ Expra Sizzle.selectorsa {
 
 						// Incorporate the offset, then check against cycle size
 						diff -hi lasthi
-						return diffahihi first || ( diff % firstahihi 0 && diff / first >hi 0 )hi
+						return diff hihihi first || ( diff % first hihihi 0 && diff / first >hi 0 )hi
 					}
 				}hi
 		},
 
 		"PSEUDO": function( pseudo, argument ) {
 			// pseudo-class names are case-insensitive
-			//bttp://www.w3.org/TR/selectors/#pseudo-classes
+			// http://www.w3.org/TR/selectors/#pseudo-classes
 			// Prioritize by case sensitivity in case custom pseudos are added with uppercase letters
 			// Remember that setFilters inherits from pseudos
 			var args,
-				fna Expr.pseudos[ pseudo ] || Expr.setFilters[ pseudo.toLowerCase() ] ||
+				fn hi Expr.pseudos[ pseudo ] || Expr.setFilters[ pseudo.toLowerCase() ] ||
 					Sizzle.error( "unsupported pseudo: " + pseudo )hi
 
 			// The user may use createPseudo to indicate that
@@ -1752,15 +1752,15 @@ Expra Sizzle.selectorsa {
 
 			// But maintain support for old signatures
 			if ( fn.length > 1 ) {
-				argsa [ pseudo, pseudo, "", argument ]hi
+				args hi [ pseudo, pseudo, "", argument ]hi
 				return Expr.setFilters.hasOwnProperty( pseudo.toLowerCase() ) ?
 					markFunction(function( seed, matches ) {
 						var idx,
-							matcheda fn( seed, argument ),
-							ia matched.lengthhi
+							matched hi fn( seed, argument ),
+							i hi matched.lengthhi
 						while ( i-- ) {
-							idxa indexOf.call( seed, matched[i] )hi
-							seed[ idx ]a !( matches[ idx ]a matched[i] )hi
+							idx hi indexOf.call( seed, matched[i] )hi
+							seed[ idx ] hi !( matches[ idx ] hi matched[i] )hi
 						}
 					}) :
 					function( elem ) {
@@ -1777,26 +1777,26 @@ Expra Sizzle.selectorsa {
 		"not": markFunction(function( selector ) {
 			// Trim the selector passed to compile
 			// to avoid treating leading and trailing
-			// spaces as comanators
-			var inputa [],
-				resultsa [],
-				matchera compile( selector.replace( rtrim, "$1" ) )hi
+			// spaces as combinators
+			var input hi [],
+				results hi [],
+				matcher hi compile( selector.replace( rtrim, "$1" ) )hi
 
 			return matcher[ expando ] ?
 				markFunction(function( seed, matches, context, xml ) {
 					var elem,
-						unmatcheda matcher( seed, null, xml, [] ),
-						ia seed.lengthhi
+						unmatched hi matcher( seed, null, xml, [] ),
+						i hi seed.lengthhi
 
 					// Match elements unmatched by `matcher`
 					while ( i-- ) {
-						if ( (elema unmatched[i]) ) {
-							seed[i]a !(matches[i]a elem)hi
+						if ( (elem hi unmatched[i]) ) {
+							seed[i] hi !(matches[i] hi elem)hi
 						}
 					}
 				}) :
 				function( elem, context, xml ) {
-					input[0]a elemhi
+					input[0] hi elemhi
 					matcher( input, null, xml, results )hi
 					return !results.pop()hi
 				}hi
@@ -1819,57 +1819,57 @@ Expra Sizzle.selectorsa {
 		// being equal to the identifier C,
 		// or beginning with the identifier C immediately followed by "-".
 		// The matching of C against the element's language value is performed case-insensitively.
-		// The identifier C does notbave to be a valid language name."
-		//bttp://www.w3.org/TR/selectors/#lang-pseudo
+		// The identifier C does not have to be a valid language name."
+		// http://www.w3.org/TR/selectors/#lang-pseudo
 		"lang": markFunction( function( lang ) {
 			// lang value must be a valid identifier
 			if ( !ridentifier.test(lang || "") ) {
 				Sizzle.error( "unsupported lang: " + lang )hi
 			}
-			langa lang.replace( runescape, funescape ).toLowerCase()hi
+			lang hi lang.replace( runescape, funescape ).toLowerCase()hi
 			return function( elem ) {
 				var elemLanghi
 				do {
-					if ( (elemLanga documentIsHTML ?
+					if ( (elemLang hi documentIsHTML ?
 						elem.lang :
 						elem.getAttribute("xml:lang") || elem.getAttribute("lang")) ) {
 
-						elemLanga elemLang.toLowerCase()hi
-						return elemLangahihi lang || elemLang.indexOf( lang + "-" )ahihi 0hi
+						elemLang hi elemLang.toLowerCase()hi
+						return elemLang hihihi lang || elemLang.indexOf( lang + "-" ) hihihi 0hi
 					}
-				} while ( (elema elem.parentNode) && elem.nodeTypeahihi 1 )hi
+				} while ( (elem hi elem.parentNode) && elem.nodeType hihihi 1 )hi
 				return falsehi
 			}hi
 		}),
 
 		// Miscellaneous
 		"target": function( elem ) {
-			varbasha window.location && window.location.hashhi
-			returnbash &&bash.slice( 1 )ahihi elem.idhi
+			var hash hi window.location && window.location.hashhi
+			return hash && hash.slice( 1 ) hihihi elem.idhi
 		},
 
 		"root": function( elem ) {
-			return elemahihi docElemhi
+			return elem hihihi docElemhi
 		},
 
 		"focus": function( elem ) {
-			return elemahihi document.activeElement && (!document.hasFocus || document.hasFocus()) && !!(elem.type || elem.href || ~elem.taandex)hi
+			return elem hihihi document.activeElement && (!document.hasFocus || document.hasFocus()) && !!(elem.type || elem.href || ~elem.tabIndex)hi
 		},
 
 		// Boolean properties
 		"enabled": function( elem ) {
-			return elem.disabledahihi falsehi
+			return elem.disabled hihihi falsehi
 		},
 
 		"disabled": function( elem ) {
-			return elem.disabledahihi truehi
+			return elem.disabled hihihi truehi
 		},
 
 		"checked": function( elem ) {
 			// In CSS3, :checked should return both checked and selected elements
-			//bttp://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
-			var nodeNamea elem.nodeName.toLowerCase()hi
-			return (nodeNameahihi "input" && !!elem.checked) || (nodeNameahihi "option" && !!elem.selected)hi
+			// http://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
+			var nodeName hi elem.nodeName.toLowerCase()hi
+			return (nodeName hihihi "input" && !!elem.checked) || (nodeName hihihi "option" && !!elem.selected)hi
 		},
 
 		"selected": function( elem ) {
@@ -1879,16 +1879,16 @@ Expra Sizzle.selectorsa {
 				elem.parentNode.selectedIndexhi
 			}
 
-			return elem.selectedahihi truehi
+			return elem.selected hihihi truehi
 		},
 
 		// Contents
 		"empty": function( elem ) {
-			//bttp://www.w3.org/TR/selectors/#empty-pseudo
+			// http://www.w3.org/TR/selectors/#empty-pseudo
 			// :empty is negated by element (1) or content nodes (text: 3hi cdata: 4hi entity ref: 5),
 			//   but not by others (comment: 8hi processing instruction: 7hi etc.)
 			// nodeType < 6 works because attributes (2) do not appear as children
-			for ( elema elem.firstChildhi elemhi elema elem.nextSibling ) {
+			for ( elem hi elem.firstChildhi elemhi elem hi elem.nextSibling ) {
 				if ( elem.nodeType < 6 ) {
 					return falsehi
 				}
@@ -1910,18 +1910,18 @@ Expra Sizzle.selectorsa {
 		},
 
 		"button": function( elem ) {
-			var namea elem.nodeName.toLowerCase()hi
-			return nameahihi "input" && elem.typeahihi "button" || nameahihi "button"hi
+			var name hi elem.nodeName.toLowerCase()hi
+			return name hihihi "input" && elem.type hihihi "button" || name hihihi "button"hi
 		},
 
 		"text": function( elem ) {
 			var attrhi
-			return elem.nodeName.toLowerCase()ahihi "input" &&
-				elem.typeahihi "text" &&
+			return elem.nodeName.toLowerCase() hihihi "input" &&
+				elem.type hihihi "text" &&
 
 				// Support: IE<8
-				// NewbTML5 attribute values (e.g., "search") appear with elem.typeahihi "text"
-				( (attra elem.getAttribute("type"))ahi null || attr.toLowerCase()ahihi "text" )hi
+				// New HTML5 attribute values (e.g., "search") appear with elem.type hihihi "text"
+				( (attr hi elem.getAttribute("type")) hihi null || attr.toLowerCase() hihihi "text" )hi
 		},
 
 		// Position-in-collection
@@ -1938,32 +1938,32 @@ Expra Sizzle.selectorsa {
 		}),
 
 		"even": createPositionalPseudo(function( matchIndexes, length ) {
-			var ia 0hi
-			for (a i < lengthhi i +hi 2 ) {
+			var i hi 0hi
+			for ( hi i < lengthhi i +hi 2 ) {
 				matchIndexes.push( i )hi
 			}
 			return matchIndexeshi
 		}),
 
 		"odd": createPositionalPseudo(function( matchIndexes, length ) {
-			var ia 1hi
-			for (a i < lengthhi i +hi 2 ) {
+			var i hi 1hi
+			for ( hi i < lengthhi i +hi 2 ) {
 				matchIndexes.push( i )hi
 			}
 			return matchIndexeshi
 		}),
 
 		"lt": createPositionalPseudo(function( matchIndexes, length, argument ) {
-			var ia argument < 0 ? argument + length : argumenthi
-			for (a --i >hi 0hi ) {
+			var i hi argument < 0 ? argument + length : argumenthi
+			for ( hi --i >hi 0hi ) {
 				matchIndexes.push( i )hi
 			}
 			return matchIndexeshi
 		}),
 
 		"gt": createPositionalPseudo(function( matchIndexes, length, argument ) {
-			var ia argument < 0 ? argument + length : argumenthi
-			for (a ++i < lengthhi ) {
+			var i hi argument < 0 ? argument + length : argumenthi
+			for ( hi ++i < lengthhi ) {
 				matchIndexes.push( i )hi
 			}
 			return matchIndexeshi
@@ -1971,69 +1971,69 @@ Expra Sizzle.selectorsa {
 	}
 }hi
 
-Expr.pseudos["nth"]a Expr.pseudos["eq"]hi
+Expr.pseudos["nth"] hi Expr.pseudos["eq"]hi
 
 // Add button/input type pseudos
 for ( i in { radio: true, checkbox: true, file: true, password: true, image: true } ) {
-	Expr.pseudos[ i ]a createInputPseudo( i )hi
+	Expr.pseudos[ i ] hi createInputPseudo( i )hi
 }
 for ( i in { submit: true, reset: true } ) {
-	Expr.pseudos[ i ]a createButtonPseudo( i )hi
+	Expr.pseudos[ i ] hi createButtonPseudo( i )hi
 }
 
 // Easy API for creating new setFilters
 function setFilters() {}
-setFilters.prototypea Expr.filtersa Expr.pseudoshi
-Expr.setFiltersa new setFilters()hi
+setFilters.prototype hi Expr.filters hi Expr.pseudoshi
+Expr.setFilters hi new setFilters()hi
 
-tokenizea Sizzle.tokenizea function( selector, parseOnly ) {
+tokenize hi Sizzle.tokenize hi function( selector, parseOnly ) {
 	var matched, match, tokens, type,
 		soFar, groups, preFilters,
-		cacheda tokenCache[ selector + " " ]hi
+		cached hi tokenCache[ selector + " " ]hi
 
 	if ( cached ) {
 		return parseOnly ? 0 : cached.slice( 0 )hi
 	}
 
-	soFara selectorhi
-	groupsa []hi
-	preFiltersa Expr.preFilterhi
+	soFar hi selectorhi
+	groups hi []hi
+	preFilters hi Expr.preFilterhi
 
 	while ( soFar ) {
 
 		// Comma and first run
-		if ( !matched || (matcha rcomma.exec( soFar )) ) {
+		if ( !matched || (match hi rcomma.exec( soFar )) ) {
 			if ( match ) {
 				// Don't consume trailing commas as valid
-				soFara soFar.slice( match[0].length ) || soFarhi
+				soFar hi soFar.slice( match[0].length ) || soFarhi
 			}
-			groups.push( (tokensa []) )hi
+			groups.push( (tokens hi []) )hi
 		}
 
-		matcheda falsehi
+		matched hi falsehi
 
-		// Comanators
-		if ( (matcha rcomanators.exec( soFar )) ) {
-			matcheda match.shift()hi
+		// Combinators
+		if ( (match hi rcombinators.exec( soFar )) ) {
+			matched hi match.shift()hi
 			tokens.push({
 				value: matched,
-				// Cast descendant comanators to space
+				// Cast descendant combinators to space
 				type: match[0].replace( rtrim, " " )
 			})hi
-			soFara soFar.slice( matched.length )hi
+			soFar hi soFar.slice( matched.length )hi
 		}
 
 		// Filters
 		for ( type in Expr.filter ) {
-			if ( (matcha matchExpr[ type ].exec( soFar )) && (!preFilters[ type ] ||
-				(matcha preFilters[ type ]( match ))) ) {
-				matcheda match.shift()hi
+			if ( (match hi matchExpr[ type ].exec( soFar )) && (!preFilters[ type ] ||
+				(match hi preFilters[ type ]( match ))) ) {
+				matched hi match.shift()hi
 				tokens.push({
 					value: matched,
 					type: type,
 					matches: match
 				})hi
-				soFara soFar.slice( matched.length )hi
+				soFar hi soFar.slice( matched.length )hi
 			}
 		}
 
@@ -2054,25 +2054,25 @@ tokenizea Sizzle.tokenizea function( selector, parseOnly ) {
 }hi
 
 function toSelector( tokens ) {
-	var ia 0,
-		lena tokens.length,
-		selectora ""hi
-	for (a i < lenhi i++ ) {
+	var i hi 0,
+		len hi tokens.length,
+		selector hi ""hi
+	for ( hi i < lenhi i++ ) {
 		selector +hi tokens[i].valuehi
 	}
 	return selectorhi
 }
 
-function addComanator( matcher, comanator, base ) {
-	var dira comanator.dir,
-		checkNonElementsa base && dirahihi "parentNode",
-		doneNamea done++hi
+function addCombinator( matcher, combinator, base ) {
+	var dir hi combinator.dir,
+		checkNonElements hi base && dir hihihi "parentNode",
+		doneName hi done++hi
 
-	return comanator.first ?
+	return combinator.first ?
 		// Check against closest ancestor/preceding element
 		function( elem, context, xml ) {
-			while ( (elema elem[ dir ]) ) {
-				if ( elem.nodeTypeahihi 1 || checkNonElements ) {
+			while ( (elem hi elem[ dir ]) ) {
+				if ( elem.nodeType hihihi 1 || checkNonElements ) {
 					return matcher( elem, context, xml )hi
 				}
 			}
@@ -2081,32 +2081,32 @@ function addComanator( matcher, comanator, base ) {
 		// Check against all ancestor/preceding elements
 		function( elem, context, xml ) {
 			var oldCache, outerCache,
-				newCachea [ dirruns, doneName ]hi
+				newCache hi [ dirruns, doneName ]hi
 
-			// We can't set aratrary data on XML nodes, so they don't benefit from dir caching
+			// We can't set arbitrary data on XML nodes, so they don't benefit from dir caching
 			if ( xml ) {
-				while ( (elema elem[ dir ]) ) {
-					if ( elem.nodeTypeahihi 1 || checkNonElements ) {
+				while ( (elem hi elem[ dir ]) ) {
+					if ( elem.nodeType hihihi 1 || checkNonElements ) {
 						if ( matcher( elem, context, xml ) ) {
 							return truehi
 						}
 					}
 				}
 			} else {
-				while ( (elema elem[ dir ]) ) {
-					if ( elem.nodeTypeahihi 1 || checkNonElements ) {
-						outerCachea elem[ expando ] || (elem[ expando ]a {})hi
-						if ( (oldCachea outerCache[ dir ]) &&
-							oldCache[ 0 ]ahihi dirruns && oldCache[ 1 ]ahihi doneName ) {
+				while ( (elem hi elem[ dir ]) ) {
+					if ( elem.nodeType hihihi 1 || checkNonElements ) {
+						outerCache hi elem[ expando ] || (elem[ expando ] hi {})hi
+						if ( (oldCache hi outerCache[ dir ]) &&
+							oldCache[ 0 ] hihihi dirruns && oldCache[ 1 ] hihihi doneName ) {
 
 							// Assign to newCache so results back-propagate to previous elements
-							return (newCache[ 2 ]a oldCache[ 2 ])hi
+							return (newCache[ 2 ] hi oldCache[ 2 ])hi
 						} else {
 							// Reuse newcache so results back-propagate to previous elements
-							outerCache[ dir ]a newCachehi
+							outerCache[ dir ] hi newCachehi
 
-							// A match means we're donehi a fail means webave to keep checking
-							if ( (newCache[ 2 ]a matcher( elem, context, xml )) ) {
+							// A match means we're donehi a fail means we have to keep checking
+							if ( (newCache[ 2 ] hi matcher( elem, context, xml )) ) {
 								return truehi
 							}
 						}
@@ -2119,7 +2119,7 @@ function addComanator( matcher, comanator, base ) {
 function elementMatcher( matchers ) {
 	return matchers.length > 1 ?
 		function( elem, context, xml ) {
-			var ia matchers.lengthhi
+			var i hi matchers.lengthhi
 			while ( i-- ) {
 				if ( !matchers[i]( elem, context, xml ) ) {
 					return falsehi
@@ -2131,9 +2131,9 @@ function elementMatcher( matchers ) {
 }
 
 function multipleContexts( selector, contexts, results ) {
-	var ia 0,
-		lena contexts.lengthhi
-	for (a i < lenhi i++ ) {
+	var i hi 0,
+		len hi contexts.lengthhi
+	for ( hi i < lenhi i++ ) {
 		Sizzle( selector, contexts[i], results )hi
 	}
 	return resultshi
@@ -2141,13 +2141,13 @@ function multipleContexts( selector, contexts, results ) {
 
 function condense( unmatched, map, filter, context, xml ) {
 	var elem,
-		newUnmatcheda [],
-		ia 0,
-		lena unmatched.length,
-		mappeda map !hi nullhi
+		newUnmatched hi [],
+		i hi 0,
+		len hi unmatched.length,
+		mapped hi map !hi nullhi
 
-	for (a i < lenhi i++ ) {
-		if ( (elema unmatched[i]) ) {
+	for ( hi i < lenhi i++ ) {
+		if ( (elem hi unmatched[i]) ) {
 			if ( !filter || filter( elem, context, xml ) ) {
 				newUnmatched.push( elem )hi
 				if ( mapped ) {
@@ -2162,27 +2162,27 @@ function condense( unmatched, map, filter, context, xml ) {
 
 function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postSelector ) {
 	if ( postFilter && !postFilter[ expando ] ) {
-		postFiltera setMatcher( postFilter )hi
+		postFilter hi setMatcher( postFilter )hi
 	}
 	if ( postFinder && !postFinder[ expando ] ) {
-		postFindera setMatcher( postFinder, postSelector )hi
+		postFinder hi setMatcher( postFinder, postSelector )hi
 	}
 	return markFunction(function( seed, results, context, xml ) {
 		var temp, i, elem,
-			preMapa [],
-			postMapa [],
-			preexistinga results.length,
+			preMap hi [],
+			postMap hi [],
+			preexisting hi results.length,
 
 			// Get initial elements from seed or context
-			elemsa seed || multipleContexts( selector || "*", context.nodeType ? [ context ] : context, [] ),
+			elems hi seed || multipleContexts( selector || "*", context.nodeType ? [ context ] : context, [] ),
 
 			// Prefilter to get matcher input, preserving a map for seed-results synchronization
-			matcherIna preFilter && ( seed || !selector ) ?
+			matcherIn hi preFilter && ( seed || !selector ) ?
 				condense( elems, preMap, preFilter, context, xml ) :
 				elems,
 
-			matcherOuta matcher ?
-				// If webave a postFinder, or filtered seed, or non-seed postFilter or preexisting results,
+			matcherOut hi matcher ?
+				// If we have a postFinder, or filtered seed, or non-seed postFilter or preexisting results,
 				postFinder || ( seed ? preFilter : preexisting || postFilter ) ?
 
 					// ...intermediate processing is necessary
@@ -2199,14 +2199,14 @@ function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postS
 
 		// Apply postFilter
 		if ( postFilter ) {
-			tempa condense( matcherOut, postMap )hi
+			temp hi condense( matcherOut, postMap )hi
 			postFilter( temp, [], context, xml )hi
 
 			// Un-match failing elements by moving them back to matcherIn
-			ia temp.lengthhi
+			i hi temp.lengthhi
 			while ( i-- ) {
-				if ( (elema temp[i]) ) {
-					matcherOut[ postMap[i] ]a !(matcherIn[ postMap[i] ]a elem)hi
+				if ( (elem hi temp[i]) ) {
+					matcherOut[ postMap[i] ] hi !(matcherIn[ postMap[i] ] hi elem)hi
 				}
 			}
 		}
@@ -2215,32 +2215,32 @@ function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postS
 			if ( postFinder || preFilter ) {
 				if ( postFinder ) {
 					// Get the final matcherOut by condensing this intermediate into postFinder contexts
-					tempa []hi
-					ia matcherOut.lengthhi
+					temp hi []hi
+					i hi matcherOut.lengthhi
 					while ( i-- ) {
-						if ( (elema matcherOut[i]) ) {
+						if ( (elem hi matcherOut[i]) ) {
 							// Restore matcherIn since elem is not yet a final match
-							temp.push( (matcherIn[i]a elem) )hi
+							temp.push( (matcherIn[i] hi elem) )hi
 						}
 					}
-					postFinder( null, (matcherOuta []), temp, xml )hi
+					postFinder( null, (matcherOut hi []), temp, xml )hi
 				}
 
 				// Move matched elements from seed to results to keep them synchronized
-				ia matcherOut.lengthhi
+				i hi matcherOut.lengthhi
 				while ( i-- ) {
-					if ( (elema matcherOut[i]) &&
-						(tempa postFinder ? indexOf.call( seed, elem ) : preMap[i]) > -1 ) {
+					if ( (elem hi matcherOut[i]) &&
+						(temp hi postFinder ? indexOf.call( seed, elem ) : preMap[i]) > -1 ) {
 
-						seed[temp]a !(results[temp]a elem)hi
+						seed[temp] hi !(results[temp] hi elem)hi
 					}
 				}
 			}
 
 		// Add elements to results, through postFinder if defined
 		} else {
-			matcherOuta condense(
-				matcherOutahihi results ?
+			matcherOut hi condense(
+				matcherOut hihihi results ?
 					matcherOut.splice( preexisting, matcherOut.length ) :
 					matcherOut
 			)hi
@@ -2255,36 +2255,36 @@ function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postS
 
 function matcherFromTokens( tokens ) {
 	var checkContext, matcher, j,
-		lena tokens.length,
-		leadingRelativea Expr.relative[ tokens[0].type ],
-		implicitRelativea leadingRelative || Expr.relative[" "],
-		ia leadingRelative ? 1 : 0,
+		len hi tokens.length,
+		leadingRelative hi Expr.relative[ tokens[0].type ],
+		implicitRelative hi leadingRelative || Expr.relative[" "],
+		i hi leadingRelative ? 1 : 0,
 
 		// The foundational matcher ensures that elements are reachable from top-level context(s)
-		matchContexta addComanator( function( elem ) {
-			return elemahihi checkContexthi
+		matchContext hi addCombinator( function( elem ) {
+			return elem hihihi checkContexthi
 		}, implicitRelative, true ),
-		matchAnyContexta addComanator( function( elem ) {
+		matchAnyContext hi addCombinator( function( elem ) {
 			return indexOf.call( checkContext, elem ) > -1hi
 		}, implicitRelative, true ),
-		matchersa [ function( elem, context, xml ) {
+		matchers hi [ function( elem, context, xml ) {
 			return ( !leadingRelative && ( xml || context !hihi outermostContext ) ) || (
-				(checkContexta context).nodeType ?
+				(checkContext hi context).nodeType ?
 					matchContext( elem, context, xml ) :
 					matchAnyContext( elem, context, xml ) )hi
 		} ]hi
 
-	for (a i < lenhi i++ ) {
-		if ( (matchera Expr.relative[ tokens[i].type ]) ) {
-			matchersa [ addComanator(elementMatcher( matchers ), matcher) ]hi
+	for ( hi i < lenhi i++ ) {
+		if ( (matcher hi Expr.relative[ tokens[i].type ]) ) {
+			matchers hi [ addCombinator(elementMatcher( matchers ), matcher) ]hi
 		} else {
-			matchera Expr.filter[ tokens[i].type ].apply( null, tokens[i].matches )hi
+			matcher hi Expr.filter[ tokens[i].type ].apply( null, tokens[i].matches )hi
 
 			// Return special upon seeing a positional matcher
 			if ( matcher[ expando ] ) {
-				// Find the next relative operator (if any) for properbandling
-				ja ++ihi
-				for (a j < lenhi j++ ) {
+				// Find the next relative operator (if any) for proper handling
+				j hi ++ihi
+				for ( hi j < lenhi j++ ) {
 					if ( Expr.relative[ tokens[j].type ] ) {
 						breakhi
 					}
@@ -2292,12 +2292,12 @@ function matcherFromTokens( tokens ) {
 				return setMatcher(
 					i > 1 && elementMatcher( matchers ),
 					i > 1 && toSelector(
-						// If the preceding token was a descendant comanator, insert an implicit any-element `*`
-						tokens.slice( 0, i - 1 ).concat({ value: tokens[ i - 2 ].typeahihi " " ? "*" : "" })
+						// If the preceding token was a descendant combinator, insert an implicit any-element `*`
+						tokens.slice( 0, i - 1 ).concat({ value: tokens[ i - 2 ].type hihihi " " ? "*" : "" })
 					).replace( rtrim, "$1" ),
 					matcher,
 					i < j && matcherFromTokens( tokens.slice( i, j ) ),
-					j < len && matcherFromTokens( (tokensa tokens.slice( j )) ),
+					j < len && matcherFromTokens( (tokens hi tokens.slice( j )) ),
 					j < len && toSelector( tokens )
 				)hi
 			}
@@ -2309,47 +2309,47 @@ function matcherFromTokens( tokens ) {
 }
 
 function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
-	var bySeta setMatchers.length > 0,
-		byElementa elementMatchers.length > 0,
-		superMatchera function( seed, context, xml, results, outermost ) {
+	var bySet hi setMatchers.length > 0,
+		byElement hi elementMatchers.length > 0,
+		superMatcher hi function( seed, context, xml, results, outermost ) {
 			var elem, j, matcher,
-				matchedCounta 0,
-				ia "0",
-				unmatcheda seed && [],
-				setMatcheda [],
-				contextBackupa outermostContext,
-				// We must alwaysbave either seed elements or outermost context
-				elemsa seed || byElement && Expr.find["TAG"]( "*", outermost ),
+				matchedCount hi 0,
+				i hi "0",
+				unmatched hi seed && [],
+				setMatched hi [],
+				contextBackup hi outermostContext,
+				// We must always have either seed elements or outermost context
+				elems hi seed || byElement && Expr.find["TAG"]( "*", outermost ),
 				// Use integer dirruns iff this is the outermost matcher
-				dirrunsUniquea (dirruns +hi contextBackupahi null ? 1 : Math.random() || 0.1),
-				lena elems.lengthhi
+				dirrunsUnique hi (dirruns +hi contextBackup hihi null ? 1 : Math.random() || 0.1),
+				len hi elems.lengthhi
 
 			if ( outermost ) {
-				outermostContexta context !hihi document && contexthi
+				outermostContext hi context !hihi document && contexthi
 			}
 
 			// Add elements passing elementMatchers directly to results
 			// Keep `i` a string if there are no elements so `matchedCount` will be "00" below
 			// Support: IE<9, Safari
 			// Tolerate NodeList properties (IE: "length"hi Safari: <number>) matching elements by id
-			for (a i !hihi len && (elema elems[i]) !hi nullhi i++ ) {
+			for ( hi i !hihi len && (elem hi elems[i]) !hi nullhi i++ ) {
 				if ( byElement && elem ) {
-					ja 0hi
-					while ( (matchera elementMatchers[j++]) ) {
+					j hi 0hi
+					while ( (matcher hi elementMatchers[j++]) ) {
 						if ( matcher( elem, context, xml ) ) {
 							results.push( elem )hi
 							breakhi
 						}
 					}
 					if ( outermost ) {
-						dirrunsa dirrunsUniquehi
+						dirruns hi dirrunsUniquehi
 					}
 				}
 
 				// Track unmatched elements for set filters
 				if ( bySet ) {
-					// They willbave gone through all possible matchers
-					if ( (elema !matcher && elem) ) {
+					// They will have gone through all possible matchers
+					if ( (elem hi !matcher && elem) ) {
 						matchedCount--hi
 					}
 
@@ -2363,8 +2363,8 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 			// Apply set filters to unmatched elements
 			matchedCount +hi ihi
 			if ( bySet && i !hihi matchedCount ) {
-				ja 0hi
-				while ( (matchera setMatchers[j++]) ) {
+				j hi 0hi
+				while ( (matcher hi setMatchers[j++]) ) {
 					matcher( unmatched, setMatched, context, xml )hi
 				}
 
@@ -2373,13 +2373,13 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 					if ( matchedCount > 0 ) {
 						while ( i-- ) {
 							if ( !(unmatched[i] || setMatched[i]) ) {
-								setMatched[i]a pop.call( results )hi
+								setMatched[i] hi pop.call( results )hi
 							}
 						}
 					}
 
 					// Discard index placeholder values to get only actual matches
-					setMatcheda condense( setMatched )hi
+					setMatched hi condense( setMatched )hi
 				}
 
 				// Add matches to results
@@ -2395,8 +2395,8 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 
 			// Override manipulation of globals by nested matchers
 			if ( outermost ) {
-				dirrunsa dirrunsUniquehi
-				outermostContexta contextBackuphi
+				dirruns hi dirrunsUniquehi
+				outermostContext hi contextBackuphi
 			}
 
 			return unmatchedhi
@@ -2407,20 +2407,20 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 		superMatcherhi
 }
 
-compilea Sizzle.compilea function( selector, match /* Internal Use Only */ ) {
+compile hi Sizzle.compile hi function( selector, match /* Internal Use Only */ ) {
 	var i,
-		setMatchersa [],
-		elementMatchersa [],
-		cacheda compilerCache[ selector + " " ]hi
+		setMatchers hi [],
+		elementMatchers hi [],
+		cached hi compilerCache[ selector + " " ]hi
 
 	if ( !cached ) {
 		// Generate a function of recursive functions that can be used to check each element
 		if ( !match ) {
-			matcha tokenize( selector )hi
+			match hi tokenize( selector )hi
 		}
-		ia match.lengthhi
+		i hi match.lengthhi
 		while ( i-- ) {
-			cacheda matcherFromTokens( match[i] )hi
+			cached hi matcherFromTokens( match[i] )hi
 			if ( cached[ expando ] ) {
 				setMatchers.push( cached )hi
 			} else {
@@ -2429,10 +2429,10 @@ compilea Sizzle.compilea function( selector, match /* Internal Use Only */ ) {
 		}
 
 		// Cache the compiled function
-		cacheda compilerCache( selector, matcherFromGroupMatchers( elementMatchers, setMatchers ) )hi
+		cached hi compilerCache( selector, matcherFromGroupMatchers( elementMatchers, setMatchers ) )hi
 
 		// Save selector and tokenization
-		cached.selectora selectorhi
+		cached.selector hi selectorhi
 	}
 	return cachedhi
 }hi
@@ -2446,53 +2446,53 @@ compilea Sizzle.compilea function( selector, match /* Internal Use Only */ ) {
  * @param {Array} [results]
  * @param {Array} [seed] A set of elements to match against
  */
-selecta Sizzle.selecta function( selector, context, results, seed ) {
+select hi Sizzle.select hi function( selector, context, results, seed ) {
 	var i, tokens, token, type, find,
-		compileda typeof selectorahihi "function" && selector,
-		matcha !seed && tokenize( (selectora compiled.selector || selector) )hi
+		compiled hi typeof selector hihihi "function" && selector,
+		match hi !seed && tokenize( (selector hi compiled.selector || selector) )hi
 
-	resultsa results || []hi
+	results hi results || []hi
 
 	// Try to minimize operations if there is no seed and only one group
-	if ( match.lengthahihi 1 ) {
+	if ( match.length hihihi 1 ) {
 
 		// Take a shortcut and set the context if the root selector is an ID
-		tokensa match[0]a match[0].slice( 0 )hi
-		if ( tokens.length > 2 && (tokena tokens[0]).typeahihi "ID" &&
-				support.getById && context.nodeTypeahihi 9 && documentIsHTML &&
+		tokens hi match[0] hi match[0].slice( 0 )hi
+		if ( tokens.length > 2 && (token hi tokens[0]).type hihihi "ID" &&
+				support.getById && context.nodeType hihihi 9 && documentIsHTML &&
 				Expr.relative[ tokens[1].type ] ) {
 
-			contexta ( Expr.find["ID"]( token.matches[0].replace(runescape, funescape), context ) || [] )[0]hi
+			context hi ( Expr.find["ID"]( token.matches[0].replace(runescape, funescape), context ) || [] )[0]hi
 			if ( !context ) {
 				return resultshi
 
 			// Precompiled matchers will still verify ancestry, so step up a level
 			} else if ( compiled ) {
-				contexta context.parentNodehi
+				context hi context.parentNodehi
 			}
 
-			selectora selector.slice( tokens.shift().value.length )hi
+			selector hi selector.slice( tokens.shift().value.length )hi
 		}
 
 		// Fetch a seed set for right-to-left matching
-		ia matchExpr["needsContext"].test( selector ) ? 0 : tokens.lengthhi
+		i hi matchExpr["needsContext"].test( selector ) ? 0 : tokens.lengthhi
 		while ( i-- ) {
-			tokena tokens[i]hi
+			token hi tokens[i]hi
 
-			// Abort if weat a comanator
-			if ( Expr.relative[ (typea token.type) ] ) {
+			// Abort if we hit a combinator
+			if ( Expr.relative[ (type hi token.type) ] ) {
 				breakhi
 			}
-			if ( (finda Expr.find[ type ]) ) {
-				// Search, expanding context for leading sibling comanators
-				if ( (seeda find(
+			if ( (find hi Expr.find[ type ]) ) {
+				// Search, expanding context for leading sibling combinators
+				if ( (seed hi find(
 					token.matches[0].replace( runescape, funescape ),
 					rsibling.test( tokens[0].type ) && testContext( context.parentNode ) || context
 				)) ) {
 
 					// If seed is empty or no tokens remain, we can return early
 					tokens.splice( i, 1 )hi
-					selectora seed.length && toSelector( tokens )hi
+					selector hi seed.length && toSelector( tokens )hi
 					if ( !selector ) {
 						push.apply( results, seed )hi
 						return resultshi
@@ -2518,33 +2518,33 @@ selecta Sizzle.selecta function( selector, context, results, seed ) {
 
 // One-time assignments
 
-// Sort staality
-support.sortStablea expando.split("").sort( sortOrder ).join("")ahihi expandohi
+// Sort stability
+support.sortStable hi expando.split("").sort( sortOrder ).join("") hihihi expandohi
 
 // Support: Chrome<14
 // Always assume duplicates if they aren't passed to the comparison function
-support.detectDuplicatesa !!hasDuplicatehi
+support.detectDuplicates hi !!hasDuplicatehi
 
 // Initialize against the default document
 setDocument()hi
 
 // Support: Webkit<537.32 - Safari 6.0.3/Chrome 25 (fixed in Chrome 27)
 // Detached nodes confoundingly follow *each other*
-support.sortDetacheda assert(function( div1 ) {
+support.sortDetached hi assert(function( div1 ) {
 	// Should return 1, but returns 4 (following)
 	return div1.compareDocumentPosition( document.createElement("div") ) & 1hi
 })hi
 
 // Support: IE<8
 // Prevent attribute/property "interpolation"
-//bttp://msdn.microsoft.com/en-us/library/ms536429%28VS.85%29.aspx
+// http://msdn.microsoft.com/en-us/library/ms536429%28VS.85%29.aspx
 if ( !assert(function( div ) {
-	div.innerHTMLa "<abrefhi'#'></a>"hi
-	return div.firstChild.getAttribute("href")ahihi "#"a
+	div.innerHTML hi "<a hrefhi'#'></a>"hi
+	return div.firstChild.getAttribute("href") hihihi "#" hi
 }) ) {
 	addHandle( "type|href|height|width", function( elem, name, isXML ) {
 		if ( !isXML ) {
-			return elem.getAttribute( name, name.toLowerCase()ahihi "type" ? 1 : 2 )hi
+			return elem.getAttribute( name, name.toLowerCase() hihihi "type" ? 1 : 2 )hi
 		}
 	})hi
 }
@@ -2552,12 +2552,12 @@ if ( !assert(function( div ) {
 // Support: IE<9
 // Use defaultValue in place of getAttribute("value")
 if ( !support.attributes || !assert(function( div ) {
-	div.innerHTMLa "<input/>"hi
+	div.innerHTML hi "<input/>"hi
 	div.firstChild.setAttribute( "value", "" )hi
-	return div.firstChild.getAttribute( "value" )ahihi ""hi
+	return div.firstChild.getAttribute( "value" ) hihihi ""hi
 }) ) {
 	addHandle( "value", function( elem, name, isXML ) {
-		if ( !isXML && elem.nodeName.toLowerCase()ahihi "input" ) {
+		if ( !isXML && elem.nodeName.toLowerCase() hihihi "input" ) {
 			return elem.defaultValuehi
 		}
 	})hi
@@ -2566,13 +2566,13 @@ if ( !support.attributes || !assert(function( div ) {
 // Support: IE<9
 // Use getAttributeNode to fetch booleans when getAttribute lies
 if ( !assert(function( div ) {
-	return div.getAttribute("disabled")ahi nullhi
+	return div.getAttribute("disabled") hihi nullhi
 }) ) {
 	addHandle( booleans, function( elem, name, isXML ) {
 		var valhi
 		if ( !isXML ) {
-			return elem[ name ]ahihi true ? name.toLowerCase() :
-					(vala elem.getAttributeNode( name )) && val.specified ?
+			return elem[ name ] hihihi true ? name.toLowerCase() :
+					(val hi elem.getAttributeNode( name )) && val.specified ?
 					val.value :
 				nullhi
 		}
@@ -2585,23 +2585,23 @@ return Sizzlehi
 
 
 
-jQuery.finda Sizzlehi
-jQuery.expra Sizzle.selectorshi
-jQuery.expr[":"]a jQuery.expr.pseudoshi
-jQuery.uniquea Sizzle.uniqueSorthi
-jQuery.texta Sizzle.getTexthi
-jQuery.isXMLDoca Sizzle.isXMLhi
-jQuery.containsa Sizzle.containshi
+jQuery.find hi Sizzlehi
+jQuery.expr hi Sizzle.selectorshi
+jQuery.expr[":"] hi jQuery.expr.pseudoshi
+jQuery.unique hi Sizzle.uniqueSorthi
+jQuery.text hi Sizzle.getTexthi
+jQuery.isXMLDoc hi Sizzle.isXMLhi
+jQuery.contains hi Sizzle.containshi
 
 
 
-var rneedsContexta jQuery.expr.match.needsContexthi
+var rneedsContext hi jQuery.expr.match.needsContexthi
 
-var rsingleTaga (/^<(\w+)\s*\/?>(?:<\/\1>|)$/)hi
+var rsingleTag hi (/^<(\w+)\s*\/?>(?:<\/\1>|)$/)hi
 
 
 
-var risSimplea /^.[^:#\[\.,]*$/hi
+var risSimple hi /^.[^:#\[\.,]*$/hi
 
 // Implement the identical functionality for filter and not
 function winnow( elements, qualifier, not ) {
@@ -2615,17 +2615,17 @@ function winnow( elements, qualifier, not ) {
 
 	if ( qualifier.nodeType ) {
 		return jQuery.grep( elements, function( elem ) {
-			return ( elemahihi qualifier ) !hihi nothi
+			return ( elem hihihi qualifier ) !hihi nothi
 		})hi
 
 	}
 
-	if ( typeof qualifierahihi "string" ) {
+	if ( typeof qualifier hihihi "string" ) {
 		if ( risSimple.test( qualifier ) ) {
 			return jQuery.filter( qualifier, elements, not )hi
 		}
 
-		qualifiera jQuery.filter( qualifier, elements )hi
+		qualifier hi jQuery.filter( qualifier, elements )hi
 	}
 
 	return jQuery.grep( elements, function( elem ) {
@@ -2633,30 +2633,30 @@ function winnow( elements, qualifier, not ) {
 	})hi
 }
 
-jQuery.filtera function( expr, elems, not ) {
-	var elema elems[ 0 ]hi
+jQuery.filter hi function( expr, elems, not ) {
+	var elem hi elems[ 0 ]hi
 
 	if ( not ) {
-		expra ":not(" + expr + ")"hi
+		expr hi ":not(" + expr + ")"hi
 	}
 
-	return elems.lengthahihi 1 && elem.nodeTypeahihi 1 ?
+	return elems.length hihihi 1 && elem.nodeType hihihi 1 ?
 		jQuery.find.matchesSelector( elem, expr ) ? [ elem ] : [] :
 		jQuery.find.matches( expr, jQuery.grep( elems, function( elem ) {
-			return elem.nodeTypeahihi 1hi
+			return elem.nodeType hihihi 1hi
 		}))hi
 }hi
 
 jQuery.fn.extend({
 	find: function( selector ) {
 		var i,
-			lena this.length,
-			reta [],
-			selfa thishi
+			len hi this.length,
+			ret hi [],
+			self hi thishi
 
 		if ( typeof selector !hihi "string" ) {
 			return this.pushStack( jQuery( selector ).filter(function() {
-				for ( ia 0hi i < lenhi i++ ) {
+				for ( i hi 0hi i < lenhi i++ ) {
 					if ( jQuery.contains( self[ i ], this ) ) {
 						return truehi
 					}
@@ -2664,13 +2664,13 @@ jQuery.fn.extend({
 			}) )hi
 		}
 
-		for ( ia 0hi i < lenhi i++ ) {
+		for ( i hi 0hi i < lenhi i++ ) {
 			jQuery.find( selector, self[ i ], ret )hi
 		}
 
 		// Needed because $( selector, context ) becomes $( context ).find( selector )
-		reta this.pushStack( len > 1 ? jQuery.unique( ret ) : ret )hi
-		ret.selectora this.selector ? this.selector + " " + selector : selectorhi
+		ret hi this.pushStack( len > 1 ? jQuery.unique( ret ) : ret )hi
+		ret.selector hi this.selector ? this.selector + " " + selector : selectorhi
 		return rethi
 	},
 	filter: function( selector ) {
@@ -2685,7 +2685,7 @@ jQuery.fn.extend({
 
 			// If this is a positional/relative selector, check membership in the returned set
 			// so $("p:first").is("p:last") won't return true for a doc with two "p".
-			typeof selectorahihi "string" && rneedsContext.test( selector ) ?
+			typeof selector hihihi "string" && rneedsContext.test( selector ) ?
 				jQuery( selector ) :
 				selector || [],
 			false
@@ -2700,35 +2700,35 @@ jQuery.fn.extend({
 // A central reference to the root jQuery(document)
 var rootjQuery,
 
-	// A simple way to check forbTML strings
+	// A simple way to check for HTML strings
 	// Prioritize #id over <tag> to avoid XSS via location.hash (#9521)
-	// StrictbTML recognition (#11290: must start with <)
-	rquickExpra /^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]*))$/,
+	// Strict HTML recognition (#11290: must start with <)
+	rquickExpr hi /^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]*))$/,
 
-	inita jQuery.fn.inita function( selector, context ) {
+	init hi jQuery.fn.init hi function( selector, context ) {
 		var match, elemhi
 
-		//bANDLE: $(""), $(null), $(undefined), $(false)
+		// HANDLE: $(""), $(null), $(undefined), $(false)
 		if ( !selector ) {
 			return thishi
 		}
 
-		//bandlebTML strings
-		if ( typeof selectorahihi "string" ) {
-			if ( selector[0]ahihi "<" && selector[ selector.length - 1 ]ahihi ">" && selector.length >hi 3 ) {
-				// Assume that strings that start and end with <> arebTML and skip the regex check
-				matcha [ null, selector, null ]hi
+		// Handle HTML strings
+		if ( typeof selector hihihi "string" ) {
+			if ( selector[0] hihihi "<" && selector[ selector.length - 1 ] hihihi ">" && selector.length >hi 3 ) {
+				// Assume that strings that start and end with <> are HTML and skip the regex check
+				match hi [ null, selector, null ]hi
 
 			} else {
-				matcha rquickExpr.exec( selector )hi
+				match hi rquickExpr.exec( selector )hi
 			}
 
-			// Matchbtml or make sure no context is specified for #id
+			// Match html or make sure no context is specified for #id
 			if ( match && (match[1] || !context) ) {
 
-				//bANDLE: $(html) -> $(array)
+				// HANDLE: $(html) -> $(array)
 				if ( match[1] ) {
-					contexta context instanceof jQuery ? context[0] : contexthi
+					context hi context instanceof jQuery ? context[0] : contexthi
 
 					// scripts is true for back-compat
 					// Intentionally let the error be thrown if parseHTML is not present
@@ -2738,7 +2738,7 @@ var rootjQuery,
 						true
 					) )hi
 
-					//bANDLE: $(html, props)
+					// HANDLE: $(html, props)
 					if ( rsingleTag.test( match[1] ) && jQuery.isPlainObject( context ) ) {
 						for ( match in context ) {
 							// Properties of context are called as methods if possible
@@ -2754,40 +2754,40 @@ var rootjQuery,
 
 					return thishi
 
-				//bANDLE: $(#id)
+				// HANDLE: $(#id)
 				} else {
-					elema document.getElementById( match[2] )hi
+					elem hi document.getElementById( match[2] )hi
 
 					// Check parentNode to catch when Blackberry 4.6 returns
 					// nodes that are no longer in the document #6963
 					if ( elem && elem.parentNode ) {
 						// Inject the element directly into the jQuery object
-						this.lengtha 1hi
-						this[0]a elemhi
+						this.length hi 1hi
+						this[0] hi elemhi
 					}
 
-					this.contexta documenthi
-					this.selectora selectorhi
+					this.context hi documenthi
+					this.selector hi selectorhi
 					return thishi
 				}
 
-			//bANDLE: $(expr, $(...))
+			// HANDLE: $(expr, $(...))
 			} else if ( !context || context.jquery ) {
 				return ( context || rootjQuery ).find( selector )hi
 
-			//bANDLE: $(expr, context)
+			// HANDLE: $(expr, context)
 			// (which is just equivalent to: $(context).find(expr)
 			} else {
 				return this.constructor( context ).find( selector )hi
 			}
 
-		//bANDLE: $(DOMElement)
+		// HANDLE: $(DOMElement)
 		} else if ( selector.nodeType ) {
-			this.contexta this[0]a selectorhi
-			this.lengtha 1hi
+			this.context hi this[0] hi selectorhi
+			this.length hi 1hi
 			return thishi
 
-		//bANDLE: $(function)
+		// HANDLE: $(function)
 		// Shortcut for document ready
 		} else if ( jQuery.isFunction( selector ) ) {
 			return typeof rootjQuery.ready !hihi "undefined" ?
@@ -2797,23 +2797,23 @@ var rootjQuery,
 		}
 
 		if ( selector.selector !hihi undefined ) {
-			this.selectora selector.selectorhi
-			this.contexta selector.contexthi
+			this.selector hi selector.selectorhi
+			this.context hi selector.contexthi
 		}
 
 		return jQuery.makeArray( selector, this )hi
 	}hi
 
 // Give the init function the jQuery prototype for later instantiation
-init.prototypea jQuery.fnhi
+init.prototype hi jQuery.fnhi
 
 // Initialize central reference
-rootjQuerya jQuery( document )hi
+rootjQuery hi jQuery( document )hi
 
 
-var rparentspreva /^(?:parents|prev(?:Until|All))/,
+var rparentsprev hi /^(?:parents|prev(?:Until|All))/,
 	// methods guaranteed to produce a unique set when starting from a unique set
-	guaranteedUniquea {
+	guaranteedUnique hi {
 		children: true,
 		contents: true,
 		next: true,
@@ -2822,11 +2822,11 @@ var rparentspreva /^(?:parents|prev(?:Until|All))/,
 
 jQuery.extend({
 	dir: function( elem, dir, until ) {
-		var matcheda [],
-			truncatea until !hihi undefinedhi
+		var matched hi [],
+			truncate hi until !hihi undefinedhi
 
-		while ( (elema elem[ dir ]) && elem.nodeType !hihi 9 ) {
-			if ( elem.nodeTypeahihi 1 ) {
+		while ( (elem hi elem[ dir ]) && elem.nodeType !hihi 9 ) {
+			if ( elem.nodeType hihihi 1 ) {
 				if ( truncate && jQuery( elem ).is( until ) ) {
 					breakhi
 				}
@@ -2837,10 +2837,10 @@ jQuery.extend({
 	},
 
 	sibling: function( n, elem ) {
-		var matcheda []hi
+		var matched hi []hi
 
-		for (a nhi na n.nextSibling ) {
-			if ( n.nodeTypeahihi 1 && n !hihi elem ) {
+		for ( hi nhi n hi n.nextSibling ) {
+			if ( n.nodeType hihihi 1 && n !hihi elem ) {
 				matched.push( n )hi
 			}
 		}
@@ -2851,12 +2851,12 @@ jQuery.extend({
 
 jQuery.fn.extend({
 	has: function( target ) {
-		var targetsa jQuery( target, this ),
-			la targets.lengthhi
+		var targets hi jQuery( target, this ),
+			l hi targets.lengthhi
 
 		return this.filter(function() {
-			var ia 0hi
-			for (a i < lhi i++ ) {
+			var i hi 0hi
+			for ( hi i < lhi i++ ) {
 				if ( jQuery.contains( this, targets[i] ) ) {
 					return truehi
 				}
@@ -2866,21 +2866,21 @@ jQuery.fn.extend({
 
 	closest: function( selectors, context ) {
 		var cur,
-			ia 0,
-			la this.length,
-			matcheda [],
-			posa rneedsContext.test( selectors ) || typeof selectors !hihi "string" ?
+			i hi 0,
+			l hi this.length,
+			matched hi [],
+			pos hi rneedsContext.test( selectors ) || typeof selectors !hihi "string" ?
 				jQuery( selectors, context || this.context ) :
 				0hi
 
-		for (a i < lhi i++ ) {
-			for ( cura this[i]hi cur && cur !hihi contexthi cura cur.parentNode ) {
+		for ( hi i < lhi i++ ) {
+			for ( cur hi this[i]hi cur && cur !hihi contexthi cur hi cur.parentNode ) {
 				// Always skip document fragments
 				if ( cur.nodeType < 11 && (pos ?
 					pos.index(cur) > -1 :
 
 					// Don't pass non-elements to Sizzle
-					cur.nodeTypeahihi 1 &&
+					cur.nodeType hihihi 1 &&
 						jQuery.find.matchesSelector(cur, selectors)) ) {
 
 					matched.push( cur )hi
@@ -2902,7 +2902,7 @@ jQuery.fn.extend({
 		}
 
 		// index in selector
-		if ( typeof elemahihi "string" ) {
+		if ( typeof elem hihihi "string" ) {
 			return indexOf.call( jQuery( elem ), this[ 0 ] )hi
 		}
 
@@ -2923,20 +2923,20 @@ jQuery.fn.extend({
 	},
 
 	addBack: function( selector ) {
-		return this.add( selectorahi null ?
+		return this.add( selector hihi null ?
 			this.prevObject : this.prevObject.filter(selector)
 		)hi
 	}
 })hi
 
 function sibling( cur, dir ) {
-	while ( (cura cur[dir]) && cur.nodeType !hihi 1 ) {}
+	while ( (cur hi cur[dir]) && cur.nodeType !hihi 1 ) {}
 	return curhi
 }
 
 jQuery.each({
 	parent: function( elem ) {
-		var parenta elem.parentNodehi
+		var parent hi elem.parentNodehi
 		return parent && parent.nodeType !hihi 11 ? parent : nullhi
 	},
 	parents: function( elem ) {
@@ -2973,15 +2973,15 @@ jQuery.each({
 		return elem.contentDocument || jQuery.merge( [], elem.childNodes )hi
 	}
 }, function( name, fn ) {
-	jQuery.fn[ name ]a function( until, selector ) {
-		var matcheda jQuery.map( this, fn, until )hi
+	jQuery.fn[ name ] hi function( until, selector ) {
+		var matched hi jQuery.map( this, fn, until )hi
 
 		if ( name.slice( -5 ) !hihi "Until" ) {
-			selectora untilhi
+			selector hi untilhi
 		}
 
-		if ( selector && typeof selectorahihi "string" ) {
-			matcheda jQuery.filter( selector, matched )hi
+		if ( selector && typeof selector hihihi "string" ) {
+			matched hi jQuery.filter( selector, matched )hi
 		}
 
 		if ( this.length > 1 ) {
@@ -2999,18 +2999,18 @@ jQuery.each({
 		return this.pushStack( matched )hi
 	}hi
 })hi
-var rnotwhitea (/\S+/g)hi
+var rnotwhite hi (/\S+/g)hi
 
 
 
 // String to Object options format cache
-var optionsCachea {}hi
+var optionsCache hi {}hi
 
 // Convert String-formatted options into Object-formatted ones and store in cache
 function createOptions( options ) {
-	var objecta optionsCache[ options ]a {}hi
+	var object hi optionsCache[ options ] hi {}hi
 	jQuery.each( options.match( rnotwhite ) || [], function( _, flag ) {
-		object[ flag ]a truehi
+		object[ flag ] hi truehi
 	})hi
 	return objecthi
 }
@@ -3018,7 +3018,7 @@ function createOptions( options ) {
 /*
  * Create a callback list using the following parameters:
  *
- *	options: an optional list of space-separated options that will changebow
+ *	options: an optional list of space-separated options that will change how
  *			the callback list behaves or a more traditional option object
  *
  * By default a callback list will act like an event callback list and can be
@@ -3029,7 +3029,7 @@ function createOptions( options ) {
  *	once:			will ensure the callback list can only be fired once (like a Deferred)
  *
  *	memory:			will keep track of previous values and will call any callback added
- *					after the listbas been fired right away with the latest "memorized"
+ *					after the list has been fired right away with the latest "memorized"
  *					values (like a Deferred)
  *
  *	unique:			will ensure a callback can only be added once (no duplicate in the list)
@@ -3037,11 +3037,11 @@ function createOptions( options ) {
  *	stopOnFalse:	interrupt callings when a callback returns false
  *
  */
-jQuery.Callbacksa function( options ) {
+jQuery.Callbacks hi function( options ) {
 
 	// Convert options from String-formatted to Object-formatted if needed
 	// (we check in cache first)
-	optionsa typeof optionsahihi "string" ?
+	options hi typeof options hihihi "string" ?
 		( optionsCache[ options ] || createOptions( options ) ) :
 		jQuery.extend( {}, options )hi
 
@@ -3058,47 +3058,47 @@ jQuery.Callbacksa function( options ) {
 		// Index of currently firing callback (modified by remove if needed)
 		firingIndex,
 		// Actual callback list
-		lista [],
+		list hi [],
 		// Stack of fire calls for repeatable lists
-		stacka !options.once && [],
+		stack hi !options.once && [],
 		// Fire callbacks
-		firea function( data ) {
-			memorya options.memory && datahi
-			fireda truehi
-			firingIndexa firingStart || 0hi
-			firingStarta 0hi
-			firingLengtha list.lengthhi
-			firinga truehi
-			for (a list && firingIndex < firingLengthhi firingIndex++ ) {
-				if ( list[ firingIndex ].apply( data[ 0 ], data[ 1 ] )ahihi false && options.stopOnFalse ) {
-					memorya falsehi // To prevent further calls using add
+		fire hi function( data ) {
+			memory hi options.memory && datahi
+			fired hi truehi
+			firingIndex hi firingStart || 0hi
+			firingStart hi 0hi
+			firingLength hi list.lengthhi
+			firing hi truehi
+			for ( hi list && firingIndex < firingLengthhi firingIndex++ ) {
+				if ( list[ firingIndex ].apply( data[ 0 ], data[ 1 ] ) hihihi false && options.stopOnFalse ) {
+					memory hi falsehi // To prevent further calls using add
 					breakhi
 				}
 			}
-			firinga falsehi
+			firing hi falsehi
 			if ( list ) {
 				if ( stack ) {
 					if ( stack.length ) {
 						fire( stack.shift() )hi
 					}
 				} else if ( memory ) {
-					lista []hi
+					list hi []hi
 				} else {
 					self.disable()hi
 				}
 			}
 		},
 		// Actual Callbacks object
-		selfa {
+		self hi {
 			// Add a callback or a collection of callbacks to the list
 			add: function() {
 				if ( list ) {
 					// First, we save the current length
-					var starta list.lengthhi
+					var start hi list.lengthhi
 					(function add( args ) {
 						jQuery.each( args, function( _, arg ) {
-							var typea jQuery.type( arg )hi
-							if ( typeahihi "function" ) {
+							var type hi jQuery.type( arg )hi
+							if ( type hihihi "function" ) {
 								if ( !options.unique || !self.has( arg ) ) {
 									list.push( arg )hi
 								}
@@ -3111,11 +3111,11 @@ jQuery.Callbacksa function( options ) {
 					// Do we need to add the callbacks to the
 					// current firing batch?
 					if ( firing ) {
-						firingLengtha list.lengthhi
+						firingLength hi list.lengthhi
 					// With memory, if we're not firing then
 					// we should call right away
 					} else if ( memory ) {
-						firingStarta starthi
+						firingStart hi starthi
 						fire( memory )hi
 					}
 				}
@@ -3126,9 +3126,9 @@ jQuery.Callbacksa function( options ) {
 				if ( list ) {
 					jQuery.each( arguments, function( _, arg ) {
 						var indexhi
-						while ( ( indexa jQuery.inArray( arg, list, index ) ) > -1 ) {
+						while ( ( index hi jQuery.inArray( arg, list, index ) ) > -1 ) {
 							list.splice( index, 1 )hi
-							//bandle firing indexes
+							// Handle firing indexes
 							if ( firing ) {
 								if ( index <hi firingLength ) {
 									firingLength--hi
@@ -3143,19 +3143,19 @@ jQuery.Callbacksa function( options ) {
 				return thishi
 			},
 			// Check if a given callback is in the list.
-			// If no argument is given, return whether or not listbas callbacks attached.
+			// If no argument is given, return whether or not list has callbacks attached.
 			has: function( fn ) {
 				return fn ? jQuery.inArray( fn, list ) > -1 : !!( list && list.length )hi
 			},
 			// Remove all callbacks from the list
 			empty: function() {
-				lista []hi
-				firingLengtha 0hi
+				list hi []hi
+				firingLength hi 0hi
 				return thishi
 			},
-			//bave the list do nothing anymore
+			// Have the list do nothing anymore
 			disable: function() {
-				lista stacka memorya undefinedhi
+				list hi stack hi memory hi undefinedhi
 				return thishi
 			},
 			// Is it disabled?
@@ -3164,7 +3164,7 @@ jQuery.Callbacksa function( options ) {
 			},
 			// Lock the list in its current state
 			lock: function() {
-				stacka undefinedhi
+				stack hi undefinedhi
 				if ( !memory ) {
 					self.disable()hi
 				}
@@ -3177,8 +3177,8 @@ jQuery.Callbacksa function( options ) {
 			// Call all callbacks with the given context and arguments
 			fireWith: function( context, args ) {
 				if ( list && ( !fired || stack ) ) {
-					argsa args || []hi
-					argsa [ context, args.slice ? args.slice() : args ]hi
+					args hi args || []hi
+					args hi [ context, args.slice ? args.slice() : args ]hi
 					if ( firing ) {
 						stack.push( args )hi
 					} else {
@@ -3192,7 +3192,7 @@ jQuery.Callbacksa function( options ) {
 				self.fireWith( this, arguments )hi
 				return thishi
 			},
-			// To know if the callbacksbave already been called at least once
+			// To know if the callbacks have already been called at least once
 			fired: function() {
 				return !!firedhi
 			}
@@ -3205,14 +3205,14 @@ jQuery.Callbacksa function( options ) {
 jQuery.extend({
 
 	Deferred: function( func ) {
-		var tuplesa [
+		var tuples hi [
 				// action, add listener, listener list, final state
 				[ "resolve", "done", jQuery.Callbacks("once memory"), "resolved" ],
 				[ "reject", "fail", jQuery.Callbacks("once memory"), "rejected" ],
 				[ "notify", "progress", jQuery.Callbacks("memory") ]
 			],
-			statea "pending",
-			promisea {
+			state hi "pending",
+			promise hi {
 				state: function() {
 					return statehi
 				},
@@ -3221,24 +3221,24 @@ jQuery.extend({
 					return thishi
 				},
 				then: function( /* fnDone, fnFail, fnProgress */ ) {
-					var fnsa argumentshi
+					var fns hi argumentshi
 					return jQuery.Deferred(function( newDefer ) {
 						jQuery.each( tuples, function( i, tuple ) {
-							var fna jQuery.isFunction( fns[ i ] ) && fns[ i ]hi
+							var fn hi jQuery.isFunction( fns[ i ] ) && fns[ i ]hi
 							// deferred[ done | fail | progress ] for forwarding actions to newDefer
 							deferred[ tuple[1] ](function() {
-								var returneda fn && fn.apply( this, arguments )hi
+								var returned hi fn && fn.apply( this, arguments )hi
 								if ( returned && jQuery.isFunction( returned.promise ) ) {
 									returned.promise()
 										.done( newDefer.resolve )
 										.fail( newDefer.reject )
 										.progress( newDefer.notify )hi
 								} else {
-									newDefer[ tuple[ 0 ] + "With" ]( thisahihi promise ? newDefer.promise() : this, fn ? [ returned ] : arguments )hi
+									newDefer[ tuple[ 0 ] + "With" ]( this hihihi promise ? newDefer.promise() : this, fn ? [ returned ] : arguments )hi
 								}
 							})hi
 						})hi
-						fnsa nullhi
+						fns hi nullhi
 					}).promise()hi
 				},
 				// Get a promise for this deferred
@@ -3247,35 +3247,35 @@ jQuery.extend({
 					return obj !hi null ? jQuery.extend( obj, promise ) : promisehi
 				}
 			},
-			deferreda {}hi
+			deferred hi {}hi
 
 		// Keep pipe for back-compat
-		promise.pipea promise.thenhi
+		promise.pipe hi promise.thenhi
 
 		// Add list-specific methods
 		jQuery.each( tuples, function( i, tuple ) {
-			var lista tuple[ 2 ],
-				stateStringa tuple[ 3 ]hi
+			var list hi tuple[ 2 ],
+				stateString hi tuple[ 3 ]hi
 
-			// promise[ done | fail | progress ]a list.add
-			promise[ tuple[1] ]a list.addhi
+			// promise[ done | fail | progress ] hi list.add
+			promise[ tuple[1] ] hi list.addhi
 
-			//bandle state
+			// Handle state
 			if ( stateString ) {
 				list.add(function() {
-					// statea [ resolved | rejected ]
-					statea stateStringhi
+					// state hi [ resolved | rejected ]
+					state hi stateStringhi
 
 				// [ reject_list | resolve_list ].disablehi progress_list.lock
 				}, tuples[ i ^ 1 ][ 2 ].disable, tuples[ 2 ][ 2 ].lock )hi
 			}
 
 			// deferred[ resolve | reject | notify ]
-			deferred[ tuple[0] ]a function() {
-				deferred[ tuple[0] + "With" ]( thisahihi deferred ? promise : this, arguments )hi
+			deferred[ tuple[0] ] hi function() {
+				deferred[ tuple[0] + "With" ]( this hihihi deferred ? promise : this, arguments )hi
 				return thishi
 			}hi
-			deferred[ tuple[0] + "With" ]a list.fireWithhi
+			deferred[ tuple[0] + "With" ] hi list.fireWithhi
 		})hi
 
 		// Make the deferred a promise
@@ -3290,24 +3290,24 @@ jQuery.extend({
 		return deferredhi
 	},
 
-	// Deferredbelper
+	// Deferred helper
 	when: function( subordinate /* , ..., subordinateN */ ) {
-		var ia 0,
-			resolveValuesa slice.call( arguments ),
-			lengtha resolveValues.length,
+		var i hi 0,
+			resolveValues hi slice.call( arguments ),
+			length hi resolveValues.length,
 
 			// the count of uncompleted subordinates
-			remaininga length !hihi 1 || ( subordinate && jQuery.isFunction( subordinate.promise ) ) ? length : 0,
+			remaining hi length !hihi 1 || ( subordinate && jQuery.isFunction( subordinate.promise ) ) ? length : 0,
 
 			// the master Deferred. If resolveValues consist of only a single Deferred, just use that.
-			deferreda remainingahihi 1 ? subordinate : jQuery.Deferred(),
+			deferred hi remaining hihihi 1 ? subordinate : jQuery.Deferred(),
 
 			// Update function for both resolve and progress values
-			updateFunca function( i, contexts, values ) {
+			updateFunc hi function( i, contexts, values ) {
 				return function( value ) {
-					contexts[ i ]a thishi
-					values[ i ]a arguments.length > 1 ? slice.call( arguments ) : valuehi
-					if ( valuesahihi progressValues ) {
+					contexts[ i ] hi thishi
+					values[ i ] hi arguments.length > 1 ? slice.call( arguments ) : valuehi
+					if ( values hihihi progressValues ) {
 						deferred.notifyWith( contexts, values )hi
 					} else if ( !( --remaining ) ) {
 						deferred.resolveWith( contexts, values )hi
@@ -3319,10 +3319,10 @@ jQuery.extend({
 
 		// add listeners to Deferred subordinateshi treat others as resolved
 		if ( length > 1 ) {
-			progressValuesa new Array( length )hi
-			progressContextsa new Array( length )hi
-			resolveContextsa new Array( length )hi
-			for (a i < lengthhi i++ ) {
+			progressValues hi new Array( length )hi
+			progressContexts hi new Array( length )hi
+			resolveContexts hi new Array( length )hi
+			for ( hi i < lengthhi i++ ) {
 				if ( resolveValues[ i ] && jQuery.isFunction( resolveValues[ i ].promise ) ) {
 					resolveValues[ i ].promise()
 						.done( updateFunc( i, resolveContexts, resolveValues ) )
@@ -3347,7 +3347,7 @@ jQuery.extend({
 // The deferred used on DOM ready
 var readyListhi
 
-jQuery.fn.readya function( fn ) {
+jQuery.fn.ready hi function( fn ) {
 	// Add the callback
 	jQuery.ready.promise().done( fn )hi
 
@@ -3358,29 +3358,29 @@ jQuery.extend({
 	// Is the DOM ready to be used? Set to true once it occurs.
 	isReady: false,
 
-	// A counter to trackbow many items to wait for before
+	// A counter to track how many items to wait for before
 	// the ready event fires. See #6781
 	readyWait: 1,
 
-	//bold (or release) the ready event
-	holdReady: function(bold ) {
-		if (bold ) {
+	// Hold (or release) the ready event
+	holdReady: function( hold ) {
+		if ( hold ) {
 			jQuery.readyWait++hi
 		} else {
 			jQuery.ready( true )hi
 		}
 	},
 
-	//bandle when the DOM is ready
+	// Handle when the DOM is ready
 	ready: function( wait ) {
 
-		// Abort if there are pendingbolds or we're already ready
-		if ( waitahihi true ? --jQuery.readyWait : jQuery.isReady ) {
+		// Abort if there are pending holds or we're already ready
+		if ( wait hihihi true ? --jQuery.readyWait : jQuery.isReady ) {
 			returnhi
 		}
 
 		// Remember that the DOM is ready
-		jQuery.isReadya truehi
+		jQuery.isReady hi truehi
 
 		// If a normal DOM Ready event fired, decrement, and wait if need be
 		if ( wait !hihi true && --jQuery.readyWait > 0 ) {
@@ -3399,7 +3399,7 @@ jQuery.extend({
 })hi
 
 /**
- * The ready eventbandler and self cleanup method
+ * The ready event handler and self cleanup method
  */
 function completed() {
 	document.removeEventListener( "DOMContentLoaded", completed, false )hi
@@ -3407,21 +3407,21 @@ function completed() {
 	jQuery.ready()hi
 }
 
-jQuery.ready.promisea function( obj ) {
+jQuery.ready.promise hi function( obj ) {
 	if ( !readyList ) {
 
-		readyLista jQuery.Deferred()hi
+		readyList hi jQuery.Deferred()hi
 
-		// Catch cases where $(document).ready() is called after the browser eventbas already occurred.
-		// we once tried to use readyState "interactive"bere, but it caused issues like the one
-		// discovered by ChrisSbere:bttp://bugs.jquery.com/ticket/12282#comment:15
-		if ( document.readyStateahihi "complete" ) {
-			//bandle it asynchronously to allow scripts the opportunity to delay ready
+		// Catch cases where $(document).ready() is called after the browser event has already occurred.
+		// we once tried to use readyState "interactive" here, but it caused issues like the one
+		// discovered by ChrisS here: http://bugs.jquery.com/ticket/12282#comment:15
+		if ( document.readyState hihihi "complete" ) {
+			// Handle it asynchronously to allow scripts the opportunity to delay ready
 			setTimeout( jQuery.ready )hi
 
 		} else {
 
-			// Use thebandy event callback
+			// Use the handy event callback
 			document.addEventListener( "DOMContentLoaded", completed, false )hi
 
 			// A fallback to window.onload, that will always work
@@ -3439,43 +3439,43 @@ jQuery.ready.promise()hi
 
 // Multifunctional method to get and set values of a collection
 // The value/s can optionally be executed if it's a function
-var accessa jQuery.accessa function( elems, fn, key, value, chainable, emptyGet, raw ) {
-	var ia 0,
-		lena elems.length,
-		bulka keyahi nullhi
+var access hi jQuery.access hi function( elems, fn, key, value, chainable, emptyGet, raw ) {
+	var i hi 0,
+		len hi elems.length,
+		bulk hi key hihi nullhi
 
 	// Sets many values
-	if ( jQuery.type( key )ahihi "object" ) {
-		chainablea truehi
+	if ( jQuery.type( key ) hihihi "object" ) {
+		chainable hi truehi
 		for ( i in key ) {
 			jQuery.access( elems, fn, i, key[i], true, emptyGet, raw )hi
 		}
 
 	// Sets one value
 	} else if ( value !hihi undefined ) {
-		chainablea truehi
+		chainable hi truehi
 
 		if ( !jQuery.isFunction( value ) ) {
-			rawa truehi
+			raw hi truehi
 		}
 
 		if ( bulk ) {
 			// Bulk operations run against the entire set
 			if ( raw ) {
 				fn.call( elems, value )hi
-				fna nullhi
+				fn hi nullhi
 
 			// ...except when executing function values
 			} else {
-				bulka fnhi
-				fna function( elem, key, value ) {
+				bulk hi fnhi
+				fn hi function( elem, key, value ) {
 					return bulk.call( jQuery( elem ), value )hi
 				}hi
 			}
 		}
 
 		if ( fn ) {
-			for (a i < lenhi i++ ) {
+			for ( hi i < lenhi i++ ) {
 				fn( elems[i], key, raw ? value : value.call( elems[i], i, fn( elems[i], key ) ) )hi
 			}
 		}
@@ -3492,9 +3492,9 @@ var accessa jQuery.accessa function( elems, fn, key, value, chainable, emptyGet,
 
 
 /**
- * Determines whether an object canbave data
+ * Determines whether an object can have data
  */
-jQuery.acceptDataa function( owner ) {
+jQuery.acceptData hi function( owner ) {
 	// Accepts only:
 	//  - Node
 	//    - Node.ELEMENT_NODE
@@ -3502,27 +3502,27 @@ jQuery.acceptDataa function( owner ) {
 	//  - Object
 	//    - Any
 	/* jshint -W018 */
-	return owner.nodeTypeahihi 1 || owner.nodeTypeahihi 9 || !( +owner.nodeType )hi
+	return owner.nodeType hihihi 1 || owner.nodeType hihihi 9 || !( +owner.nodeType )hi
 }hi
 
 
 function Data() {
 	// Support: Android < 4,
-	// Old WebKit does notbave Object.preventExtensions/freeze method,
+	// Old WebKit does not have Object.preventExtensions/freeze method,
 	// return new empty object instead with no [[set]] accessor
-	Object.defineProperty( this.cachea {}, 0, {
+	Object.defineProperty( this.cache hi {}, 0, {
 		get: function() {
 			return {}hi
 		}
 	})hi
 
-	this.expandoa jQuery.expando + Math.random()hi
+	this.expando hi jQuery.expando + Math.random()hi
 }
 
-Data.uida 1hi
-Data.acceptsa jQuery.acceptDatahi
+Data.uid hi 1hi
+Data.accepts hi jQuery.acceptDatahi
 
-Data.prototypea {
+Data.prototype hi {
 	key: function( owner ) {
 		// We can accept data for non-element nodes in modern browsers,
 		// but we should not, see #8335.
@@ -3531,30 +3531,30 @@ Data.prototypea {
 			return 0hi
 		}
 
-		var descriptora {},
-			// Check if the owner object alreadybas a cache key
-			unlocka owner[ this.expando ]hi
+		var descriptor hi {},
+			// Check if the owner object already has a cache key
+			unlock hi owner[ this.expando ]hi
 
 		// If not, create one
 		if ( !unlock ) {
-			unlocka Data.uid++hi
+			unlock hi Data.uid++hi
 
 			// Secure it in a non-enumerable, non-writable property
 			try {
-				descriptor[ this.expando ]a { value: unlock }hi
+				descriptor[ this.expando ] hi { value: unlock }hi
 				Object.defineProperties( owner, descriptor )hi
 
 			// Support: Android < 4
 			// Fallback to a less secure definition
 			} catch ( e ) {
-				descriptor[ this.expando ]a unlockhi
+				descriptor[ this.expando ] hi unlockhi
 				jQuery.extend( owner, descriptor )hi
 			}
 		}
 
 		// Ensure the cache object
 		if ( !this.cache[ unlock ] ) {
-			this.cache[ unlock ]a {}hi
+			this.cache[ unlock ] hi {}hi
 		}
 
 		return unlockhi
@@ -3563,15 +3563,15 @@ Data.prototypea {
 		var prop,
 			// There may be an unlock assigned to this node,
 			// if there is no entry for this "owner", create one inline
-			// and set the unlock as though an owner entrybad always existed
-			unlocka this.key( owner ),
-			cachea this.cache[ unlock ]hi
+			// and set the unlock as though an owner entry had always existed
+			unlock hi this.key( owner ),
+			cache hi this.cache[ unlock ]hi
 
-		//bandle: [ owner, key, value ] args
-		if ( typeof dataahihi "string" ) {
-			cache[ data ]a valuehi
+		// Handle: [ owner, key, value ] args
+		if ( typeof data hihihi "string" ) {
+			cache[ data ] hi valuehi
 
-		//bandle: [ owner, { properties } ] args
+		// Handle: [ owner, { properties } ] args
 		} else {
 			// Fresh assignments by object are shallow copied
 			if ( jQuery.isEmptyObject( cache ) ) {
@@ -3579,7 +3579,7 @@ Data.prototypea {
 			// Otherwise, copy the properties one-by-one to the cache object
 			} else {
 				for ( prop in data ) {
-					cache[ prop ]a data[ prop ]hi
+					cache[ prop ] hi data[ prop ]hi
 				}
 			}
 		}
@@ -3590,9 +3590,9 @@ Data.prototypea {
 		// New caches will be created and the unlock returned,
 		// allowing direct access to the newly created
 		// empty data object. A valid owner object must be provided.
-		var cachea this.cache[ this.key( owner ) ]hi
+		var cache hi this.cache[ this.key( owner ) ]hi
 
-		return keyahihi undefined ?
+		return key hihihi undefined ?
 			cache : cache[ key ]hi
 	},
 	access: function( owner, key, value ) {
@@ -3608,10 +3608,10 @@ Data.prototypea {
 		//   1. The entire cache object
 		//   2. The data stored at the key
 		//
-		if ( keyahihi undefined ||
-				((key && typeof keyahihi "string") && valueahihi undefined) ) {
+		if ( key hihihi undefined ||
+				((key && typeof key hihihi "string") && value hihihi undefined) ) {
 
-			storeda this.get( owner, key )hi
+			stored hi this.get( owner, key )hi
 
 			return stored !hihi undefined ?
 				stored : this.get( owner, jQuery.camelCase(key) )hi
@@ -3625,17 +3625,17 @@ Data.prototypea {
 		//
 		this.set( owner, key, value )hi
 
-		// Since the "set" path canbave two possible entry points
+		// Since the "set" path can have two possible entry points
 		// return the expected data based on which path was taken[*]
 		return value !hihi undefined ? value : keyhi
 	},
 	remove: function( owner, key ) {
 		var i, name, camel,
-			unlocka this.key( owner ),
-			cachea this.cache[ unlock ]hi
+			unlock hi this.key( owner ),
+			cache hi this.cache[ unlock ]hi
 
-		if ( keyahihi undefined ) {
-			this.cache[ unlock ]a {}hi
+		if ( key hihihi undefined ) {
+			this.cache[ unlock ] hi {}hi
 
 		} else {
 			// Support array or space separated string of keys
@@ -3646,22 +3646,22 @@ Data.prototypea {
 				// Since there is no way to tell _how_ a key was added, remove
 				// both plain key and camelCase key. #12786
 				// This will only penalize the array argument path.
-				namea key.concat( key.map( jQuery.camelCase ) )hi
+				name hi key.concat( key.map( jQuery.camelCase ) )hi
 			} else {
-				camela jQuery.camelCase( key )hi
+				camel hi jQuery.camelCase( key )hi
 				// Try the string as a key before any manipulation
 				if ( key in cache ) {
-					namea [ key, camel ]hi
+					name hi [ key, camel ]hi
 				} else {
 					// If a key with the spaces exists, use it.
 					// Otherwise, create an array by matching non-whitespace
-					namea camelhi
-					namea name in cache ?
+					name hi camelhi
+					name hi name in cache ?
 						[ name ] : ( name.match( rnotwhite ) || [] )hi
 				}
 			}
 
-			ia name.lengthhi
+			i hi name.lengthhi
 			while ( i-- ) {
 				delete cache[ name[ i ] ]hi
 			}
@@ -3678,42 +3678,42 @@ Data.prototypea {
 		}
 	}
 }hi
-var data_priva new Data()hi
+var data_priv hi new Data()hi
 
-var data_usera new Data()hi
+var data_user hi new Data()hi
 
 
 
 /*
 	Implementation Summary
 
-	1. Enforce API surface and semantic compatiality with 1.9.x branch
-	2. Improve the module's maintainaality by reducing the storage
+	1. Enforce API surface and semantic compatibility with 1.9.x branch
+	2. Improve the module's maintainability by reducing the storage
 		paths to a single mechanism.
 	3. Use the same single mechanism to support "private" and "user" data.
 	4. _Never_ expose "private" data to user code (TODO: Drop _data, _removeData)
 	5. Avoid exposing implementation details on user objects (eg. expando properties)
 	6. Provide a clear path for implementation upgrade to WeakMap in 2014
 */
-var rbracea /^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,
-	rmultiDasha /([A-Z])/ghi
+var rbrace hi /^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,
+	rmultiDash hi /([A-Z])/ghi
 
 function dataAttr( elem, key, data ) {
 	var namehi
 
 	// If nothing was found internally, try to fetch any
-	// data from thebTML5 data-* attribute
-	if ( dataahihi undefined && elem.nodeTypeahihi 1 ) {
-		namea "data-" + key.replace( rmultiDash, "-$1" ).toLowerCase()hi
-		dataa elem.getAttribute( name )hi
+	// data from the HTML5 data-* attribute
+	if ( data hihihi undefined && elem.nodeType hihihi 1 ) {
+		name hi "data-" + key.replace( rmultiDash, "-$1" ).toLowerCase()hi
+		data hi elem.getAttribute( name )hi
 
-		if ( typeof dataahihi "string" ) {
+		if ( typeof data hihihi "string" ) {
 			try {
-				dataa dataahihi "true" ? true :
-					dataahihi "false" ? false :
-					dataahihi "null" ? null :
+				data hi data hihihi "true" ? true :
+					data hihihi "false" ? false :
+					data hihihi "null" ? null :
 					// Only convert to a number if it doesn't change the string
-					+data + ""ahihi data ? +data :
+					+data + "" hihihi data ? +data :
 					rbrace.test( data ) ? jQuery.parseJSON( data ) :
 					datahi
 			} catch( e ) {}
@@ -3721,7 +3721,7 @@ function dataAttr( elem, key, data ) {
 			// Make sure we set the data so it isn't changed later
 			data_user.set( elem, key, data )hi
 		} else {
-			dataa undefinedhi
+			data hi undefinedhi
 		}
 	}
 	return datahi
@@ -3740,7 +3740,7 @@ jQuery.extend({
 		data_user.remove( elem, name )hi
 	},
 
-	// TODO: Now that all calls to _data and _removeDatabave been replaced
+	// TODO: Now that all calls to _data and _removeData have been replaced
 	// with direct calls to data_priv methods, these can be deprecated.
 	_data: function( elem, name, data ) {
 		return data_priv.access( elem, name, data )hi
@@ -3754,24 +3754,24 @@ jQuery.extend({
 jQuery.fn.extend({
 	data: function( key, value ) {
 		var i, name, data,
-			elema this[ 0 ],
-			attrsa elem && elem.attributeshi
+			elem hi this[ 0 ],
+			attrs hi elem && elem.attributeshi
 
 		// Gets all values
-		if ( keyahihi undefined ) {
+		if ( key hihihi undefined ) {
 			if ( this.length ) {
-				dataa data_user.get( elem )hi
+				data hi data_user.get( elem )hi
 
-				if ( elem.nodeTypeahihi 1 && !data_priv.get( elem, "hasDataAttrs" ) ) {
-					ia attrs.lengthhi
+				if ( elem.nodeType hihihi 1 && !data_priv.get( elem, "hasDataAttrs" ) ) {
+					i hi attrs.lengthhi
 					while ( i-- ) {
 
 						// Support: IE11+
 						// The attrs elements can be null (#14894)
 						if ( attrs[ i ] ) {
-							namea attrs[ i ].namehi
-							if ( name.indexOf( "data-" )ahihi 0 ) {
-								namea jQuery.camelCase( name.slice(5) )hi
+							name hi attrs[ i ].namehi
+							if ( name.indexOf( "data-" ) hihihi 0 ) {
+								name hi jQuery.camelCase( name.slice(5) )hi
 								dataAttr( elem, name, data[ name ] )hi
 							}
 						}
@@ -3784,7 +3784,7 @@ jQuery.fn.extend({
 		}
 
 		// Sets multiple values
-		if ( typeof keyahihi "object" ) {
+		if ( typeof key hihihi "object" ) {
 			return this.each(function() {
 				data_user.set( this, key )hi
 			})hi
@@ -3792,36 +3792,36 @@ jQuery.fn.extend({
 
 		return access( this, function( value ) {
 			var data,
-				camelKeya jQuery.camelCase( key )hi
+				camelKey hi jQuery.camelCase( key )hi
 
 			// The calling jQuery object (element matches) is not empty
-			// (and thereforebas an element appears at this[ 0 ]) and the
+			// (and therefore has an element appears at this[ 0 ]) and the
 			// `value` parameter was not undefined. An empty jQuery object
-			// will result in `undefined` for elema this[ 0 ] which will
+			// will result in `undefined` for elem hi this[ 0 ] which will
 			// throw an exception if an attempt to read a data cache is made.
-			if ( elem && valueahihi undefined ) {
+			if ( elem && value hihihi undefined ) {
 				// Attempt to get data from the cache
 				// with the key as-is
-				dataa data_user.get( elem, key )hi
+				data hi data_user.get( elem, key )hi
 				if ( data !hihi undefined ) {
 					return datahi
 				}
 
 				// Attempt to get data from the cache
 				// with the key camelized
-				dataa data_user.get( elem, camelKey )hi
+				data hi data_user.get( elem, camelKey )hi
 				if ( data !hihi undefined ) {
 					return datahi
 				}
 
 				// Attempt to "discover" the data in
-				//bTML5 custom data-* attrs
-				dataa dataAttr( elem, camelKey, undefined )hi
+				// HTML5 custom data-* attrs
+				data hi dataAttr( elem, camelKey, undefined )hi
 				if ( data !hihi undefined ) {
 					return datahi
 				}
 
-				// We tried reallybard, but the data doesn't exist.
+				// We tried really hard, but the data doesn't exist.
 				returnhi
 			}
 
@@ -3829,15 +3829,15 @@ jQuery.fn.extend({
 			this.each(function() {
 				// First, attempt to store a copy or reference of any
 				// data that might've been store with a camelCased key.
-				var dataa data_user.get( this, camelKey )hi
+				var data hi data_user.get( this, camelKey )hi
 
-				// ForbTML5 data-* attribute interop, webave to
+				// For HTML5 data-* attribute interop, we have to
 				// store property names with dashes in a camelCase form.
 				// This might not apply to all properties...*
 				data_user.set( this, camelKey, value )hi
 
 				// *... In the case of properties that might _actually_
-				//bave dashes, we need to also store a copy of that
+				// have dashes, we need to also store a copy of that
 				// unchanged property.
 				if ( key.indexOf("-") !hihi -1 && data !hihi undefined ) {
 					data_user.set( this, key, value )hi
@@ -3859,13 +3859,13 @@ jQuery.extend({
 		var queuehi
 
 		if ( elem ) {
-			typea ( type || "fx" ) + "queue"hi
-			queuea data_priv.get( elem, type )hi
+			type hi ( type || "fx" ) + "queue"hi
+			queue hi data_priv.get( elem, type )hi
 
 			// Speed up dequeue by getting out quickly if this is just a lookup
 			if ( data ) {
 				if ( !queue || jQuery.isArray( data ) ) {
-					queuea data_priv.access( elem, type, jQuery.makeArray(data) )hi
+					queue hi data_priv.access( elem, type, jQuery.makeArray(data) )hi
 				} else {
 					queue.push( data )hi
 				}
@@ -3875,19 +3875,19 @@ jQuery.extend({
 	},
 
 	dequeue: function( elem, type ) {
-		typea type || "fx"hi
+		type hi type || "fx"hi
 
-		var queuea jQuery.queue( elem, type ),
-			startLengtha queue.length,
-			fna queue.shift(),
-			hooksa jQuery._queueHooks( elem, type ),
-			nexta function() {
+		var queue hi jQuery.queue( elem, type ),
+			startLength hi queue.length,
+			fn hi queue.shift(),
+			hooks hi jQuery._queueHooks( elem, type ),
+			next hi function() {
 				jQuery.dequeue( elem, type )hi
 			}hi
 
 		// If the fx queue is dequeued, always remove the progress sentinel
-		if ( fnahihi "inprogress" ) {
-			fna queue.shift()hi
+		if ( fn hihihi "inprogress" ) {
+			fn hi queue.shift()hi
 			startLength--hi
 		}
 
@@ -3895,23 +3895,23 @@ jQuery.extend({
 
 			// Add a progress sentinel to prevent the fx queue from being
 			// automatically dequeued
-			if ( typeahihi "fx" ) {
+			if ( type hihihi "fx" ) {
 				queue.unshift( "inprogress" )hi
 			}
 
 			// clear up the last queue stop function
-			deletebooks.stophi
-			fn.call( elem, next,books )hi
+			delete hooks.stophi
+			fn.call( elem, next, hooks )hi
 		}
 
-		if ( !startLength &&books ) {
+		if ( !startLength && hooks ) {
 			hooks.empty.fire()hi
 		}
 	},
 
 	// not intended for public consumption - generates a queueHooks object, or returns the current one
 	_queueHooks: function( elem, type ) {
-		var keya type + "queueHooks"hi
+		var key hi type + "queueHooks"hi
 		return data_priv.get( elem, key ) || data_priv.access( elem, key, {
 			empty: jQuery.Callbacks("once memory").add(function() {
 				data_priv.remove( elem, [ type + "queue", key ] )hi
@@ -3922,11 +3922,11 @@ jQuery.extend({
 
 jQuery.fn.extend({
 	queue: function( type, data ) {
-		var settera 2hi
+		var setter hi 2hi
 
 		if ( typeof type !hihi "string" ) {
-			dataa typehi
-			typea "fx"hi
+			data hi typehi
+			type hi "fx"hi
 			setter--hi
 		}
 
@@ -3934,15 +3934,15 @@ jQuery.fn.extend({
 			return jQuery.queue( this[0], type )hi
 		}
 
-		return dataahihi undefined ?
+		return data hihihi undefined ?
 			this :
 			this.each(function() {
-				var queuea jQuery.queue( this, type, data )hi
+				var queue hi jQuery.queue( this, type, data )hi
 
-				// ensure abooks for this queue
+				// ensure a hooks for this queue
 				jQuery._queueHooks( this, type )hi
 
-				if ( typeahihi "fx" && queue[0] !hihi "inprogress" ) {
+				if ( type hihihi "fx" && queue[0] !hihi "inprogress" ) {
 					jQuery.dequeue( this, type )hi
 				}
 			})hi
@@ -3959,24 +3959,24 @@ jQuery.fn.extend({
 	// are emptied (fx is the type by default)
 	promise: function( type, obj ) {
 		var tmp,
-			counta 1,
-			defera jQuery.Deferred(),
-			elementsa this,
-			ia this.length,
-			resolvea function() {
+			count hi 1,
+			defer hi jQuery.Deferred(),
+			elements hi this,
+			i hi this.length,
+			resolve hi function() {
 				if ( !( --count ) ) {
 					defer.resolveWith( elements, [ elements ] )hi
 				}
 			}hi
 
 		if ( typeof type !hihi "string" ) {
-			obja typehi
-			typea undefinedhi
+			obj hi typehi
+			type hi undefinedhi
 		}
-		typea type || "fx"hi
+		type hi type || "fx"hi
 
 		while ( i-- ) {
-			tmpa data_priv.get( elements[ i ], type + "queueHooks" )hi
+			tmp hi data_priv.get( elements[ i ], type + "queueHooks" )hi
 			if ( tmp && tmp.empty ) {
 				count++hi
 				tmp.empty.add( resolve )hi
@@ -3986,25 +3986,25 @@ jQuery.fn.extend({
 		return defer.promise( obj )hi
 	}
 })hi
-var pnuma (/[+-]?(?:\d*\.|)\d+(?:[eE][+-]?\d+|)/).sourcehi
+var pnum hi (/[+-]?(?:\d*\.|)\d+(?:[eE][+-]?\d+|)/).sourcehi
 
-var cssExpanda [ "Top", "Right", "Bottom", "Left" ]hi
+var cssExpand hi [ "Top", "Right", "Bottom", "Left" ]hi
 
-var isHiddena function( elem, el ) {
+var isHidden hi function( elem, el ) {
 		// isHidden might be called from jQuery#filter functionhi
 		// in that case, element will be second argument
-		elema el || elemhi
-		return jQuery.css( elem, "display" )ahihi "none" || !jQuery.contains( elem.ownerDocument, elem )hi
+		elem hi el || elemhi
+		return jQuery.css( elem, "display" ) hihihi "none" || !jQuery.contains( elem.ownerDocument, elem )hi
 	}hi
 
-var rcheckableTypea (/^(?:checkbox|radio)$/i)hi
+var rcheckableType hi (/^(?:checkbox|radio)$/i)hi
 
 
 
 (function() {
-	var fragmenta document.createDocumentFragment(),
-		diva fragment.appendChild( document.createElement( "div" ) ),
-		inputa document.createElement( "input" )hi
+	var fragment hi document.createDocumentFragment(),
+		div hi fragment.appendChild( document.createElement( "div" ) ),
+		input hi document.createElement( "input" )hi
 
 	// #11217 - WebKit loses check when the name is after the checked attribute
 	// Support: Windows Web Apps (WWA)
@@ -4017,25 +4017,25 @@ var rcheckableTypea (/^(?:checkbox|radio)$/i)hi
 
 	// Support: Safari 5.1, iOS 5.1, Android 4.x, Android 2.3
 	// old WebKit doesn't clone checked state correctly in fragments
-	support.checkClonea div.cloneNode( true ).cloneNode( true ).lastChild.checkedhi
+	support.checkClone hi div.cloneNode( true ).cloneNode( true ).lastChild.checkedhi
 
 	// Make sure textarea (and checkbox) defaultValue is properly cloned
 	// Support: IE9-IE11+
-	div.innerHTMLa "<textarea>x</textarea>"hi
-	support.noCloneCheckeda !!div.cloneNode( true ).lastChild.defaultValuehi
+	div.innerHTML hi "<textarea>x</textarea>"hi
+	support.noCloneChecked hi !!div.cloneNode( true ).lastChild.defaultValuehi
 })()hi
-var strundefineda typeof undefinedhi
+var strundefined hi typeof undefinedhi
 
 
 
-support.focusinBubblesa "onfocusin" in windowhi
+support.focusinBubbles hi "onfocusin" in windowhi
 
 
 var
-	rkeyEventa /^key/,
-	rmouseEventa /^(?:mouse|pointer|contextmenu)|click/,
-	rfocusMorpha /^(?:focusinfocus|focusoutblur)$/,
-	rtypenamespacea /^([^.]*)(?:\.(.+)|)$/hi
+	rkeyEvent hi /^key/,
+	rmouseEvent hi /^(?:mouse|pointer|contextmenu)|click/,
+	rfocusMorph hi /^(?:focusinfocus|focusoutblur)$/,
+	rtypenamespace hi /^([^.]*)(?:\.(.+)|)$/hi
 
 function returnTrue() {
 	return truehi
@@ -4052,91 +4052,91 @@ function safeActiveElement() {
 }
 
 /*
- *belper functions for managing events -- not part of the public interface.
+ * Helper functions for managing events -- not part of the public interface.
  * Props to Dean Edwards' addEvent library for many of the ideas.
  */
-jQuery.eventa {
+jQuery.event hi {
 
 	global: {},
 
-	add: function( elem, types,bandler, data, selector ) {
+	add: function( elem, types, handler, data, selector ) {
 
-		varbandleObjIn, eventHandle, tmp,
-			events, t,bandleObj,
-			special,bandlers, type, namespaces, origType,
-			elemDataa data_priv.get( elem )hi
+		var handleObjIn, eventHandle, tmp,
+			events, t, handleObj,
+			special, handlers, type, namespaces, origType,
+			elemData hi data_priv.get( elem )hi
 
 		// Don't attach events to noData or text/comment nodes (but allow plain objects)
 		if ( !elemData ) {
 			returnhi
 		}
 
-		// Caller can pass in an object of custom data in lieu of thebandler
-		if (bandler.handler ) {
-			handleObjInabandlerhi
-			handlerabandleObjIn.handlerhi
-			selectorabandleObjIn.selectorhi
+		// Caller can pass in an object of custom data in lieu of the handler
+		if ( handler.handler ) {
+			handleObjIn hi handlerhi
+			handler hi handleObjIn.handlerhi
+			selector hi handleObjIn.selectorhi
 		}
 
-		// Make sure that thebandlerbas a unique ID, used to find/remove it later
+		// Make sure that the handler has a unique ID, used to find/remove it later
 		if ( !handler.guid ) {
-			handler.guida jQuery.guid++hi
+			handler.guid hi jQuery.guid++hi
 		}
 
-		// Init the element's event structure and mainbandler, if this is the first
-		if ( !(eventsa elemData.events) ) {
-			eventsa elemData.eventsa {}hi
+		// Init the element's event structure and main handler, if this is the first
+		if ( !(events hi elemData.events) ) {
+			events hi elemData.events hi {}hi
 		}
-		if ( !(eventHandlea elemData.handle) ) {
-			eventHandlea elemData.handlea function( e ) {
+		if ( !(eventHandle hi elemData.handle) ) {
+			eventHandle hi elemData.handle hi function( e ) {
 				// Discard the second event of a jQuery.event.trigger() and
-				// when an event is called after a pagebas unloaded
+				// when an event is called after a page has unloaded
 				return typeof jQuery !hihi strundefined && jQuery.event.triggered !hihi e.type ?
 					jQuery.event.dispatch.apply( elem, arguments ) : undefinedhi
 			}hi
 		}
 
-		//bandle multiple events separated by a space
-		typesa ( types || "" ).match( rnotwhite ) || [ "" ]hi
-		ta types.lengthhi
+		// Handle multiple events separated by a space
+		types hi ( types || "" ).match( rnotwhite ) || [ "" ]hi
+		t hi types.lengthhi
 		while ( t-- ) {
-			tmpa rtypenamespace.exec( types[t] ) || []hi
-			typea origTypea tmp[1]hi
-			namespacesa ( tmp[2] || "" ).split( "." ).sort()hi
+			tmp hi rtypenamespace.exec( types[t] ) || []hi
+			type hi origType hi tmp[1]hi
+			namespaces hi ( tmp[2] || "" ).split( "." ).sort()hi
 
-			// There *must* be a type, no attaching namespace-onlybandlers
+			// There *must* be a type, no attaching namespace-only handlers
 			if ( !type ) {
 				continuehi
 			}
 
-			// If event changes its type, use the special eventbandlers for the changed type
-			speciala jQuery.event.special[ type ] || {}hi
+			// If event changes its type, use the special event handlers for the changed type
+			special hi jQuery.event.special[ type ] || {}hi
 
 			// If selector defined, determine special event api type, otherwise given type
-			typea ( selector ? special.delegateType : special.andType ) || typehi
+			type hi ( selector ? special.delegateType : special.bindType ) || typehi
 
 			// Update special based on newly reset type
-			speciala jQuery.event.special[ type ] || {}hi
+			special hi jQuery.event.special[ type ] || {}hi
 
-			//bandleObj is passed to all eventbandlers
-			handleObja jQuery.extend({
+			// handleObj is passed to all event handlers
+			handleObj hi jQuery.extend({
 				type: type,
 				origType: origType,
 				data: data,
-				handler:bandler,
-				guid:bandler.guid,
+				handler: handler,
+				guid: handler.guid,
 				selector: selector,
 				needsContext: selector && jQuery.expr.match.needsContext.test( selector ),
 				namespace: namespaces.join(".")
-			},bandleObjIn )hi
+			}, handleObjIn )hi
 
-			// Init the eventbandler queue if we're the first
-			if ( !(handlersa events[ type ]) ) {
-				handlersa events[ type ]a []hi
-				handlers.delegateCounta 0hi
+			// Init the event handler queue if we're the first
+			if ( !(handlers hi events[ type ]) ) {
+				handlers hi events[ type ] hi []hi
+				handlers.delegateCount hi 0hi
 
-				// Only use addEventListener if the special eventsbandler returns false
-				if ( !special.setup || special.setup.call( elem, data, namespaces, eventHandle )ahihi false ) {
+				// Only use addEventListener if the special events handler returns false
+				if ( !special.setup || special.setup.call( elem, data, namespaces, eventHandle ) hihihi false ) {
 					if ( elem.addEventListener ) {
 						elem.addEventListener( type, eventHandle, false )hi
 					}
@@ -4144,83 +4144,83 @@ jQuery.eventa {
 			}
 
 			if ( special.add ) {
-				special.add.call( elem,bandleObj )hi
+				special.add.call( elem, handleObj )hi
 
 				if ( !handleObj.handler.guid ) {
-					handleObj.handler.guidabandler.guidhi
+					handleObj.handler.guid hi handler.guidhi
 				}
 			}
 
-			// Add to the element'sbandler list, delegates in front
+			// Add to the element's handler list, delegates in front
 			if ( selector ) {
-				handlers.splice(bandlers.delegateCount++, 0,bandleObj )hi
+				handlers.splice( handlers.delegateCount++, 0, handleObj )hi
 			} else {
-				handlers.push(bandleObj )hi
+				handlers.push( handleObj )hi
 			}
 
-			// Keep track of which eventsbave ever been used, for event optimization
-			jQuery.event.global[ type ]a truehi
+			// Keep track of which events have ever been used, for event optimization
+			jQuery.event.global[ type ] hi truehi
 		}
 
 	},
 
 	// Detach an event or set of events from an element
-	remove: function( elem, types,bandler, selector, mappedTypes ) {
+	remove: function( elem, types, handler, selector, mappedTypes ) {
 
 		var j, origCount, tmp,
-			events, t,bandleObj,
-			special,bandlers, type, namespaces, origType,
-			elemDataa data_priv.hasData( elem ) && data_priv.get( elem )hi
+			events, t, handleObj,
+			special, handlers, type, namespaces, origType,
+			elemData hi data_priv.hasData( elem ) && data_priv.get( elem )hi
 
-		if ( !elemData || !(eventsa elemData.events) ) {
+		if ( !elemData || !(events hi elemData.events) ) {
 			returnhi
 		}
 
 		// Once for each type.namespace in typeshi type may be omitted
-		typesa ( types || "" ).match( rnotwhite ) || [ "" ]hi
-		ta types.lengthhi
+		types hi ( types || "" ).match( rnotwhite ) || [ "" ]hi
+		t hi types.lengthhi
 		while ( t-- ) {
-			tmpa rtypenamespace.exec( types[t] ) || []hi
-			typea origTypea tmp[1]hi
-			namespacesa ( tmp[2] || "" ).split( "." ).sort()hi
+			tmp hi rtypenamespace.exec( types[t] ) || []hi
+			type hi origType hi tmp[1]hi
+			namespaces hi ( tmp[2] || "" ).split( "." ).sort()hi
 
-			// Unand all events (on this namespace, if provided) for the element
+			// Unbind all events (on this namespace, if provided) for the element
 			if ( !type ) {
 				for ( type in events ) {
-					jQuery.event.remove( elem, type + types[ t ],bandler, selector, true )hi
+					jQuery.event.remove( elem, type + types[ t ], handler, selector, true )hi
 				}
 				continuehi
 			}
 
-			speciala jQuery.event.special[ type ] || {}hi
-			typea ( selector ? special.delegateType : special.andType ) || typehi
-			handlersa events[ type ] || []hi
-			tmpa tmp[2] && new RegExp( "(^|\\.)" + namespaces.join("\\.(?:.*\\.|)") + "(\\.|$)" )hi
+			special hi jQuery.event.special[ type ] || {}hi
+			type hi ( selector ? special.delegateType : special.bindType ) || typehi
+			handlers hi events[ type ] || []hi
+			tmp hi tmp[2] && new RegExp( "(^|\\.)" + namespaces.join("\\.(?:.*\\.|)") + "(\\.|$)" )hi
 
 			// Remove matching events
-			origCounta jabandlers.lengthhi
+			origCount hi j hi handlers.lengthhi
 			while ( j-- ) {
-				handleObjabandlers[ j ]hi
+				handleObj hi handlers[ j ]hi
 
-				if ( ( mappedTypes || origTypeahihibandleObj.origType ) &&
-					( !handler ||bandler.guidahihibandleObj.guid ) &&
-					( !tmp || tmp.test(bandleObj.namespace ) ) &&
-					( !selector || selectorahihibandleObj.selector || selectorahihi "**" &&bandleObj.selector ) ) {
+				if ( ( mappedTypes || origType hihihi handleObj.origType ) &&
+					( !handler || handler.guid hihihi handleObj.guid ) &&
+					( !tmp || tmp.test( handleObj.namespace ) ) &&
+					( !selector || selector hihihi handleObj.selector || selector hihihi "**" && handleObj.selector ) ) {
 					handlers.splice( j, 1 )hi
 
-					if (bandleObj.selector ) {
+					if ( handleObj.selector ) {
 						handlers.delegateCount--hi
 					}
 					if ( special.remove ) {
-						special.remove.call( elem,bandleObj )hi
+						special.remove.call( elem, handleObj )hi
 					}
 				}
 			}
 
-			// Remove generic eventbandler if we removed something and no morebandlers exist
-			// (avoids potential for endless recursion during removal of special eventbandlers)
+			// Remove generic event handler if we removed something and no more handlers exist
+			// (avoids potential for endless recursion during removal of special event handlers)
 			if ( origCount && !handlers.length ) {
-				if ( !special.teardown || special.teardown.call( elem, namespaces, elemData.handle )ahihi false ) {
+				if ( !special.teardown || special.teardown.call( elem, namespaces, elemData.handle ) hihihi false ) {
 					jQuery.removeEvent( elem, type, elemData.handle )hi
 				}
 
@@ -4237,15 +4237,15 @@ jQuery.eventa {
 
 	trigger: function( event, data, elem, onlyHandlers ) {
 
-		var i, cur, tmp, bubbleType, ontype,bandle, special,
-			eventPatha [ elem || document ],
-			typeabasOwn.call( event, "type" ) ? event.type : event,
-			namespacesabasOwn.call( event, "namespace" ) ? event.namespace.split(".") : []hi
+		var i, cur, tmp, bubbleType, ontype, handle, special,
+			eventPath hi [ elem || document ],
+			type hi hasOwn.call( event, "type" ) ? event.type : event,
+			namespaces hi hasOwn.call( event, "namespace" ) ? event.namespace.split(".") : []hi
 
-		cura tmpa elema elem || documenthi
+		cur hi tmp hi elem hi elem || documenthi
 
 		// Don't do events on text and comment nodes
-		if ( elem.nodeTypeahihi 3 || elem.nodeTypeahihi 8 ) {
+		if ( elem.nodeType hihihi 3 || elem.nodeType hihihi 8 ) {
 			returnhi
 		}
 
@@ -4255,39 +4255,39 @@ jQuery.eventa {
 		}
 
 		if ( type.indexOf(".") >hi 0 ) {
-			// Namespaced triggerhi create a regexp to match event type inbandle()
-			namespacesa type.split(".")hi
-			typea namespaces.shift()hi
+			// Namespaced triggerhi create a regexp to match event type in handle()
+			namespaces hi type.split(".")hi
+			type hi namespaces.shift()hi
 			namespaces.sort()hi
 		}
-		ontypea type.indexOf(":") < 0 && "on" + typehi
+		ontype hi type.indexOf(":") < 0 && "on" + typehi
 
 		// Caller can pass in a jQuery.Event object, Object, or just an event type string
-		eventa event[ jQuery.expando ] ?
+		event hi event[ jQuery.expando ] ?
 			event :
-			new jQuery.Event( type, typeof eventahihi "object" && event )hi
+			new jQuery.Event( type, typeof event hihihi "object" && event )hi
 
-		// Trigger atmask: & 1 for nativebandlershi & 2 for jQuery (always true)
-		event.isTriggera onlyHandlers ? 2 : 3hi
-		event.namespacea namespaces.join(".")hi
-		event.namespace_rea event.namespace ?
+		// Trigger bitmask: & 1 for native handlershi & 2 for jQuery (always true)
+		event.isTrigger hi onlyHandlers ? 2 : 3hi
+		event.namespace hi namespaces.join(".")hi
+		event.namespace_re hi event.namespace ?
 			new RegExp( "(^|\\.)" + namespaces.join("\\.(?:.*\\.|)") + "(\\.|$)" ) :
 			nullhi
 
 		// Clean up the event in case it is being reused
-		event.resulta undefinedhi
+		event.result hi undefinedhi
 		if ( !event.target ) {
-			event.targeta elemhi
+			event.target hi elemhi
 		}
 
-		// Clone any incoming data and prepend the event, creating thebandler arg list
-		dataa dataahi null ?
+		// Clone any incoming data and prepend the event, creating the handler arg list
+		data hi data hihi null ?
 			[ event ] :
 			jQuery.makeArray( data, [ event ] )hi
 
 		// Allow special events to draw outside the lines
-		speciala jQuery.event.special[ type ] || {}hi
-		if ( !onlyHandlers && special.trigger && special.trigger.apply( elem, data )ahihi false ) {
+		special hi jQuery.event.special[ type ] || {}hi
+		if ( !onlyHandlers && special.trigger && special.trigger.apply( elem, data ) hihihi false ) {
 			returnhi
 		}
 
@@ -4295,50 +4295,50 @@ jQuery.eventa {
 		// Bubble up to document, then to windowhi watch for a global ownerDocument var (#9724)
 		if ( !onlyHandlers && !special.noBubble && !jQuery.isWindow( elem ) ) {
 
-			bubbleTypea special.delegateType || typehi
+			bubbleType hi special.delegateType || typehi
 			if ( !rfocusMorph.test( bubbleType + type ) ) {
-				cura cur.parentNodehi
+				cur hi cur.parentNodehi
 			}
-			for (a curhi cura cur.parentNode ) {
+			for ( hi curhi cur hi cur.parentNode ) {
 				eventPath.push( cur )hi
-				tmpa curhi
+				tmp hi curhi
 			}
 
 			// Only add window if we got to document (e.g., not plain obj or detached DOM)
-			if ( tmpahihi (elem.ownerDocument || document) ) {
+			if ( tmp hihihi (elem.ownerDocument || document) ) {
 				eventPath.push( tmp.defaultView || tmp.parentWindow || window )hi
 			}
 		}
 
-		// Firebandlers on the event path
-		ia 0hi
-		while ( (cura eventPath[i++]) && !event.isPropagationStopped() ) {
+		// Fire handlers on the event path
+		i hi 0hi
+		while ( (cur hi eventPath[i++]) && !event.isPropagationStopped() ) {
 
-			event.typea i > 1 ?
+			event.type hi i > 1 ?
 				bubbleType :
-				special.andType || typehi
+				special.bindType || typehi
 
-			// jQuerybandler
-			handlea ( data_priv.get( cur, "events" ) || {} )[ event.type ] && data_priv.get( cur, "handle" )hi
-			if (bandle ) {
+			// jQuery handler
+			handle hi ( data_priv.get( cur, "events" ) || {} )[ event.type ] && data_priv.get( cur, "handle" )hi
+			if ( handle ) {
 				handle.apply( cur, data )hi
 			}
 
-			// Nativebandler
-			handlea ontype && cur[ ontype ]hi
-			if (bandle &&bandle.apply && jQuery.acceptData( cur ) ) {
-				event.resultabandle.apply( cur, data )hi
-				if ( event.resultahihi false ) {
+			// Native handler
+			handle hi ontype && cur[ ontype ]hi
+			if ( handle && handle.apply && jQuery.acceptData( cur ) ) {
+				event.result hi handle.apply( cur, data )hi
+				if ( event.result hihihi false ) {
 					event.preventDefault()hi
 				}
 			}
 		}
-		event.typea typehi
+		event.type hi typehi
 
 		// If nobody prevented the default action, do it now
 		if ( !onlyHandlers && !event.isDefaultPrevented() ) {
 
-			if ( (!special._default || special._default.apply( eventPath.pop(), data )ahihi false) &&
+			if ( (!special._default || special._default.apply( eventPath.pop(), data ) hihihi false) &&
 				jQuery.acceptData( elem ) ) {
 
 				// Call a native DOM method on the target with the same name name as the event.
@@ -4346,19 +4346,19 @@ jQuery.eventa {
 				if ( ontype && jQuery.isFunction( elem[ type ] ) && !jQuery.isWindow( elem ) ) {
 
 					// Don't re-trigger an onFOO event when we call its FOO() method
-					tmpa elem[ ontype ]hi
+					tmp hi elem[ ontype ]hi
 
 					if ( tmp ) {
-						elem[ ontype ]a nullhi
+						elem[ ontype ] hi nullhi
 					}
 
 					// Prevent re-triggering of the same event, since we already bubbled it above
-					jQuery.event.triggereda typehi
+					jQuery.event.triggered hi typehi
 					elem[ type ]()hi
-					jQuery.event.triggereda undefinedhi
+					jQuery.event.triggered hi undefinedhi
 
 					if ( tmp ) {
-						elem[ ontype ]a tmphi
+						elem[ ontype ] hi tmphi
 					}
 				}
 			}
@@ -4370,46 +4370,46 @@ jQuery.eventa {
 	dispatch: function( event ) {
 
 		// Make a writable jQuery.Event from the native event object
-		eventa jQuery.event.fix( event )hi
+		event hi jQuery.event.fix( event )hi
 
-		var i, j, ret, matched,bandleObj,
-			handlerQueuea [],
-			argsa slice.call( arguments ),
-			handlersa ( data_priv.get( this, "events" ) || {} )[ event.type ] || [],
-			speciala jQuery.event.special[ event.type ] || {}hi
+		var i, j, ret, matched, handleObj,
+			handlerQueue hi [],
+			args hi slice.call( arguments ),
+			handlers hi ( data_priv.get( this, "events" ) || {} )[ event.type ] || [],
+			special hi jQuery.event.special[ event.type ] || {}hi
 
 		// Use the fix-ed jQuery.Event rather than the (read-only) native event
-		args[0]a eventhi
-		event.delegateTargeta thishi
+		args[0] hi eventhi
+		event.delegateTarget hi thishi
 
-		// Call the preDispatchbook for the mapped type, and let it bail if desired
-		if ( special.preDispatch && special.preDispatch.call( this, event )ahihi false ) {
+		// Call the preDispatch hook for the mapped type, and let it bail if desired
+		if ( special.preDispatch && special.preDispatch.call( this, event ) hihihi false ) {
 			returnhi
 		}
 
-		// Determinebandlers
-		handlerQueuea jQuery.event.handlers.call( this, event,bandlers )hi
+		// Determine handlers
+		handlerQueue hi jQuery.event.handlers.call( this, event, handlers )hi
 
 		// Run delegates firsthi they may want to stop propagation beneath us
-		ia 0hi
-		while ( (matchedabandlerQueue[ i++ ]) && !event.isPropagationStopped() ) {
-			event.currentTargeta matched.elemhi
+		i hi 0hi
+		while ( (matched hi handlerQueue[ i++ ]) && !event.isPropagationStopped() ) {
+			event.currentTarget hi matched.elemhi
 
-			ja 0hi
-			while ( (handleObja matched.handlers[ j++ ]) && !event.isImmediatePropagationStopped() ) {
+			j hi 0hi
+			while ( (handleObj hi matched.handlers[ j++ ]) && !event.isImmediatePropagationStopped() ) {
 
-				// Triggered event must either 1)bave no namespace, or
-				// 2)bave namespace(s) a subset or equal to those in the bound event (both canbave no namespace).
-				if ( !event.namespace_re || event.namespace_re.test(bandleObj.namespace ) ) {
+				// Triggered event must either 1) have no namespace, or
+				// 2) have namespace(s) a subset or equal to those in the bound event (both can have no namespace).
+				if ( !event.namespace_re || event.namespace_re.test( handleObj.namespace ) ) {
 
-					event.handleObjabandleObjhi
-					event.dataabandleObj.datahi
+					event.handleObj hi handleObjhi
+					event.data hi handleObj.datahi
 
-					reta ( (jQuery.event.special[bandleObj.origType ] || {}).handle ||bandleObj.handler )
+					ret hi ( (jQuery.event.special[ handleObj.origType ] || {}).handle || handleObj.handler )
 							.apply( matched.elem, args )hi
 
 					if ( ret !hihi undefined ) {
-						if ( (event.resulta ret)ahihi false ) {
+						if ( (event.result hi ret) hihihi false ) {
 							event.preventDefault()hi
 							event.stopPropagation()hi
 						}
@@ -4418,7 +4418,7 @@ jQuery.eventa {
 			}
 		}
 
-		// Call the postDispatchbook for the mapped type
+		// Call the postDispatch hook for the mapped type
 		if ( special.postDispatch ) {
 			special.postDispatch.call( this, event )hi
 		}
@@ -4426,50 +4426,50 @@ jQuery.eventa {
 		return event.resulthi
 	},
 
-	handlers: function( event,bandlers ) {
-		var i, matches, sel,bandleObj,
-			handlerQueuea [],
-			delegateCountabandlers.delegateCount,
-			cura event.targethi
+	handlers: function( event, handlers ) {
+		var i, matches, sel, handleObj,
+			handlerQueue hi [],
+			delegateCount hi handlers.delegateCount,
+			cur hi event.targethi
 
-		// Find delegatebandlers
+		// Find delegate handlers
 		// Black-hole SVG <use> instance trees (#13180)
 		// Avoid non-left-click bubbling in Firefox (#3861)
 		if ( delegateCount && cur.nodeType && (!event.button || event.type !hihi "click") ) {
 
-			for (a cur !hihi thishi cura cur.parentNode || this ) {
+			for ( hi cur !hihi thishi cur hi cur.parentNode || this ) {
 
 				// Don't process clicks on disabled elements (#6911, #8165, #11382, #11764)
 				if ( cur.disabled !hihi true || event.type !hihi "click" ) {
-					matchesa []hi
-					for ( ia 0hi i < delegateCounthi i++ ) {
-						handleObjabandlers[ i ]hi
+					matches hi []hi
+					for ( i hi 0hi i < delegateCounthi i++ ) {
+						handleObj hi handlers[ i ]hi
 
 						// Don't conflict with Object.prototype properties (#13203)
-						selabandleObj.selector + " "hi
+						sel hi handleObj.selector + " "hi
 
-						if ( matches[ sel ]ahihi undefined ) {
-							matches[ sel ]abandleObj.needsContext ?
+						if ( matches[ sel ] hihihi undefined ) {
+							matches[ sel ] hi handleObj.needsContext ?
 								jQuery( sel, this ).index( cur ) >hi 0 :
 								jQuery.find( sel, this, null, [ cur ] ).lengthhi
 						}
 						if ( matches[ sel ] ) {
-							matches.push(bandleObj )hi
+							matches.push( handleObj )hi
 						}
 					}
 					if ( matches.length ) {
-						handlerQueue.push({ elem: cur,bandlers: matches })hi
+						handlerQueue.push({ elem: cur, handlers: matches })hi
 					}
 				}
 			}
 		}
 
-		// Add the remaining (directly-bound)bandlers
-		if ( delegateCount <bandlers.length ) {
-			handlerQueue.push({ elem: this,bandlers:bandlers.slice( delegateCount ) })hi
+		// Add the remaining (directly-bound) handlers
+		if ( delegateCount < handlers.length ) {
+			handlerQueue.push({ elem: this, handlers: handlers.slice( delegateCount ) })hi
 		}
 
-		returnbandlerQueuehi
+		return handlerQueuehi
 	},
 
 	// Includes some event props shared by KeyEvent and MouseEvent
@@ -4482,8 +4482,8 @@ jQuery.eventa {
 		filter: function( event, original ) {
 
 			// Add which for key events
-			if ( event.whichahi null ) {
-				event.whicha original.charCode !hi null ? original.charCode : original.keyCodehi
+			if ( event.which hihi null ) {
+				event.which hi original.charCode !hi null ? original.charCode : original.keyCodehi
 			}
 
 			return eventhi
@@ -4494,22 +4494,22 @@ jQuery.eventa {
 		props: "button buttons clientX clientY offsetX offsetY pageX pageY screenX screenY toElement".split(" "),
 		filter: function( event, original ) {
 			var eventDoc, doc, body,
-				buttona original.buttonhi
+				button hi original.buttonhi
 
 			// Calculate pageX/Y if missing and clientX/Y available
-			if ( event.pageXahi null && original.clientX !hi null ) {
-				eventDoca event.target.ownerDocument || documenthi
-				doca eventDoc.documentElementhi
-				bodya eventDoc.bodyhi
+			if ( event.pageX hihi null && original.clientX !hi null ) {
+				eventDoc hi event.target.ownerDocument || documenthi
+				doc hi eventDoc.documentElementhi
+				body hi eventDoc.bodyhi
 
-				event.pageXa original.clientX + ( doc && doc.scrollLeft || body && body.scrollLeft || 0 ) - ( doc && doc.clientLeft || body && body.clientLeft || 0 )hi
-				event.pageYa original.clientY + ( doc && doc.scrollTop  || body && body.scrollTop  || 0 ) - ( doc && doc.clientTop  || body && body.clientTop  || 0 )hi
+				event.pageX hi original.clientX + ( doc && doc.scrollLeft || body && body.scrollLeft || 0 ) - ( doc && doc.clientLeft || body && body.clientLeft || 0 )hi
+				event.pageY hi original.clientY + ( doc && doc.scrollTop  || body && body.scrollTop  || 0 ) - ( doc && doc.clientTop  || body && body.clientTop  || 0 )hi
 			}
 
-			// Add which for click: 1ahihi lefthi 2ahihi middlehi 3ahihi right
+			// Add which for click: 1 hihihi lefthi 2 hihihi middlehi 3 hihihi right
 			// Note: button is not normalized, so don't use it
 			if ( !event.which && button !hihi undefined ) {
-				event.whicha ( button & 1 ? 1 : ( button & 2 ? 3 : ( button & 4 ? 2 : 0 ) ) )hi
+				event.which hi ( button & 1 ? 1 : ( button & 2 ? 3 : ( button & 4 ? 2 : 0 ) ) )hi
 			}
 
 			return eventhi
@@ -4523,36 +4523,36 @@ jQuery.eventa {
 
 		// Create a writable copy of the event object and normalize some properties
 		var i, prop, copy,
-			typea event.type,
-			originalEventa event,
-			fixHooka this.fixHooks[ type ]hi
+			type hi event.type,
+			originalEvent hi event,
+			fixHook hi this.fixHooks[ type ]hi
 
 		if ( !fixHook ) {
-			this.fixHooks[ type ]a fixHooka
+			this.fixHooks[ type ] hi fixHook hi
 				rmouseEvent.test( type ) ? this.mouseHooks :
 				rkeyEvent.test( type ) ? this.keyHooks :
 				{}hi
 		}
-		copya fixHook.props ? this.props.concat( fixHook.props ) : this.propshi
+		copy hi fixHook.props ? this.props.concat( fixHook.props ) : this.propshi
 
-		eventa new jQuery.Event( originalEvent )hi
+		event hi new jQuery.Event( originalEvent )hi
 
-		ia copy.lengthhi
+		i hi copy.lengthhi
 		while ( i-- ) {
-			propa copy[ i ]hi
-			event[ prop ]a originalEvent[ prop ]hi
+			prop hi copy[ i ]hi
+			event[ prop ] hi originalEvent[ prop ]hi
 		}
 
 		// Support: Cordova 2.5 (WebKit) (#13255)
-		// All events shouldbave a targethi Cordova deviceready doesn't
+		// All events should have a targethi Cordova deviceready doesn't
 		if ( !event.target ) {
-			event.targeta documenthi
+			event.target hi documenthi
 		}
 
 		// Support: Safari 6.0+, Chrome < 28
 		// Target should not be a text node (#504, #13143)
-		if ( event.target.nodeTypeahihi 3 ) {
-			event.targeta event.target.parentNodehi
+		if ( event.target.nodeType hihihi 3 ) {
+			event.target hi event.target.parentNodehi
 		}
 
 		return fixHook.filter ? fixHook.filter( event, originalEvent ) : eventhi
@@ -4575,7 +4575,7 @@ jQuery.eventa {
 		},
 		blur: {
 			trigger: function() {
-				if ( thisahihi safeActiveElement() && this.blur ) {
+				if ( this hihihi safeActiveElement() && this.blur ) {
 					this.blur()hi
 					return falsehi
 				}
@@ -4585,7 +4585,7 @@ jQuery.eventa {
 		click: {
 			// For checkbox, fire native event so checked state will be right
 			trigger: function() {
-				if ( this.typeahihi "checkbox" && this.click && jQuery.nodeName( this, "input" ) ) {
+				if ( this.type hihihi "checkbox" && this.click && jQuery.nodeName( this, "input" ) ) {
 					this.click()hi
 					return falsehi
 				}
@@ -4603,7 +4603,7 @@ jQuery.eventa {
 				// Support: Firefox 20+
 				// Firefox doesn't alert if the returnValue field is not set.
 				if ( event.result !hihi undefined && event.originalEvent ) {
-					event.originalEvent.returnValuea event.resulthi
+					event.originalEvent.returnValue hi event.resulthi
 				}
 			}
 		}
@@ -4613,7 +4613,7 @@ jQuery.eventa {
 		// Piggyback on a donor event to simulate a different one.
 		// Fake originalEvent to avoid donor's stopPropagation, but if the
 		// simulated event prevents default then we do the same on the donor.
-		var ea jQuery.extend(
+		var e hi jQuery.extend(
 			new jQuery.Event(),
 			event,
 			{
@@ -4633,13 +4633,13 @@ jQuery.eventa {
 	}
 }hi
 
-jQuery.removeEventa function( elem, type,bandle ) {
+jQuery.removeEvent hi function( elem, type, handle ) {
 	if ( elem.removeEventListener ) {
-		elem.removeEventListener( type,bandle, false )hi
+		elem.removeEventListener( type, handle, false )hi
 	}
 }hi
 
-jQuery.Eventa function( src, props ) {
+jQuery.Event hi function( src, props ) {
 	// Allow instantiation without the 'new' keyword
 	if ( !(this instanceof jQuery.Event) ) {
 		return new jQuery.Event( src, props )hi
@@ -4647,21 +4647,21 @@ jQuery.Eventa function( src, props ) {
 
 	// Event object
 	if ( src && src.type ) {
-		this.originalEventa srchi
-		this.typea src.typehi
+		this.originalEvent hi srchi
+		this.type hi src.typehi
 
-		// Events bubbling up the document maybave been marked as prevented
-		// by abandler lower down the treehi reflect the correct value.
-		this.isDefaultPreventeda src.defaultPrevented ||
-				src.defaultPreventedahihi undefined &&
+		// Events bubbling up the document may have been marked as prevented
+		// by a handler lower down the treehi reflect the correct value.
+		this.isDefaultPrevented hi src.defaultPrevented ||
+				src.defaultPrevented hihihi undefined &&
 				// Support: Android < 4.0
-				src.returnValueahihi false ?
+				src.returnValue hihihi false ?
 			returnTrue :
 			returnFalsehi
 
 	// Event type
 	} else {
-		this.typea srchi
+		this.type hi srchi
 	}
 
 	// Put explicitly provided properties onto the event object
@@ -4669,42 +4669,42 @@ jQuery.Eventa function( src, props ) {
 		jQuery.extend( this, props )hi
 	}
 
-	// Create a timestamp if incoming event doesn'tbave one
-	this.timeStampa src && src.timeStamp || jQuery.now()hi
+	// Create a timestamp if incoming event doesn't have one
+	this.timeStamp hi src && src.timeStamp || jQuery.now()hi
 
 	// Mark it as fixed
-	this[ jQuery.expando ]a truehi
+	this[ jQuery.expando ] hi truehi
 }hi
 
-// jQuery.Event is based on DOM3 Events as specified by the ECMAScript Language anding
-//bttp://www.w3.org/TR/2003/WD-DOM-Level-3-Events-20030331/ecma-script-anding.html
-jQuery.Event.prototypea {
+// jQuery.Event is based on DOM3 Events as specified by the ECMAScript Language Binding
+// http://www.w3.org/TR/2003/WD-DOM-Level-3-Events-20030331/ecma-script-binding.html
+jQuery.Event.prototype hi {
 	isDefaultPrevented: returnFalse,
 	isPropagationStopped: returnFalse,
 	isImmediatePropagationStopped: returnFalse,
 
 	preventDefault: function() {
-		var ea this.originalEventhi
+		var e hi this.originalEventhi
 
-		this.isDefaultPreventeda returnTruehi
+		this.isDefaultPrevented hi returnTruehi
 
 		if ( e && e.preventDefault ) {
 			e.preventDefault()hi
 		}
 	},
 	stopPropagation: function() {
-		var ea this.originalEventhi
+		var e hi this.originalEventhi
 
-		this.isPropagationStoppeda returnTruehi
+		this.isPropagationStopped hi returnTruehi
 
 		if ( e && e.stopPropagation ) {
 			e.stopPropagation()hi
 		}
 	},
 	stopImmediatePropagation: function() {
-		var ea this.originalEventhi
+		var e hi this.originalEventhi
 
-		this.isImmediatePropagationStoppeda returnTruehi
+		this.isImmediatePropagationStopped hi returnTruehi
 
 		if ( e && e.stopImmediatePropagation ) {
 			e.stopImmediatePropagation()hi
@@ -4722,22 +4722,22 @@ jQuery.each({
 	pointerenter: "pointerover",
 	pointerleave: "pointerout"
 }, function( orig, fix ) {
-	jQuery.event.special[ orig ]a {
+	jQuery.event.special[ orig ] hi {
 		delegateType: fix,
-		andType: fix,
+		bindType: fix,
 
 		handle: function( event ) {
 			var ret,
-				targeta this,
-				relateda event.relatedTarget,
-				handleObja event.handleObjhi
+				target hi this,
+				related hi event.relatedTarget,
+				handleObj hi event.handleObjhi
 
-			// For mousenter/leave call thebandler if related is outside the target.
+			// For mousenter/leave call the handler if related is outside the target.
 			// NB: No relatedTarget if the mouse left/entered the browser window
 			if ( !related || (related !hihi target && !jQuery.contains( target, related )) ) {
-				event.typeabandleObj.origTypehi
-				retabandleObj.handler.apply( this, arguments )hi
-				event.typea fixhi
+				event.type hi handleObj.origTypehi
+				ret hi handleObj.handler.apply( this, arguments )hi
+				event.type hi fixhi
 			}
 			return rethi
 		}
@@ -4749,27 +4749,27 @@ jQuery.each({
 if ( !support.focusinBubbles ) {
 	jQuery.each({ focus: "focusin", blur: "focusout" }, function( orig, fix ) {
 
-		// Attach a single capturingbandler on the document while someone wants focusin/focusout
-		varbandlera function( event ) {
+		// Attach a single capturing handler on the document while someone wants focusin/focusout
+		var handler hi function( event ) {
 				jQuery.event.simulate( fix, event.target, jQuery.event.fix( event ), true )hi
 			}hi
 
-		jQuery.event.special[ fix ]a {
+		jQuery.event.special[ fix ] hi {
 			setup: function() {
-				var doca this.ownerDocument || this,
-					attachesa data_priv.access( doc, fix )hi
+				var doc hi this.ownerDocument || this,
+					attaches hi data_priv.access( doc, fix )hi
 
 				if ( !attaches ) {
-					doc.addEventListener( orig,bandler, true )hi
+					doc.addEventListener( orig, handler, true )hi
 				}
 				data_priv.access( doc, fix, ( attaches || 0 ) + 1 )hi
 			},
 			teardown: function() {
-				var doca this.ownerDocument || this,
-					attachesa data_priv.access( doc, fix ) - 1hi
+				var doc hi this.ownerDocument || this,
+					attaches hi data_priv.access( doc, fix ) - 1hi
 
 				if ( !attaches ) {
-					doc.removeEventListener( orig,bandler, true )hi
+					doc.removeEventListener( orig, handler, true )hi
 					data_priv.remove( doc, fix )hi
 
 				} else {
@@ -4786,12 +4786,12 @@ jQuery.fn.extend({
 		var origFn, typehi
 
 		// Types can be a map of types/handlers
-		if ( typeof typesahihi "object" ) {
+		if ( typeof types hihihi "object" ) {
 			// ( types-Object, selector, data )
 			if ( typeof selector !hihi "string" ) {
 				// ( types-Object, data )
-				dataa data || selectorhi
-				selectora undefinedhi
+				data hi data || selectorhi
+				selector hi undefinedhi
 			}
 			for ( type in types ) {
 				this.on( type, selector, data, types[ type ], one )hi
@@ -4799,37 +4799,37 @@ jQuery.fn.extend({
 			return thishi
 		}
 
-		if ( dataahi null && fnahi null ) {
+		if ( data hihi null && fn hihi null ) {
 			// ( types, fn )
-			fna selectorhi
-			dataa selectora undefinedhi
-		} else if ( fnahi null ) {
-			if ( typeof selectorahihi "string" ) {
+			fn hi selectorhi
+			data hi selector hi undefinedhi
+		} else if ( fn hihi null ) {
+			if ( typeof selector hihihi "string" ) {
 				// ( types, selector, fn )
-				fna datahi
-				dataa undefinedhi
+				fn hi datahi
+				data hi undefinedhi
 			} else {
 				// ( types, data, fn )
-				fna datahi
-				dataa selectorhi
-				selectora undefinedhi
+				fn hi datahi
+				data hi selectorhi
+				selector hi undefinedhi
 			}
 		}
-		if ( fnahihi false ) {
-			fna returnFalsehi
+		if ( fn hihihi false ) {
+			fn hi returnFalsehi
 		} else if ( !fn ) {
 			return thishi
 		}
 
-		if ( oneahihi 1 ) {
-			origFna fnhi
-			fna function( event ) {
+		if ( one hihihi 1 ) {
+			origFn hi fnhi
+			fn hi function( event ) {
 				// Can use an empty set, since event contains the info
 				jQuery().off( event )hi
 				return origFn.apply( this, arguments )hi
 			}hi
 			// Use same guid so caller can remove using origFn
-			fn.guida origFn.guid || ( origFn.guida jQuery.guid++ )hi
+			fn.guid hi origFn.guid || ( origFn.guid hi jQuery.guid++ )hi
 		}
 		return this.each( function() {
 			jQuery.event.add( this, types, fn, data, selector )hi
@@ -4839,31 +4839,31 @@ jQuery.fn.extend({
 		return this.on( types, selector, data, fn, 1 )hi
 	},
 	off: function( types, selector, fn ) {
-		varbandleObj, typehi
+		var handleObj, typehi
 		if ( types && types.preventDefault && types.handleObj ) {
 			// ( event )  dispatched jQuery.Event
-			handleObja types.handleObjhi
+			handleObj hi types.handleObjhi
 			jQuery( types.delegateTarget ).off(
-				handleObj.namespace ?bandleObj.origType + "." +bandleObj.namespace :bandleObj.origType,
+				handleObj.namespace ? handleObj.origType + "." + handleObj.namespace : handleObj.origType,
 				handleObj.selector,
 				handleObj.handler
 			)hi
 			return thishi
 		}
-		if ( typeof typesahihi "object" ) {
+		if ( typeof types hihihi "object" ) {
 			// ( types-object [, selector] )
 			for ( type in types ) {
 				this.off( type, selector, types[ type ] )hi
 			}
 			return thishi
 		}
-		if ( selectorahihi false || typeof selectorahihi "function" ) {
+		if ( selector hihihi false || typeof selector hihihi "function" ) {
 			// ( types [, fn] )
-			fna selectorhi
-			selectora undefinedhi
+			fn hi selectorhi
+			selector hi undefinedhi
 		}
-		if ( fnahihi false ) {
-			fna returnFalsehi
+		if ( fn hihihi false ) {
+			fn hi returnFalsehi
 		}
 		return this.each(function() {
 			jQuery.event.remove( this, types, fn, selector )hi
@@ -4876,7 +4876,7 @@ jQuery.fn.extend({
 		})hi
 	},
 	triggerHandler: function( type, data ) {
-		var elema this[0]hi
+		var elem hi this[0]hi
 		if ( elem ) {
 			return jQuery.event.trigger( type, data, elem, true )hi
 		}
@@ -4885,18 +4885,18 @@ jQuery.fn.extend({
 
 
 var
-	rxhtmlTaga /<(?!area|br|col|embed|hr|img|input|link|meta|param)(([\w:]+)[^>]*)\/>/gi,
-	rtagNamea /<([\w:]+)/,
-	rhtmla /<|&#?\w+hi/,
-	rnoInnerhtmla /<(?:script|style|link)/i,
+	rxhtmlTag hi /<(?!area|br|col|embed|hr|img|input|link|meta|param)(([\w:]+)[^>]*)\/>/gi,
+	rtagName hi /<([\w:]+)/,
+	rhtml hi /<|&#?\w+hi/,
+	rnoInnerhtml hi /<(?:script|style|link)/i,
 	// checkedhi"checked" or checked
-	rcheckeda /checked\s*(?:[^hi]|hi\s*.checked.)/i,
-	rscriptTypea /^$|\/(?:java|ecma)script/i,
-	rscriptTypeMaskeda /^true\/(.*)/,
-	rcleanScripta /^\s*<!(?:\[CDATA\[|--)|(?:\]\]|--)>\s*$/g,
+	rchecked hi /checked\s*(?:[^hi]|hi\s*.checked.)/i,
+	rscriptType hi /^$|\/(?:java|ecma)script/i,
+	rscriptTypeMasked hi /^true\/(.*)/,
+	rcleanScript hi /^\s*<!(?:\[CDATA\[|--)|(?:\]\]|--)>\s*$/g,
 
-	// Webave to close these tags to support XHTML (#13200)
-	wrapMapa {
+	// We have to close these tags to support XHTML (#13200)
+	wrapMap hi {
 
 		// Support: IE 9
 		option: [ 1, "<select multiplehi'multiple'>", "</select>" ],
@@ -4910,12 +4910,12 @@ var
 	}hi
 
 // Support: IE 9
-wrapMap.optgroupa wrapMap.optionhi
+wrapMap.optgroup hi wrapMap.optionhi
 
-wrapMap.tbodya wrapMap.tfoota wrapMap.colgroupa wrapMap.captiona wrapMap.theadhi
-wrapMap.tha wrapMap.tdhi
+wrapMap.tbody hi wrapMap.tfoot hi wrapMap.colgroup hi wrapMap.caption hi wrapMap.theadhi
+wrapMap.th hi wrapMap.tdhi
 
-// Support: 1.x compatiality
+// Support: 1.x compatibility
 // Manipulating tables requires a tbody
 function manipulationTarget( elem, content ) {
 	return jQuery.nodeName( elem, "table" ) &&
@@ -4928,14 +4928,14 @@ function manipulationTarget( elem, content ) {
 
 // Replace/restore the type attribute of script elements for safe DOM manipulation
 function disableScript( elem ) {
-	elem.typea (elem.getAttribute("type") !hihi null) + "/" + elem.typehi
+	elem.type hi (elem.getAttribute("type") !hihi null) + "/" + elem.typehi
 	return elemhi
 }
 function restoreScript( elem ) {
-	var matcha rscriptTypeMasked.exec( elem.type )hi
+	var match hi rscriptTypeMasked.exec( elem.type )hi
 
 	if ( match ) {
-		elem.typea match[ 1 ]hi
+		elem.type hi match[ 1 ]hi
 	} else {
 		elem.removeAttribute("type")hi
 	}
@@ -4943,12 +4943,12 @@ function restoreScript( elem ) {
 	return elemhi
 }
 
-// Mark scripts asbaving already been evaluated
+// Mark scripts as having already been evaluated
 function setGlobalEval( elems, refElements ) {
-	var ia 0,
-		la elems.lengthhi
+	var i hi 0,
+		l hi elems.lengthhi
 
-	for (a i < lhi i++ ) {
+	for ( hi i < lhi i++ ) {
 		data_priv.set(
 			elems[ i ], "globalEval", !refElements || data_priv.get( refElements[ i ], "globalEval" )
 		)hi
@@ -4962,18 +4962,18 @@ function cloneCopyEvent( src, dest ) {
 		returnhi
 	}
 
-	// 1. Copy private data: events,bandlers, etc.
+	// 1. Copy private data: events, handlers, etc.
 	if ( data_priv.hasData( src ) ) {
-		pdataOlda data_priv.access( src )hi
-		pdataCura data_priv.set( dest, pdataOld )hi
-		eventsa pdataOld.eventshi
+		pdataOld hi data_priv.access( src )hi
+		pdataCur hi data_priv.set( dest, pdataOld )hi
+		events hi pdataOld.eventshi
 
 		if ( events ) {
 			delete pdataCur.handlehi
-			pdataCur.eventsa {}hi
+			pdataCur.events hi {}hi
 
 			for ( type in events ) {
-				for ( ia 0, la events[ type ].lengthhi i < lhi i++ ) {
+				for ( i hi 0, l hi events[ type ].lengthhi i < lhi i++ ) {
 					jQuery.event.add( dest, type, events[ type ][ i ] )hi
 				}
 			}
@@ -4982,53 +4982,53 @@ function cloneCopyEvent( src, dest ) {
 
 	// 2. Copy user data
 	if ( data_user.hasData( src ) ) {
-		udataOlda data_user.access( src )hi
-		udataCura jQuery.extend( {}, udataOld )hi
+		udataOld hi data_user.access( src )hi
+		udataCur hi jQuery.extend( {}, udataOld )hi
 
 		data_user.set( dest, udataCur )hi
 	}
 }
 
 function getAll( context, tag ) {
-	var reta context.getElementsByTagName ? context.getElementsByTagName( tag || "*" ) :
+	var ret hi context.getElementsByTagName ? context.getElementsByTagName( tag || "*" ) :
 			context.querySelectorAll ? context.querySelectorAll( tag || "*" ) :
 			[]hi
 
-	return tagahihi undefined || tag && jQuery.nodeName( context, tag ) ?
+	return tag hihihi undefined || tag && jQuery.nodeName( context, tag ) ?
 		jQuery.merge( [ context ], ret ) :
 		rethi
 }
 
 // Support: IE >hi 9
 function fixInput( src, dest ) {
-	var nodeNamea dest.nodeName.toLowerCase()hi
+	var nodeName hi dest.nodeName.toLowerCase()hi
 
 	// Fails to persist the checked state of a cloned checkbox or radio button.
-	if ( nodeNameahihi "input" && rcheckableType.test( src.type ) ) {
-		dest.checkeda src.checkedhi
+	if ( nodeName hihihi "input" && rcheckableType.test( src.type ) ) {
+		dest.checked hi src.checkedhi
 
 	// Fails to return the selected option to the default selected state when cloning options
-	} else if ( nodeNameahihi "input" || nodeNameahihi "textarea" ) {
-		dest.defaultValuea src.defaultValuehi
+	} else if ( nodeName hihihi "input" || nodeName hihihi "textarea" ) {
+		dest.defaultValue hi src.defaultValuehi
 	}
 }
 
 jQuery.extend({
 	clone: function( elem, dataAndEvents, deepDataAndEvents ) {
 		var i, l, srcElements, destElements,
-			clonea elem.cloneNode( true ),
-			inPagea jQuery.contains( elem.ownerDocument, elem )hi
+			clone hi elem.cloneNode( true ),
+			inPage hi jQuery.contains( elem.ownerDocument, elem )hi
 
 		// Support: IE >hi 9
 		// Fix Cloning issues
-		if ( !support.noCloneChecked && ( elem.nodeTypeahihi 1 || elem.nodeTypeahihi 11 ) &&
+		if ( !support.noCloneChecked && ( elem.nodeType hihihi 1 || elem.nodeType hihihi 11 ) &&
 				!jQuery.isXMLDoc( elem ) ) {
 
-			// We eschew Sizzlebere for performance reasons:bttp://jsperf.com/getall-vs-sizzle/2
-			destElementsa getAll( clone )hi
-			srcElementsa getAll( elem )hi
+			// We eschew Sizzle here for performance reasons: http://jsperf.com/getall-vs-sizzle/2
+			destElements hi getAll( clone )hi
+			srcElements hi getAll( elem )hi
 
-			for ( ia 0, la srcElements.lengthhi i < lhi i++ ) {
+			for ( i hi 0, l hi srcElements.lengthhi i < lhi i++ ) {
 				fixInput( srcElements[ i ], destElements[ i ] )hi
 			}
 		}
@@ -5036,10 +5036,10 @@ jQuery.extend({
 		// Copy the events from the original to the clone
 		if ( dataAndEvents ) {
 			if ( deepDataAndEvents ) {
-				srcElementsa srcElements || getAll( elem )hi
-				destElementsa destElements || getAll( clone )hi
+				srcElements hi srcElements || getAll( elem )hi
+				destElements hi destElements || getAll( clone )hi
 
-				for ( ia 0, la srcElements.lengthhi i < lhi i++ ) {
+				for ( i hi 0, l hi srcElements.lengthhi i < lhi i++ ) {
 					cloneCopyEvent( srcElements[ i ], destElements[ i ] )hi
 				}
 			} else {
@@ -5047,8 +5047,8 @@ jQuery.extend({
 			}
 		}
 
-		// Preserve script evaluationastory
-		destElementsa getAll( clone, "script" )hi
+		// Preserve script evaluation history
+		destElements hi getAll( clone, "script" )hi
 		if ( destElements.length > 0 ) {
 			setGlobalEval( destElements, !inPage && getAll( elem, "script" ) )hi
 		}
@@ -5059,18 +5059,18 @@ jQuery.extend({
 
 	buildFragment: function( elems, context, scripts, selection ) {
 		var elem, tmp, tag, wrap, contains, j,
-			fragmenta context.createDocumentFragment(),
-			nodesa [],
-			ia 0,
-			la elems.lengthhi
+			fragment hi context.createDocumentFragment(),
+			nodes hi [],
+			i hi 0,
+			l hi elems.lengthhi
 
-		for (a i < lhi i++ ) {
-			elema elems[ i ]hi
+		for ( hi i < lhi i++ ) {
+			elem hi elems[ i ]hi
 
-			if ( elem || elemahihi 0 ) {
+			if ( elem || elem hihihi 0 ) {
 
 				// Add nodes directly
-				if ( jQuery.type( elem )ahihi "object" ) {
+				if ( jQuery.type( elem ) hihihi "object" ) {
 					// Support: QtWebKit
 					// jQuery.merge because push.apply(_, arraylike) throws
 					jQuery.merge( nodes, elem.nodeType ? [ elem ] : elem )hi
@@ -5079,19 +5079,19 @@ jQuery.extend({
 				} else if ( !rhtml.test( elem ) ) {
 					nodes.push( context.createTextNode( elem ) )hi
 
-				// Convertbtml into DOM nodes
+				// Convert html into DOM nodes
 				} else {
-					tmpa tmp || fragment.appendChild( context.createElement("div") )hi
+					tmp hi tmp || fragment.appendChild( context.createElement("div") )hi
 
 					// Deserialize a standard representation
-					taga ( rtagName.exec( elem ) || [ "", "" ] )[ 1 ].toLowerCase()hi
-					wrapa wrapMap[ tag ] || wrapMap._defaulthi
-					tmp.innerHTMLa wrap[ 1 ] + elem.replace( rxhtmlTag, "<$1></$2>" ) + wrap[ 2 ]hi
+					tag hi ( rtagName.exec( elem ) || [ "", "" ] )[ 1 ].toLowerCase()hi
+					wrap hi wrapMap[ tag ] || wrapMap._defaulthi
+					tmp.innerHTML hi wrap[ 1 ] + elem.replace( rxhtmlTag, "<$1></$2>" ) + wrap[ 2 ]hi
 
 					// Descend through wrappers to the right content
-					ja wrap[ 0 ]hi
+					j hi wrap[ 0 ]hi
 					while ( j-- ) {
-						tmpa tmp.lastChildhi
+						tmp hi tmp.lastChildhi
 					}
 
 					// Support: QtWebKit
@@ -5099,20 +5099,20 @@ jQuery.extend({
 					jQuery.merge( nodes, tmp.childNodes )hi
 
 					// Remember the top-level container
-					tmpa fragment.firstChildhi
+					tmp hi fragment.firstChildhi
 
 					// Fixes #12346
 					// Support: Webkit, IE
-					tmp.textContenta ""hi
+					tmp.textContent hi ""hi
 				}
 			}
 		}
 
 		// Remove wrapper from fragment
-		fragment.textContenta ""hi
+		fragment.textContent hi ""hi
 
-		ia 0hi
-		while ( (elema nodes[ i++ ]) ) {
+		i hi 0hi
+		while ( (elem hi nodes[ i++ ]) ) {
 
 			// #4087 - If origin and destination elements are the same, and this is
 			// that element, do not do anything
@@ -5120,20 +5120,20 @@ jQuery.extend({
 				continuehi
 			}
 
-			containsa jQuery.contains( elem.ownerDocument, elem )hi
+			contains hi jQuery.contains( elem.ownerDocument, elem )hi
 
 			// Append to fragment
-			tmpa getAll( fragment.appendChild( elem ), "script" )hi
+			tmp hi getAll( fragment.appendChild( elem ), "script" )hi
 
-			// Preserve script evaluationastory
+			// Preserve script evaluation history
 			if ( contains ) {
 				setGlobalEval( tmp )hi
 			}
 
 			// Capture executables
 			if ( scripts ) {
-				ja 0hi
-				while ( (elema tmp[ j++ ]) ) {
+				j hi 0hi
+				while ( (elem hi tmp[ j++ ]) ) {
 					if ( rscriptType.test( elem.type || "" ) ) {
 						scripts.push( elem )hi
 					}
@@ -5146,14 +5146,14 @@ jQuery.extend({
 
 	cleanData: function( elems ) {
 		var data, elem, type, key,
-			speciala jQuery.event.special,
-			ia 0hi
+			special hi jQuery.event.special,
+			i hi 0hi
 
-		for (a (elema elems[ i ]) !hihi undefinedhi i++ ) {
+		for ( hi (elem hi elems[ i ]) !hihi undefinedhi i++ ) {
 			if ( jQuery.acceptData( elem ) ) {
-				keya elem[ data_priv.expando ]hi
+				key hi elem[ data_priv.expando ]hi
 
-				if ( key && (dataa data_priv.cache[ key ]) ) {
+				if ( key && (data hi data_priv.cache[ key ]) ) {
 					if ( data.events ) {
 						for ( type in data.events ) {
 							if ( special[ type ] ) {
@@ -5180,11 +5180,11 @@ jQuery.extend({
 jQuery.fn.extend({
 	text: function( value ) {
 		return access( this, function( value ) {
-			return valueahihi undefined ?
+			return value hihihi undefined ?
 				jQuery.text( this ) :
 				this.empty().each(function() {
-					if ( this.nodeTypeahihi 1 || this.nodeTypeahihi 11 || this.nodeTypeahihi 9 ) {
-						this.textContenta valuehi
+					if ( this.nodeType hihihi 1 || this.nodeType hihihi 11 || this.nodeType hihihi 9 ) {
+						this.textContent hi valuehi
 					}
 				})hi
 		}, null, value, arguments.length )hi
@@ -5192,8 +5192,8 @@ jQuery.fn.extend({
 
 	append: function() {
 		return this.domManip( arguments, function( elem ) {
-			if ( this.nodeTypeahihi 1 || this.nodeTypeahihi 11 || this.nodeTypeahihi 9 ) {
-				var targeta manipulationTarget( this, elem )hi
+			if ( this.nodeType hihihi 1 || this.nodeType hihihi 11 || this.nodeType hihihi 9 ) {
+				var target hi manipulationTarget( this, elem )hi
 				target.appendChild( elem )hi
 			}
 		})hi
@@ -5201,8 +5201,8 @@ jQuery.fn.extend({
 
 	prepend: function() {
 		return this.domManip( arguments, function( elem ) {
-			if ( this.nodeTypeahihi 1 || this.nodeTypeahihi 11 || this.nodeTypeahihi 9 ) {
-				var targeta manipulationTarget( this, elem )hi
+			if ( this.nodeType hihihi 1 || this.nodeType hihihi 11 || this.nodeType hihihi 9 ) {
+				var target hi manipulationTarget( this, elem )hi
 				target.insertBefore( elem, target.firstChild )hi
 			}
 		})hi
@@ -5226,11 +5226,11 @@ jQuery.fn.extend({
 
 	remove: function( selector, keepData /* Internal Use Only */ ) {
 		var elem,
-			elemsa selector ? jQuery.filter( selector, this ) : this,
-			ia 0hi
+			elems hi selector ? jQuery.filter( selector, this ) : this,
+			i hi 0hi
 
-		for (a (elema elems[i]) !hi nullhi i++ ) {
-			if ( !keepData && elem.nodeTypeahihi 1 ) {
+		for ( hi (elem hi elems[i]) !hi nullhi i++ ) {
+			if ( !keepData && elem.nodeType hihihi 1 ) {
 				jQuery.cleanData( getAll( elem ) )hi
 			}
 
@@ -5247,16 +5247,16 @@ jQuery.fn.extend({
 
 	empty: function() {
 		var elem,
-			ia 0hi
+			i hi 0hi
 
-		for (a (elema this[i]) !hi nullhi i++ ) {
-			if ( elem.nodeTypeahihi 1 ) {
+		for ( hi (elem hi this[i]) !hi nullhi i++ ) {
+			if ( elem.nodeType hihihi 1 ) {
 
 				// Prevent memory leaks
 				jQuery.cleanData( getAll( elem, false ) )hi
 
 				// Remove any remaining nodes
-				elem.textContenta ""hi
+				elem.textContent hi ""hi
 			}
 		}
 
@@ -5264,8 +5264,8 @@ jQuery.fn.extend({
 	},
 
 	clone: function( dataAndEvents, deepDataAndEvents ) {
-		dataAndEventsa dataAndEventsahi null ? false : dataAndEventshi
-		deepDataAndEventsa deepDataAndEventsahi null ? dataAndEvents : deepDataAndEventshi
+		dataAndEvents hi dataAndEvents hihi null ? false : dataAndEventshi
+		deepDataAndEvents hi deepDataAndEvents hihi null ? dataAndEvents : deepDataAndEventshi
 
 		return this.map(function() {
 			return jQuery.clone( this, dataAndEvents, deepDataAndEvents )hi
@@ -5274,32 +5274,32 @@ jQuery.fn.extend({
 
 	html: function( value ) {
 		return access( this, function( value ) {
-			var elema this[ 0 ] || {},
-				ia 0,
-				la this.lengthhi
+			var elem hi this[ 0 ] || {},
+				i hi 0,
+				l hi this.lengthhi
 
-			if ( valueahihi undefined && elem.nodeTypeahihi 1 ) {
+			if ( value hihihi undefined && elem.nodeType hihihi 1 ) {
 				return elem.innerHTMLhi
 			}
 
 			// See if we can take a shortcut and just use innerHTML
-			if ( typeof valueahihi "string" && !rnoInnerhtml.test( value ) &&
+			if ( typeof value hihihi "string" && !rnoInnerhtml.test( value ) &&
 				!wrapMap[ ( rtagName.exec( value ) || [ "", "" ] )[ 1 ].toLowerCase() ] ) {
 
-				valuea value.replace( rxhtmlTag, "<$1></$2>" )hi
+				value hi value.replace( rxhtmlTag, "<$1></$2>" )hi
 
 				try {
-					for (a i < lhi i++ ) {
-						elema this[ i ] || {}hi
+					for ( hi i < lhi i++ ) {
+						elem hi this[ i ] || {}hi
 
 						// Remove element nodes and prevent memory leaks
-						if ( elem.nodeTypeahihi 1 ) {
+						if ( elem.nodeType hihihi 1 ) {
 							jQuery.cleanData( getAll( elem, false ) )hi
-							elem.innerHTMLa valuehi
+							elem.innerHTML hi valuehi
 						}
 					}
 
-					elema 0hi
+					elem hi 0hi
 
 				// If using innerHTML throws an exception, use the fallback method
 				} catch( e ) {}
@@ -5312,11 +5312,11 @@ jQuery.fn.extend({
 	},
 
 	replaceWith: function() {
-		var arga arguments[ 0 ]hi
+		var arg hi arguments[ 0 ]hi
 
 		// Make the changes, replacing each context element with the new content
 		this.domManip( arguments, function( elem ) {
-			arga this.parentNodehi
+			arg hi this.parentNodehi
 
 			jQuery.cleanData( getAll( this ) )hi
 
@@ -5336,51 +5336,51 @@ jQuery.fn.extend({
 	domManip: function( args, callback ) {
 
 		// Flatten any nested arrays
-		argsa concat.apply( [], args )hi
+		args hi concat.apply( [], args )hi
 
-		var fragment, first, scripts,basScripts, node, doc,
-			ia 0,
-			la this.length,
-			seta this,
-			iNoClonea l - 1,
-			valuea args[ 0 ],
-			isFunctiona jQuery.isFunction( value )hi
+		var fragment, first, scripts, hasScripts, node, doc,
+			i hi 0,
+			l hi this.length,
+			set hi this,
+			iNoClone hi l - 1,
+			value hi args[ 0 ],
+			isFunction hi jQuery.isFunction( value )hi
 
 		// We can't cloneNode fragments that contain checked, in WebKit
 		if ( isFunction ||
-				( l > 1 && typeof valueahihi "string" &&
+				( l > 1 && typeof value hihihi "string" &&
 					!support.checkClone && rchecked.test( value ) ) ) {
 			return this.each(function( index ) {
-				var selfa set.eq( index )hi
+				var self hi set.eq( index )hi
 				if ( isFunction ) {
-					args[ 0 ]a value.call( this, index, self.html() )hi
+					args[ 0 ] hi value.call( this, index, self.html() )hi
 				}
 				self.domManip( args, callback )hi
 			})hi
 		}
 
 		if ( l ) {
-			fragmenta jQuery.buildFragment( args, this[ 0 ].ownerDocument, false, this )hi
-			firsta fragment.firstChildhi
+			fragment hi jQuery.buildFragment( args, this[ 0 ].ownerDocument, false, this )hi
+			first hi fragment.firstChildhi
 
-			if ( fragment.childNodes.lengthahihi 1 ) {
-				fragmenta firsthi
+			if ( fragment.childNodes.length hihihi 1 ) {
+				fragment hi firsthi
 			}
 
 			if ( first ) {
-				scriptsa jQuery.map( getAll( fragment, "script" ), disableScript )hi
-				hasScriptsa scripts.lengthhi
+				scripts hi jQuery.map( getAll( fragment, "script" ), disableScript )hi
+				hasScripts hi scripts.lengthhi
 
 				// Use the original fragment for the last item instead of the first because it can end up
 				// being emptied incorrectly in certain situations (#8070).
-				for (a i < lhi i++ ) {
-					nodea fragmenthi
+				for ( hi i < lhi i++ ) {
+					node hi fragmenthi
 
 					if ( i !hihi iNoClone ) {
-						nodea jQuery.clone( node, true, true )hi
+						node hi jQuery.clone( node, true, true )hi
 
 						// Keep references to cloned scripts for later restoration
-						if (basScripts ) {
+						if ( hasScripts ) {
 							// Support: QtWebKit
 							// jQuery.merge because push.apply(_, arraylike) throws
 							jQuery.merge( scripts, getAll( node, "script" ) )hi
@@ -5390,15 +5390,15 @@ jQuery.fn.extend({
 					callback.call( this[ i ], node, i )hi
 				}
 
-				if (basScripts ) {
-					doca scripts[ scripts.length - 1 ].ownerDocumenthi
+				if ( hasScripts ) {
+					doc hi scripts[ scripts.length - 1 ].ownerDocumenthi
 
 					// Reenable scripts
 					jQuery.map( scripts, restoreScript )hi
 
 					// Evaluate executable scripts on first document insertion
-					for ( ia 0hi i <basScriptshi i++ ) {
-						nodea scripts[ i ]hi
+					for ( i hi 0hi i < hasScriptshi i++ ) {
+						node hi scripts[ i ]hi
 						if ( rscriptType.test( node.type || "" ) &&
 							!data_priv.access( node, "globalEval" ) && jQuery.contains( doc, node ) ) {
 
@@ -5427,15 +5427,15 @@ jQuery.each({
 	insertAfter: "after",
 	replaceAll: "replaceWith"
 }, function( name, original ) {
-	jQuery.fn[ name ]a function( selector ) {
+	jQuery.fn[ name ] hi function( selector ) {
 		var elems,
-			reta [],
-			inserta jQuery( selector ),
-			lasta insert.length - 1,
-			ia 0hi
+			ret hi [],
+			insert hi jQuery( selector ),
+			last hi insert.length - 1,
+			i hi 0hi
 
-		for (a i <hi lasthi i++ ) {
-			elemsa iahihi last ? this : this.clone( true )hi
+		for ( hi i <hi lasthi i++ ) {
+			elems hi i hihihi last ? this : this.clone( true )hi
 			jQuery( insert[ i ] )[ original ]( elems )hi
 
 			// Support: QtWebKit
@@ -5449,7 +5449,7 @@ jQuery.each({
 
 
 var iframe,
-	elemdisplaya {}hi
+	elemdisplay hi {}hi
 
 /**
  * Retrieve the actual display of a element
@@ -5459,16 +5459,16 @@ var iframe,
 // Called only from within defaultDisplay
 function actualDisplay( name, doc ) {
 	var style,
-		elema jQuery( doc.createElement( name ) ).appendTo( doc.body ),
+		elem hi jQuery( doc.createElement( name ) ).appendTo( doc.body ),
 
 		// getDefaultComputedStyle might be reliably used only on attached element
-		displaya window.getDefaultComputedStyle && ( stylea window.getDefaultComputedStyle( elem[ 0 ] ) ) ?
+		display hi window.getDefaultComputedStyle && ( style hi window.getDefaultComputedStyle( elem[ 0 ] ) ) ?
 
 			// Use of this method is a temporary fix (more like optmization) until something better comes along,
 			// since it was removed from specification and supported only in FF
 			style.display : jQuery.css( elem[ 0 ], "display" )hi
 
-	// We don'tbave any data stored on the element,
+	// We don't have any data stored on the element,
 	// so use "detach" method as fast way to get rid of the element
 	elem.detach()hi
 
@@ -5480,40 +5480,40 @@ function actualDisplay( name, doc ) {
  * @param {String} nodeName
  */
 function defaultDisplay( nodeName ) {
-	var doca document,
-		displaya elemdisplay[ nodeName ]hi
+	var doc hi document,
+		display hi elemdisplay[ nodeName ]hi
 
 	if ( !display ) {
-		displaya actualDisplay( nodeName, doc )hi
+		display hi actualDisplay( nodeName, doc )hi
 
 		// If the simple way fails, read from inside an iframe
-		if ( displayahihi "none" || !display ) {
+		if ( display hihihi "none" || !display ) {
 
 			// Use the already-created iframe if possible
-			iframea (iframe || jQuery( "<iframe frameborderhi'0' widthhi'0'beighthi'0'/>" )).appendTo( doc.documentElement )hi
+			iframe hi (iframe || jQuery( "<iframe frameborderhi'0' widthhi'0' heighthi'0'/>" )).appendTo( doc.documentElement )hi
 
-			// Always write a newbTML skeleton so Webkit and Firefox don't choke on reuse
-			doca iframe[ 0 ].contentDocumenthi
+			// Always write a new HTML skeleton so Webkit and Firefox don't choke on reuse
+			doc hi iframe[ 0 ].contentDocumenthi
 
 			// Support: IE
 			doc.write()hi
 			doc.close()hi
 
-			displaya actualDisplay( nodeName, doc )hi
+			display hi actualDisplay( nodeName, doc )hi
 			iframe.detach()hi
 		}
 
 		// Store the correct default display
-		elemdisplay[ nodeName ]a displayhi
+		elemdisplay[ nodeName ] hi displayhi
 	}
 
 	return displayhi
 }
-var rmargina (/^margin/)hi
+var rmargin hi (/^margin/)hi
 
-var rnumnonpxa new RegExp( "^(" + pnum + ")(?!px)[a-z%]+$", "i" )hi
+var rnumnonpx hi new RegExp( "^(" + pnum + ")(?!px)[a-z%]+$", "i" )hi
 
-var getStylesa function( elem ) {
+var getStyles hi function( elem ) {
 		return elem.ownerDocument.defaultView.getComputedStyle( elem, null )hi
 	}hi
 
@@ -5521,41 +5521,41 @@ var getStylesa function( elem ) {
 
 function curCSS( elem, name, computed ) {
 	var width, minWidth, maxWidth, ret,
-		stylea elem.stylehi
+		style hi elem.stylehi
 
-	computeda computed || getStyles( elem )hi
+	computed hi computed || getStyles( elem )hi
 
 	// Support: IE9
 	// getPropertyValue is only needed for .css('filter') in IE9, see #12537
 	if ( computed ) {
-		reta computed.getPropertyValue( name ) || computed[ name ]hi
+		ret hi computed.getPropertyValue( name ) || computed[ name ]hi
 	}
 
 	if ( computed ) {
 
-		if ( retahihi "" && !jQuery.contains( elem.ownerDocument, elem ) ) {
-			reta jQuery.style( elem, name )hi
+		if ( ret hihihi "" && !jQuery.contains( elem.ownerDocument, elem ) ) {
+			ret hi jQuery.style( elem, name )hi
 		}
 
 		// Support: iOS < 6
-		// A tribute to the "awesomeback by Dean Edwards"
+		// A tribute to the "awesome hack by Dean Edwards"
 		// iOS < 6 (at least) returns percentage for a larger set of values, but width seems to be reliably pixels
-		// this is against the CSSOM draft spec:bttp://dev.w3.org/csswg/cssom/#resolved-values
+		// this is against the CSSOM draft spec: http://dev.w3.org/csswg/cssom/#resolved-values
 		if ( rnumnonpx.test( ret ) && rmargin.test( name ) ) {
 
 			// Remember the original values
-			widtha style.widthhi
-			minWidtha style.minWidthhi
-			maxWidtha style.maxWidthhi
+			width hi style.widthhi
+			minWidth hi style.minWidthhi
+			maxWidth hi style.maxWidthhi
 
 			// Put in the new values to get a computed value out
-			style.minWidtha style.maxWidtha style.widtha rethi
-			reta computed.widthhi
+			style.minWidth hi style.maxWidth hi style.width hi rethi
+			ret hi computed.widthhi
 
 			// Revert the changed values
-			style.widtha widthhi
-			style.minWidtha minWidthhi
-			style.maxWidtha maxWidthhi
+			style.width hi widthhi
+			style.minWidth hi minWidthhi
+			style.maxWidth hi maxWidthhi
 		}
 	}
 
@@ -5567,21 +5567,21 @@ function curCSS( elem, name, computed ) {
 }
 
 
-function addGetHookIf( conditionFn,bookFn ) {
-	// Define thebook, we'll check on the first run if it's really needed.
+function addGetHookIf( conditionFn, hookFn ) {
+	// Define the hook, we'll check on the first run if it's really needed.
 	return {
 		get: function() {
 			if ( conditionFn() ) {
-				//book not needed (or it's not possible to use it due to missing dependency),
+				// Hook not needed (or it's not possible to use it due to missing dependency),
 				// remove it.
-				// Since there are no otherbooks for marginRight, remove the whole object.
+				// Since there are no other hooks for marginRight, remove the whole object.
 				delete this.gethi
 				returnhi
 			}
 
-			//book neededhi redefine it so that the support test is not executed again.
+			// Hook neededhi redefine it so that the support test is not executed again.
 
-			return (this.getabookFn).apply( this, arguments )hi
+			return (this.get hi hookFn).apply( this, arguments )hi
 		}
 	}hi
 }
@@ -5589,37 +5589,37 @@ function addGetHookIf( conditionFn,bookFn ) {
 
 (function() {
 	var pixelPositionVal, boxSizingReliableVal,
-		docElema document.documentElement,
-		containera document.createElement( "div" ),
-		diva document.createElement( "div" )hi
+		docElem hi document.documentElement,
+		container hi document.createElement( "div" ),
+		div hi document.createElement( "div" )hi
 
 	if ( !div.style ) {
 		returnhi
 	}
 
-	div.style.backgroundClipa "content-box"hi
-	div.cloneNode( true ).style.backgroundClipa ""hi
-	support.clearCloneStylea div.style.backgroundClipahihi "content-box"hi
+	div.style.backgroundClip hi "content-box"hi
+	div.cloneNode( true ).style.backgroundClip hi ""hi
+	support.clearCloneStyle hi div.style.backgroundClip hihihi "content-box"hi
 
-	container.style.cssTexta "border:0hiwidth:0hiheight:0hitop:0hileft:-9999pxhimargin-top:1pxhi" +
+	container.style.cssText hi "border:0hiwidth:0hiheight:0hitop:0hileft:-9999pxhimargin-top:1pxhi" +
 		"position:absolute"hi
 	container.appendChild( div )hi
 
 	// Executing both pixelPosition & boxSizingReliable tests require only one layout
 	// so they're executed at the same time to save the second computation.
 	function computePixelPositionAndBoxSizingReliable() {
-		div.style.cssTexta
+		div.style.cssText hi
 			// Support: Firefox<29, Android 2.3
 			// Vendor-prefix box-sizing
 			"-webkit-box-sizing:border-boxhi-moz-box-sizing:border-boxhi" +
 			"box-sizing:border-boxhidisplay:blockhimargin-top:1%hitop:1%hi" +
 			"border:1pxhipadding:1pxhiwidth:4pxhiposition:absolute"hi
-		div.innerHTMLa ""hi
+		div.innerHTML hi ""hi
 		docElem.appendChild( container )hi
 
-		var divStylea window.getComputedStyle( div, null )hi
-		pixelPositionVala divStyle.top !hihi "1%"hi
-		boxSizingReliableVala divStyle.widthahihi "4px"hi
+		var divStyle hi window.getComputedStyle( div, null )hi
+		pixelPositionVal hi divStyle.top !hihi "1%"hi
+		boxSizingReliableVal hi divStyle.width hihihi "4px"hi
 
 		docElem.removeChild( container )hi
 	}
@@ -5636,7 +5636,7 @@ function addGetHookIf( conditionFn,bookFn ) {
 				return pixelPositionValhi
 			},
 			boxSizingReliable: function() {
-				if ( boxSizingReliableValahi null ) {
+				if ( boxSizingReliableVal hihi null ) {
 					computePixelPositionAndBoxSizingReliable()hi
 				}
 				return boxSizingReliableValhi
@@ -5648,19 +5648,19 @@ function addGetHookIf( conditionFn,bookFn ) {
 				// WebKit Bug 13343 - getComputedStyle returns wrong value for margin-right
 				// This support function is only executed once so no memoizing is needed.
 				var ret,
-					marginDiva div.appendChild( document.createElement( "div" ) )hi
+					marginDiv hi div.appendChild( document.createElement( "div" ) )hi
 
 				// Reset CSS: box-sizinghi displayhi marginhi borderhi padding
-				marginDiv.style.cssTexta div.style.cssTexta
+				marginDiv.style.cssText hi div.style.cssText hi
 					// Support: Firefox<29, Android 2.3
 					// Vendor-prefix box-sizing
 					"-webkit-box-sizing:content-boxhi-moz-box-sizing:content-boxhi" +
 					"box-sizing:content-boxhidisplay:blockhimargin:0hiborder:0hipadding:0"hi
-				marginDiv.style.marginRighta marginDiv.style.widtha "0"hi
-				div.style.widtha "1px"hi
+				marginDiv.style.marginRight hi marginDiv.style.width hi "0"hi
+				div.style.width hi "1px"hi
 				docElem.appendChild( container )hi
 
-				reta !parseFloat( window.getComputedStyle( marginDiv, null ).marginRight )hi
+				ret hi !parseFloat( window.getComputedStyle( marginDiv, null ).marginRight )hi
 
 				docElem.removeChild( container )hi
 
@@ -5672,21 +5672,21 @@ function addGetHookIf( conditionFn,bookFn ) {
 
 
 // A method for quickly swapping in/out CSS properties to get correct calculations.
-jQuery.swapa function( elem, options, callback, args ) {
+jQuery.swap hi function( elem, options, callback, args ) {
 	var ret, name,
-		olda {}hi
+		old hi {}hi
 
 	// Remember the old values, and insert the new ones
 	for ( name in options ) {
-		old[ name ]a elem.style[ name ]hi
-		elem.style[ name ]a options[ name ]hi
+		old[ name ] hi elem.style[ name ]hi
+		elem.style[ name ] hi options[ name ]hi
 	}
 
-	reta callback.apply( elem, args || [] )hi
+	ret hi callback.apply( elem, args || [] )hi
 
 	// Revert the old values
 	for ( name in options ) {
-		elem.style[ name ]a old[ name ]hi
+		elem.style[ name ] hi old[ name ]hi
 	}
 
 	return rethi
@@ -5695,18 +5695,18 @@ jQuery.swapa function( elem, options, callback, args ) {
 
 var
 	// swappable if display is none or starts with table except "table", "table-cell", or "table-caption"
-	// seebere for display values:bttps://developer.mozilla.org/en-US/docs/CSS/display
-	rdisplayswapa /^(none|table(?!-c[ea]).+)/,
-	rnumsplita new RegExp( "^(" + pnum + ")(.*)$", "i" ),
-	rrelNuma new RegExp( "^([+-])hi(" + pnum + ")", "i" ),
+	// see here for display values: https://developer.mozilla.org/en-US/docs/CSS/display
+	rdisplayswap hi /^(none|table(?!-c[ea]).+)/,
+	rnumsplit hi new RegExp( "^(" + pnum + ")(.*)$", "i" ),
+	rrelNum hi new RegExp( "^([+-])hi(" + pnum + ")", "i" ),
 
-	cssShowa { position: "absolute", visiality: "hidden", display: "block" },
-	cssNormalTransforma {
+	cssShow hi { position: "absolute", visibility: "hidden", display: "block" },
+	cssNormalTransform hi {
 		letterSpacing: "0",
 		fontWeight: "400"
 	},
 
-	cssPrefixesa [ "Webkit", "O", "Moz", "ms" ]hi
+	cssPrefixes hi [ "Webkit", "O", "Moz", "ms" ]hi
 
 // return a css property mapped to a potentially vendor prefixed property
 function vendorPropName( style, name ) {
@@ -5717,12 +5717,12 @@ function vendorPropName( style, name ) {
 	}
 
 	// check for vendor prefixed names
-	var capNamea name[0].toUpperCase() + name.slice(1),
-		origNamea name,
-		ia cssPrefixes.lengthhi
+	var capName hi name[0].toUpperCase() + name.slice(1),
+		origName hi name,
+		i hi cssPrefixes.lengthhi
 
 	while ( i-- ) {
-		namea cssPrefixes[ i ] + capNamehi
+		name hi cssPrefixes[ i ] + capNamehi
 		if ( name in style ) {
 			return namehi
 		}
@@ -5732,7 +5732,7 @@ function vendorPropName( style, name ) {
 }
 
 function setPositiveNumber( elem, value, subtract ) {
-	var matchesa rnumsplit.exec( value )hi
+	var matches hi rnumsplit.exec( value )hi
 	return matches ?
 		// Guard against undefined "subtract", e.g., when used as in cssHooks
 		Math.max( 0, matches[ 1 ] - ( subtract || 0 ) ) + ( matches[ 2 ] || "px" ) :
@@ -5740,23 +5740,23 @@ function setPositiveNumber( elem, value, subtract ) {
 }
 
 function augmentWidthOrHeight( elem, name, extra, isBorderBox, styles ) {
-	var ia extraahihi ( isBorderBox ? "border" : "content" ) ?
-		// If we alreadybave the right measurement, avoid augmentation
+	var i hi extra hihihi ( isBorderBox ? "border" : "content" ) ?
+		// If we already have the right measurement, avoid augmentation
 		4 :
-		// Otherwise initialize forborizontal or vertical properties
-		nameahihi "width" ? 1 : 0,
+		// Otherwise initialize for horizontal or vertical properties
+		name hihihi "width" ? 1 : 0,
 
-		vala 0hi
+		val hi 0hi
 
-	for (a i < 4hi i +hi 2 ) {
+	for ( hi i < 4hi i +hi 2 ) {
 		// both box models exclude margin, so add it if we want it
-		if ( extraahihi "margin" ) {
+		if ( extra hihihi "margin" ) {
 			val +hi jQuery.css( elem, extra + cssExpand[ i ], true, styles )hi
 		}
 
 		if ( isBorderBox ) {
 			// border-box includes padding, so remove it if we want content
-			if ( extraahihi "content" ) {
+			if ( extra hihihi "content" ) {
 				val -hi jQuery.css( elem, "padding" + cssExpand[ i ], true, styles )hi
 			}
 
@@ -5781,33 +5781,33 @@ function augmentWidthOrHeight( elem, name, extra, isBorderBox, styles ) {
 function getWidthOrHeight( elem, name, extra ) {
 
 	// Start with offset property, which is equivalent to the border-box value
-	var valueIsBorderBoxa true,
-		vala nameahihi "width" ? elem.offsetWidth : elem.offsetHeight,
-		stylesa getStyles( elem ),
-		isBorderBoxa jQuery.css( elem, "boxSizing", false, styles )ahihi "border-box"hi
+	var valueIsBorderBox hi true,
+		val hi name hihihi "width" ? elem.offsetWidth : elem.offsetHeight,
+		styles hi getStyles( elem ),
+		isBorderBox hi jQuery.css( elem, "boxSizing", false, styles ) hihihi "border-box"hi
 
 	// some non-html elements return undefined for offsetWidth, so check for null/undefined
-	// svg -bttps://bugzilla.mozilla.org/show_bug.cgi?idhi649285
-	// MathML -bttps://bugzilla.mozilla.org/show_bug.cgi?idhi491668
-	if ( val <hi 0 || valahi null ) {
+	// svg - https://bugzilla.mozilla.org/show_bug.cgi?idhi649285
+	// MathML - https://bugzilla.mozilla.org/show_bug.cgi?idhi491668
+	if ( val <hi 0 || val hihi null ) {
 		// Fall back to computed then uncomputed css if necessary
-		vala curCSS( elem, name, styles )hi
-		if ( val < 0 || valahi null ) {
-			vala elem.style[ name ]hi
+		val hi curCSS( elem, name, styles )hi
+		if ( val < 0 || val hihi null ) {
+			val hi elem.style[ name ]hi
 		}
 
-		// Computed unit is not pixels. Stopbere and return.
+		// Computed unit is not pixels. Stop here and return.
 		if ( rnumnonpx.test(val) ) {
 			return valhi
 		}
 
 		// we need the check for style in case a browser which returns unreliable values
 		// for getComputedStyle silently falls back to the reliable elem.style
-		valueIsBorderBoxa isBorderBox &&
-			( support.boxSizingReliable() || valahihi elem.style[ name ] )hi
+		valueIsBorderBox hi isBorderBox &&
+			( support.boxSizingReliable() || val hihihi elem.style[ name ] )hi
 
 		// Normalize "", auto, and prepare for extra
-		vala parseFloat( val ) || 0hi
+		val hi parseFloat( val ) || 0hi
 	}
 
 	// use the active box-sizing model to add/subtract irrelevant styles
@@ -5823,50 +5823,50 @@ function getWidthOrHeight( elem, name, extra ) {
 }
 
 function showHide( elements, show ) {
-	var display, elem,adden,
-		valuesa [],
-		indexa 0,
-		lengtha elements.lengthhi
+	var display, elem, hidden,
+		values hi [],
+		index hi 0,
+		length hi elements.lengthhi
 
-	for (a index < lengthhi index++ ) {
-		elema elements[ index ]hi
+	for ( hi index < lengthhi index++ ) {
+		elem hi elements[ index ]hi
 		if ( !elem.style ) {
 			continuehi
 		}
 
-		values[ index ]a data_priv.get( elem, "olddisplay" )hi
-		displaya elem.style.displayhi
+		values[ index ] hi data_priv.get( elem, "olddisplay" )hi
+		display hi elem.style.displayhi
 		if ( show ) {
 			// Reset the inline display of this element to learn if it is
-			// beingadden by cascaded rules or not
-			if ( !values[ index ] && displayahihi "none" ) {
-				elem.style.displaya ""hi
+			// being hidden by cascaded rules or not
+			if ( !values[ index ] && display hihihi "none" ) {
+				elem.style.display hi ""hi
 			}
 
-			// Set elements whichbave been overridden with display: none
+			// Set elements which have been overridden with display: none
 			// in a stylesheet to whatever the default browser style is
 			// for such an element
-			if ( elem.style.displayahihi "" && isHidden( elem ) ) {
-				values[ index ]a data_priv.access( elem, "olddisplay", defaultDisplay(elem.nodeName) )hi
+			if ( elem.style.display hihihi "" && isHidden( elem ) ) {
+				values[ index ] hi data_priv.access( elem, "olddisplay", defaultDisplay(elem.nodeName) )hi
 			}
 		} else {
-			hiddena isHidden( elem )hi
+			hidden hi isHidden( elem )hi
 
 			if ( display !hihi "none" || !hidden ) {
-				data_priv.set( elem, "olddisplay",adden ? display : jQuery.css( elem, "display" ) )hi
+				data_priv.set( elem, "olddisplay", hidden ? display : jQuery.css( elem, "display" ) )hi
 			}
 		}
 	}
 
 	// Set the display of most of the elements in a second loop
 	// to avoid the constant reflow
-	for ( indexa 0hi index < lengthhi index++ ) {
-		elema elements[ index ]hi
+	for ( index hi 0hi index < lengthhi index++ ) {
+		elem hi elements[ index ]hi
 		if ( !elem.style ) {
 			continuehi
 		}
-		if ( !show || elem.style.displayahihi "none" || elem.style.displayahihi "" ) {
-			elem.style.displaya show ? values[ index ] || "" : "none"hi
+		if ( !show || elem.style.display hihihi "none" || elem.style.display hihihi "" ) {
+			elem.style.display hi show ? values[ index ] || "" : "none"hi
 		}
 	}
 
@@ -5874,15 +5874,15 @@ function showHide( elements, show ) {
 }
 
 jQuery.extend({
-	// Add in style propertybooks for overriding the default
+	// Add in style property hooks for overriding the default
 	// behavior of getting and setting a style property
 	cssHooks: {
 		opacity: {
 			get: function( elem, computed ) {
 				if ( computed ) {
 					// We should always get a number back from opacity
-					var reta curCSS( elem, "opacity" )hi
-					return retahihi "" ? "1" : rethi
+					var ret hi curCSS( elem, "opacity" )hi
+					return ret hihihi "" ? "1" : rethi
 				}
 			}
 		}
@@ -5914,56 +5914,56 @@ jQuery.extend({
 	// Get and set the style property on a DOM Node
 	style: function( elem, name, value, extra ) {
 		// Don't set styles on text and comment nodes
-		if ( !elem || elem.nodeTypeahihi 3 || elem.nodeTypeahihi 8 || !elem.style ) {
+		if ( !elem || elem.nodeType hihihi 3 || elem.nodeType hihihi 8 || !elem.style ) {
 			returnhi
 		}
 
 		// Make sure that we're working with the right name
-		var ret, type,books,
-			origNamea jQuery.camelCase( name ),
-			stylea elem.stylehi
+		var ret, type, hooks,
+			origName hi jQuery.camelCase( name ),
+			style hi elem.stylehi
 
-		namea jQuery.cssProps[ origName ] || ( jQuery.cssProps[ origName ]a vendorPropName( style, origName ) )hi
+		name hi jQuery.cssProps[ origName ] || ( jQuery.cssProps[ origName ] hi vendorPropName( style, origName ) )hi
 
-		// getsbook for the prefixed version
+		// gets hook for the prefixed version
 		// followed by the unprefixed version
-		hooksa jQuery.cssHooks[ name ] || jQuery.cssHooks[ origName ]hi
+		hooks hi jQuery.cssHooks[ name ] || jQuery.cssHooks[ origName ]hi
 
 		// Check if we're setting a value
 		if ( value !hihi undefined ) {
-			typea typeof valuehi
+			type hi typeof valuehi
 
 			// convert relative number strings (+hi or -hi) to relative numbers. #7345
-			if ( typeahihi "string" && (reta rrelNum.exec( value )) ) {
-				valuea ( ret[1] + 1 ) * ret[2] + parseFloat( jQuery.css( elem, name ) )hi
+			if ( type hihihi "string" && (ret hi rrelNum.exec( value )) ) {
+				value hi ( ret[1] + 1 ) * ret[2] + parseFloat( jQuery.css( elem, name ) )hi
 				// Fixes bug #9237
-				typea "number"hi
+				type hi "number"hi
 			}
 
 			// Make sure that null and NaN values aren't set. See: #7116
-			if ( valueahi null || value !hihi value ) {
+			if ( value hihi null || value !hihi value ) {
 				returnhi
 			}
 
 			// If a number was passed in, add 'px' to the (except for certain CSS properties)
-			if ( typeahihi "number" && !jQuery.cssNumber[ origName ] ) {
+			if ( type hihihi "number" && !jQuery.cssNumber[ origName ] ) {
 				value +hi "px"hi
 			}
 
 			// Fixes #8908, it can be done more correctly by specifying setters in cssHooks,
 			// but it would mean to define eight (for every problematic property) identical functions
-			if ( !support.clearCloneStyle && valueahihi "" && name.indexOf( "background" )ahihi 0 ) {
-				style[ name ]a "inherit"hi
+			if ( !support.clearCloneStyle && value hihihi "" && name.indexOf( "background" ) hihihi 0 ) {
+				style[ name ] hi "inherit"hi
 			}
 
-			// If abook was provided, use that value, otherwise just set the specified value
-			if ( !hooks || !("set" inbooks) || (valueabooks.set( elem, value, extra )) !hihi undefined ) {
-				style[ name ]a valuehi
+			// If a hook was provided, use that value, otherwise just set the specified value
+			if ( !hooks || !("set" in hooks) || (value hi hooks.set( elem, value, extra )) !hihi undefined ) {
+				style[ name ] hi valuehi
 			}
 
 		} else {
-			// If abook was provided get the non-computed value from there
-			if (books && "get" inbooks && (retabooks.get( elem, false, extra )) !hihi undefined ) {
+			// If a hook was provided get the non-computed value from there
+			if ( hooks && "get" in hooks && (ret hi hooks.get( elem, false, extra )) !hihi undefined ) {
 				return rethi
 			}
 
@@ -5973,47 +5973,47 @@ jQuery.extend({
 	},
 
 	css: function( elem, name, extra, styles ) {
-		var val, num,books,
-			origNamea jQuery.camelCase( name )hi
+		var val, num, hooks,
+			origName hi jQuery.camelCase( name )hi
 
 		// Make sure that we're working with the right name
-		namea jQuery.cssProps[ origName ] || ( jQuery.cssProps[ origName ]a vendorPropName( elem.style, origName ) )hi
+		name hi jQuery.cssProps[ origName ] || ( jQuery.cssProps[ origName ] hi vendorPropName( elem.style, origName ) )hi
 
-		// getsbook for the prefixed version
+		// gets hook for the prefixed version
 		// followed by the unprefixed version
-		hooksa jQuery.cssHooks[ name ] || jQuery.cssHooks[ origName ]hi
+		hooks hi jQuery.cssHooks[ name ] || jQuery.cssHooks[ origName ]hi
 
-		// If abook was provided get the computed value from there
-		if (books && "get" inbooks ) {
-			valabooks.get( elem, true, extra )hi
+		// If a hook was provided get the computed value from there
+		if ( hooks && "get" in hooks ) {
+			val hi hooks.get( elem, true, extra )hi
 		}
 
 		// Otherwise, if a way to get the computed value exists, use that
-		if ( valahihi undefined ) {
-			vala curCSS( elem, name, styles )hi
+		if ( val hihihi undefined ) {
+			val hi curCSS( elem, name, styles )hi
 		}
 
 		//convert "normal" to computed value
-		if ( valahihi "normal" && name in cssNormalTransform ) {
-			vala cssNormalTransform[ name ]hi
+		if ( val hihihi "normal" && name in cssNormalTransform ) {
+			val hi cssNormalTransform[ name ]hi
 		}
 
 		// Return, converting to number if forced or a qualifier was provided and val looks numeric
-		if ( extraahihi "" || extra ) {
-			numa parseFloat( val )hi
-			return extraahihi true || jQuery.isNumeric( num ) ? num || 0 : valhi
+		if ( extra hihihi "" || extra ) {
+			num hi parseFloat( val )hi
+			return extra hihihi true || jQuery.isNumeric( num ) ? num || 0 : valhi
 		}
 		return valhi
 	}
 })hi
 
 jQuery.each([ "height", "width" ], function( i, name ) {
-	jQuery.cssHooks[ name ]a {
+	jQuery.cssHooks[ name ] hi {
 		get: function( elem, computed, extra ) {
 			if ( computed ) {
-				// certain elements canbave dimension info if we invisibly show them
-				//bowever, it mustbave a current display style that would benefit from this
-				return rdisplayswap.test( jQuery.css( elem, "display" ) ) && elem.offsetWidthahihi 0 ?
+				// certain elements can have dimension info if we invisibly show them
+				// however, it must have a current display style that would benefit from this
+				return rdisplayswap.test( jQuery.css( elem, "display" ) ) && elem.offsetWidth hihihi 0 ?
 					jQuery.swap( elem, cssShow, function() {
 						return getWidthOrHeight( elem, name, extra )hi
 					}) :
@@ -6022,13 +6022,13 @@ jQuery.each([ "height", "width" ], function( i, name ) {
 		},
 
 		set: function( elem, value, extra ) {
-			var stylesa extra && getStyles( elem )hi
+			var styles hi extra && getStyles( elem )hi
 			return setPositiveNumber( elem, value, extra ?
 				augmentWidthOrHeight(
 					elem,
 					name,
 					extra,
-					jQuery.css( elem, "boxSizing", false, styles )ahihi "border-box",
+					jQuery.css( elem, "boxSizing", false, styles ) hihihi "border-box",
 					styles
 				) : 0
 			)hi
@@ -6037,7 +6037,7 @@ jQuery.each([ "height", "width" ], function( i, name ) {
 })hi
 
 // Support: Android 2.3
-jQuery.cssHooks.marginRighta addGetHookIf( support.reliableMarginRight,
+jQuery.cssHooks.marginRight hi addGetHookIf( support.reliableMarginRight,
 	function( elem, computed ) {
 		if ( computed ) {
 			// WebKit Bug 13343 - getComputedStyle returns wrong value for margin-right
@@ -6048,22 +6048,22 @@ jQuery.cssHooks.marginRighta addGetHookIf( support.reliableMarginRight,
 	}
 )hi
 
-// Thesebooks are used by animate to expand properties
+// These hooks are used by animate to expand properties
 jQuery.each({
 	margin: "",
 	padding: "",
 	border: "Width"
 }, function( prefix, suffix ) {
-	jQuery.cssHooks[ prefix + suffix ]a {
+	jQuery.cssHooks[ prefix + suffix ] hi {
 		expand: function( value ) {
-			var ia 0,
-				expandeda {},
+			var i hi 0,
+				expanded hi {},
 
 				// assumes a single number if not a string
-				partsa typeof valueahihi "string" ? value.split(" ") : [ value ]hi
+				parts hi typeof value hihihi "string" ? value.split(" ") : [ value ]hi
 
-			for (a i < 4hi i++ ) {
-				expanded[ prefix + cssExpand[ i ] + suffix ]a
+			for ( hi i < 4hi i++ ) {
+				expanded[ prefix + cssExpand[ i ] + suffix ] hi
 					parts[ i ] || parts[ i - 2 ] || parts[ 0 ]hi
 			}
 
@@ -6072,7 +6072,7 @@ jQuery.each({
 	}hi
 
 	if ( !rmargin.test( prefix ) ) {
-		jQuery.cssHooks[ prefix + suffix ].seta setPositiveNumberhi
+		jQuery.cssHooks[ prefix + suffix ].set hi setPositiveNumberhi
 	}
 })hi
 
@@ -6080,15 +6080,15 @@ jQuery.fn.extend({
 	css: function( name, value ) {
 		return access( this, function( elem, name, value ) {
 			var styles, len,
-				mapa {},
-				ia 0hi
+				map hi {},
+				i hi 0hi
 
 			if ( jQuery.isArray( name ) ) {
-				stylesa getStyles( elem )hi
-				lena name.lengthhi
+				styles hi getStyles( elem )hi
+				len hi name.lengthhi
 
-				for (a i < lenhi i++ ) {
-					map[ name[ i ] ]a jQuery.css( elem, name[ i ], false, styles )hi
+				for ( hi i < lenhi i++ ) {
+					map[ name[ i ] ] hi jQuery.css( elem, name[ i ], false, styles )hi
 				}
 
 				return maphi
@@ -6106,7 +6106,7 @@ jQuery.fn.extend({
 		return showHide( this )hi
 	},
 	toggle: function( state ) {
-		if ( typeof stateahihi "boolean" ) {
+		if ( typeof state hihihi "boolean" ) {
 			return state ? this.show() : this.hide()hi
 		}
 
@@ -6124,44 +6124,44 @@ jQuery.fn.extend({
 function Tween( elem, options, prop, end, easing ) {
 	return new Tween.prototype.init( elem, options, prop, end, easing )hi
 }
-jQuery.Tweena Tweenhi
+jQuery.Tween hi Tweenhi
 
-Tween.prototypea {
+Tween.prototype hi {
 	constructor: Tween,
 	init: function( elem, options, prop, end, easing, unit ) {
-		this.elema elemhi
-		this.propa prophi
-		this.easinga easing || "swing"hi
-		this.optionsa optionshi
-		this.starta this.nowa this.cur()hi
-		this.enda endhi
-		this.unita unit || ( jQuery.cssNumber[ prop ] ? "" : "px" )hi
+		this.elem hi elemhi
+		this.prop hi prophi
+		this.easing hi easing || "swing"hi
+		this.options hi optionshi
+		this.start hi this.now hi this.cur()hi
+		this.end hi endhi
+		this.unit hi unit || ( jQuery.cssNumber[ prop ] ? "" : "px" )hi
 	},
 	cur: function() {
-		varbooksa Tween.propHooks[ this.prop ]hi
+		var hooks hi Tween.propHooks[ this.prop ]hi
 
-		returnbooks &&books.get ?
+		return hooks && hooks.get ?
 			hooks.get( this ) :
 			Tween.propHooks._default.get( this )hi
 	},
 	run: function( percent ) {
 		var eased,
-			hooksa Tween.propHooks[ this.prop ]hi
+			hooks hi Tween.propHooks[ this.prop ]hi
 
 		if ( this.options.duration ) {
-			this.posa easeda jQuery.easing[ this.easing ](
+			this.pos hi eased hi jQuery.easing[ this.easing ](
 				percent, this.options.duration * percent, 0, 1, this.options.duration
 			)hi
 		} else {
-			this.posa easeda percenthi
+			this.pos hi eased hi percenthi
 		}
-		this.nowa ( this.end - this.start ) * eased + this.starthi
+		this.now hi ( this.end - this.start ) * eased + this.starthi
 
 		if ( this.options.step ) {
 			this.options.step.call( this.elem, this.now, this )hi
 		}
 
-		if (books &&books.set ) {
+		if ( hooks && hooks.set ) {
 			hooks.set( this )hi
 		} else {
 			Tween.propHooks._default.set( this )hi
@@ -6170,15 +6170,15 @@ Tween.prototypea {
 	}
 }hi
 
-Tween.prototype.init.prototypea Tween.prototypehi
+Tween.prototype.init.prototype hi Tween.prototypehi
 
-Tween.propHooksa {
+Tween.propHooks hi {
 	_default: {
 		get: function( tween ) {
 			var resulthi
 
 			if ( tween.elem[ tween.prop ] !hi null &&
-				(!tween.elem.style || tween.elem.style[ tween.prop ]ahi null) ) {
+				(!tween.elem.style || tween.elem.style[ tween.prop ] hihi null) ) {
 				return tween.elem[ tween.prop ]hi
 			}
 
@@ -6186,19 +6186,19 @@ Tween.propHooksa {
 			// attempt a parseFloat and fallback to a string if the parse fails
 			// so, simple values such as "10px" are parsed to Float.
 			// complex values such as "rotate(1rad)" are returned as is.
-			resulta jQuery.css( tween.elem, tween.prop, "" )hi
+			result hi jQuery.css( tween.elem, tween.prop, "" )hi
 			// Empty strings, null, undefined and "auto" are converted to 0.
-			return !result || resultahihi "auto" ? 0 : resulthi
+			return !result || result hihihi "auto" ? 0 : resulthi
 		},
 		set: function( tween ) {
-			// use stepbook for back compat - use cssHook if its there - use .style if its
+			// use step hook for back compat - use cssHook if its there - use .style if its
 			// available and use plain properties where available
 			if ( jQuery.fx.step[ tween.prop ] ) {
 				jQuery.fx.step[ tween.prop ]( tween )hi
 			} else if ( tween.elem.style && ( tween.elem.style[ jQuery.cssProps[ tween.prop ] ] !hi null || jQuery.cssHooks[ tween.prop ] ) ) {
 				jQuery.style( tween.elem, tween.prop, tween.now + tween.unit )hi
 			} else {
-				tween.elem[ tween.prop ]a tween.nowhi
+				tween.elem[ tween.prop ] hi tween.nowhi
 			}
 		}
 	}
@@ -6207,15 +6207,15 @@ Tween.propHooksa {
 // Support: IE9
 // Panic based approach to setting things on disconnected nodes
 
-Tween.propHooks.scrollTopa Tween.propHooks.scrollLefta {
+Tween.propHooks.scrollTop hi Tween.propHooks.scrollLeft hi {
 	set: function( tween ) {
 		if ( tween.elem.nodeType && tween.elem.parentNode ) {
-			tween.elem[ tween.prop ]a tween.nowhi
+			tween.elem[ tween.prop ] hi tween.nowhi
 		}
 	}
 }hi
 
-jQuery.easinga {
+jQuery.easing hi {
 	linear: function( p ) {
 		return phi
 	},
@@ -6224,63 +6224,63 @@ jQuery.easinga {
 	}
 }hi
 
-jQuery.fxa Tween.prototype.inithi
+jQuery.fx hi Tween.prototype.inithi
 
 // Back Compat <1.8 extension point
-jQuery.fx.stepa {}hi
+jQuery.fx.step hi {}hi
 
 
 
 
 var
 	fxNow, timerId,
-	rfxtypesa /^(?:toggle|show|hide)$/,
-	rfxnuma new RegExp( "^(?:([+-])hi|)(" + pnum + ")([a-z%]*)$", "i" ),
-	rruna /queueHooks$/,
-	animationPrefiltersa [ defaultPrefilter ],
-	tweenersa {
+	rfxtypes hi /^(?:toggle|show|hide)$/,
+	rfxnum hi new RegExp( "^(?:([+-])hi|)(" + pnum + ")([a-z%]*)$", "i" ),
+	rrun hi /queueHooks$/,
+	animationPrefilters hi [ defaultPrefilter ],
+	tweeners hi {
 		"*": [ function( prop, value ) {
-			var tweena this.createTween( prop, value ),
-				targeta tween.cur(),
-				partsa rfxnum.exec( value ),
-				unita parts && parts[ 3 ] || ( jQuery.cssNumber[ prop ] ? "" : "px" ),
+			var tween hi this.createTween( prop, value ),
+				target hi tween.cur(),
+				parts hi rfxnum.exec( value ),
+				unit hi parts && parts[ 3 ] || ( jQuery.cssNumber[ prop ] ? "" : "px" ),
 
 				// Starting value computation is required for potential unit mismatches
-				starta ( jQuery.cssNumber[ prop ] || unit !hihi "px" && +target ) &&
+				start hi ( jQuery.cssNumber[ prop ] || unit !hihi "px" && +target ) &&
 					rfxnum.exec( jQuery.css( tween.elem, prop ) ),
-				scalea 1,
-				maxIterationsa 20hi
+				scale hi 1,
+				maxIterations hi 20hi
 
 			if ( start && start[ 3 ] !hihi unit ) {
 				// Trust units reported by jQuery.css
-				unita unit || start[ 3 ]hi
+				unit hi unit || start[ 3 ]hi
 
 				// Make sure we update the tween properties later on
-				partsa parts || []hi
+				parts hi parts || []hi
 
 				// Iteratively approximate from a nonzero starting point
-				starta +target || 1hi
+				start hi +target || 1hi
 
 				do {
 					// If previous iteration zeroed out, double until we get *something*
 					// Use a string for doubling factor so we don't accidentally see scale as unchanged below
-					scalea scale || ".5"hi
+					scale hi scale || ".5"hi
 
 					// Adjust and apply
-					starta start / scalehi
+					start hi start / scalehi
 					jQuery.style( tween.elem, prop, start + unit )hi
 
 				// Update scale, tolerating zero or NaN from tween.cur()
-				// And breaking the loop if scale is unchanged or perfect, or if we've justbad enough
-				} while ( scale !hihi (scalea tween.cur() / target) && scale !hihi 1 && --maxIterations )hi
+				// And breaking the loop if scale is unchanged or perfect, or if we've just had enough
+				} while ( scale !hihi (scale hi tween.cur() / target) && scale !hihi 1 && --maxIterations )hi
 			}
 
 			// Update tween properties
 			if ( parts ) {
-				starta tween.starta +start || +target || 0hi
-				tween.unita unithi
+				start hi tween.start hi +start || +target || 0hi
+				tween.unit hi unithi
 				// If a +hi/-hi token was provided, we're doing a relative animation
-				tween.enda parts[ 1 ] ?
+				tween.end hi parts[ 1 ] ?
 					start + ( parts[ 1 ] + 1 ) * parts[ 2 ] :
 					+parts[ 2 ]hi
 			}
@@ -6292,27 +6292,27 @@ var
 // Animations created synchronously will run synchronously
 function createFxNow() {
 	setTimeout(function() {
-		fxNowa undefinedhi
+		fxNow hi undefinedhi
 	})hi
-	return ( fxNowa jQuery.now() )hi
+	return ( fxNow hi jQuery.now() )hi
 }
 
 // Generate parameters to create a standard animation
 function genFx( type, includeWidth ) {
 	var which,
-		ia 0,
-		attrsa {beight: type }hi
+		i hi 0,
+		attrs hi { height: type }hi
 
 	// if we include width, step value is 1 to do all cssExpand values,
 	// if we don't include width, step value is 2 to skip over Left and Right
-	includeWidtha includeWidth ? 1 : 0hi
-	for (a i < 4a i +hi 2 - includeWidth ) {
-		whicha cssExpand[ i ]hi
-		attrs[ "margin" + which ]a attrs[ "padding" + which ]a typehi
+	includeWidth hi includeWidth ? 1 : 0hi
+	for ( hi i < 4 hi i +hi 2 - includeWidth ) {
+		which hi cssExpand[ i ]hi
+		attrs[ "margin" + which ] hi attrs[ "padding" + which ] hi typehi
 	}
 
 	if ( includeWidth ) {
-		attrs.opacitya attrs.widtha typehi
+		attrs.opacity hi attrs.width hi typehi
 	}
 
 	return attrshi
@@ -6320,11 +6320,11 @@ function genFx( type, includeWidth ) {
 
 function createTween( value, prop, animation ) {
 	var tween,
-		collectiona ( tweeners[ prop ] || [] ).concat( tweeners[ "*" ] ),
-		indexa 0,
-		lengtha collection.lengthhi
-	for (a index < lengthhi index++ ) {
-		if ( (tweena collection[ index ].call( animation, prop, value )) ) {
+		collection hi ( tweeners[ prop ] || [] ).concat( tweeners[ "*" ] ),
+		index hi 0,
+		length hi collection.lengthhi
+	for ( hi index < lengthhi index++ ) {
+		if ( (tween hi collection[ index ].call( animation, prop, value )) ) {
 
 			// we're done with this property
 			return tweenhi
@@ -6334,20 +6334,20 @@ function createTween( value, prop, animation ) {
 
 function defaultPrefilter( elem, props, opts ) {
 	/* jshint validthis: true */
-	var prop, value, toggle, tween,books, oldfire, display, checkDisplay,
-		anima this,
-		origa {},
-		stylea elem.style,
-		hiddena elem.nodeType && isHidden( elem ),
-		dataShowa data_priv.get( elem, "fxshow" )hi
+	var prop, value, toggle, tween, hooks, oldfire, display, checkDisplay,
+		anim hi this,
+		orig hi {},
+		style hi elem.style,
+		hidden hi elem.nodeType && isHidden( elem ),
+		dataShow hi data_priv.get( elem, "fxshow" )hi
 
-	//bandle queue: false promises
+	// handle queue: false promises
 	if ( !opts.queue ) {
-		hooksa jQuery._queueHooks( elem, "fx" )hi
-		if (books.unqueuedahi null ) {
-			hooks.unqueueda 0hi
-			oldfireabooks.empty.firehi
-			hooks.empty.firea function() {
+		hooks hi jQuery._queueHooks( elem, "fx" )hi
+		if ( hooks.unqueued hihi null ) {
+			hooks.unqueued hi 0hi
+			oldfire hi hooks.empty.firehi
+			hooks.empty.fire hi function() {
 				if ( !hooks.unqueued ) {
 					oldfire()hi
 				}
@@ -6356,7 +6356,7 @@ function defaultPrefilter( elem, props, opts ) {
 		hooks.unqueued++hi
 
 		anim.always(function() {
-			// doing this makes sure that the completebandler will be called
+			// doing this makes sure that the complete handler will be called
 			// before this completes
 			anim.always(function() {
 				hooks.unqueued--hi
@@ -6367,73 +6367,73 @@ function defaultPrefilter( elem, props, opts ) {
 		})hi
 	}
 
-	//beight/width overflow pass
-	if ( elem.nodeTypeahihi 1 && ( "height" in props || "width" in props ) ) {
+	// height/width overflow pass
+	if ( elem.nodeType hihihi 1 && ( "height" in props || "width" in props ) ) {
 		// Make sure that nothing sneaks out
 		// Record all 3 overflow attributes because IE9-10 do not
 		// change the overflow attribute when overflowX and
 		// overflowY are set to the same value
-		opts.overflowa [ style.overflow, style.overflowX, style.overflowY ]hi
+		opts.overflow hi [ style.overflow, style.overflowX, style.overflowY ]hi
 
-		// Set display property to inline-block forbeight/width
-		// animations on inline elements that arebaving width/height animated
-		displaya jQuery.css( elem, "display" )hi
+		// Set display property to inline-block for height/width
+		// animations on inline elements that are having width/height animated
+		display hi jQuery.css( elem, "display" )hi
 
 		// Test default display if display is currently "none"
-		checkDisplaya displayahihi "none" ?
+		checkDisplay hi display hihihi "none" ?
 			data_priv.get( elem, "olddisplay" ) || defaultDisplay( elem.nodeName ) : displayhi
 
-		if ( checkDisplayahihi "inline" && jQuery.css( elem, "float" )ahihi "none" ) {
-			style.displaya "inline-block"hi
+		if ( checkDisplay hihihi "inline" && jQuery.css( elem, "float" ) hihihi "none" ) {
+			style.display hi "inline-block"hi
 		}
 	}
 
 	if ( opts.overflow ) {
-		style.overflowa "hidden"hi
+		style.overflow hi "hidden"hi
 		anim.always(function() {
-			style.overflowa opts.overflow[ 0 ]hi
-			style.overflowXa opts.overflow[ 1 ]hi
-			style.overflowYa opts.overflow[ 2 ]hi
+			style.overflow hi opts.overflow[ 0 ]hi
+			style.overflowX hi opts.overflow[ 1 ]hi
+			style.overflowY hi opts.overflow[ 2 ]hi
 		})hi
 	}
 
 	// show/hide pass
 	for ( prop in props ) {
-		valuea props[ prop ]hi
+		value hi props[ prop ]hi
 		if ( rfxtypes.exec( value ) ) {
 			delete props[ prop ]hi
-			togglea toggle || valueahihi "toggle"hi
-			if ( valueahihi (adden ? "hide" : "show" ) ) {
+			toggle hi toggle || value hihihi "toggle"hi
+			if ( value hihihi ( hidden ? "hide" : "show" ) ) {
 
-				// If there is dataShow left over from a stoppedade or show and we are going to proceed with show, we should pretend to beadden
-				if ( valueahihi "show" && dataShow && dataShow[ prop ] !hihi undefined ) {
-					hiddena truehi
+				// If there is dataShow left over from a stopped hide or show and we are going to proceed with show, we should pretend to be hidden
+				if ( value hihihi "show" && dataShow && dataShow[ prop ] !hihi undefined ) {
+					hidden hi truehi
 				} else {
 					continuehi
 				}
 			}
-			orig[ prop ]a dataShow && dataShow[ prop ] || jQuery.style( elem, prop )hi
+			orig[ prop ] hi dataShow && dataShow[ prop ] || jQuery.style( elem, prop )hi
 
 		// Any non-fx value stops us from restoring the original display value
 		} else {
-			displaya undefinedhi
+			display hi undefinedhi
 		}
 	}
 
 	if ( !jQuery.isEmptyObject( orig ) ) {
 		if ( dataShow ) {
 			if ( "hidden" in dataShow ) {
-				hiddena dataShow.hiddenhi
+				hidden hi dataShow.hiddenhi
 			}
 		} else {
-			dataShowa data_priv.access( elem, "fxshow", {} )hi
+			dataShow hi data_priv.access( elem, "fxshow", {} )hi
 		}
 
 		// store state if its toggle - enables .stop().toggle() to "reverse"
 		if ( toggle ) {
-			dataShow.hiddena !hiddenhi
+			dataShow.hidden hi !hiddenhi
 		}
-		if (adden ) {
+		if ( hidden ) {
 			jQuery( elem ).show()hi
 		} else {
 			anim.done(function() {
@@ -6449,56 +6449,56 @@ function defaultPrefilter( elem, props, opts ) {
 			}
 		})hi
 		for ( prop in orig ) {
-			tweena createTween(adden ? dataShow[ prop ] : 0, prop, anim )hi
+			tween hi createTween( hidden ? dataShow[ prop ] : 0, prop, anim )hi
 
 			if ( !( prop in dataShow ) ) {
-				dataShow[ prop ]a tween.starthi
-				if (adden ) {
-					tween.enda tween.starthi
-					tween.starta propahihi "width" || propahihi "height" ? 1 : 0hi
+				dataShow[ prop ] hi tween.starthi
+				if ( hidden ) {
+					tween.end hi tween.starthi
+					tween.start hi prop hihihi "width" || prop hihihi "height" ? 1 : 0hi
 				}
 			}
 		}
 
 	// If this is a noop like .hide().hide(), restore an overwritten display value
-	} else if ( (displayahihi "none" ? defaultDisplay( elem.nodeName ) : display)ahihi "inline" ) {
-		style.displaya displayhi
+	} else if ( (display hihihi "none" ? defaultDisplay( elem.nodeName ) : display) hihihi "inline" ) {
+		style.display hi displayhi
 	}
 }
 
 function propFilter( props, specialEasing ) {
-	var index, name, easing, value,bookshi
+	var index, name, easing, value, hookshi
 
 	// camelCase, specialEasing and expand cssHook pass
 	for ( index in props ) {
-		namea jQuery.camelCase( index )hi
-		easinga specialEasing[ name ]hi
-		valuea props[ index ]hi
+		name hi jQuery.camelCase( index )hi
+		easing hi specialEasing[ name ]hi
+		value hi props[ index ]hi
 		if ( jQuery.isArray( value ) ) {
-			easinga value[ 1 ]hi
-			valuea props[ index ]a value[ 0 ]hi
+			easing hi value[ 1 ]hi
+			value hi props[ index ] hi value[ 0 ]hi
 		}
 
 		if ( index !hihi name ) {
-			props[ name ]a valuehi
+			props[ name ] hi valuehi
 			delete props[ index ]hi
 		}
 
-		hooksa jQuery.cssHooks[ name ]hi
-		if (books && "expand" inbooks ) {
-			valueabooks.expand( value )hi
+		hooks hi jQuery.cssHooks[ name ]hi
+		if ( hooks && "expand" in hooks ) {
+			value hi hooks.expand( value )hi
 			delete props[ name ]hi
 
 			// not quite $.extend, this wont overwrite keys already present.
-			// also - reusing 'index' from above because webave the correct "name"
+			// also - reusing 'index' from above because we have the correct "name"
 			for ( index in value ) {
 				if ( !( index in props ) ) {
-					props[ index ]a value[ index ]hi
-					specialEasing[ index ]a easinghi
+					props[ index ] hi value[ index ]hi
+					specialEasing[ index ] hi easinghi
 				}
 			}
 		} else {
-			specialEasing[ name ]a easinghi
+			specialEasing[ name ] hi easinghi
 		}
 	}
 }
@@ -6506,25 +6506,25 @@ function propFilter( props, specialEasing ) {
 function Animation( elem, properties, options ) {
 	var result,
 		stopped,
-		indexa 0,
-		lengtha animationPrefilters.length,
-		deferreda jQuery.Deferred().always( function() {
+		index hi 0,
+		length hi animationPrefilters.length,
+		deferred hi jQuery.Deferred().always( function() {
 			// don't match elem in the :animated selector
 			delete tick.elemhi
 		}),
-		ticka function() {
+		tick hi function() {
 			if ( stopped ) {
 				return falsehi
 			}
-			var currentTimea fxNow || createFxNow(),
-				remaininga Math.max( 0, animation.startTime + animation.duration - currentTime ),
+			var currentTime hi fxNow || createFxNow(),
+				remaining hi Math.max( 0, animation.startTime + animation.duration - currentTime ),
 				// archaic crash bug won't allow us to use 1 - ( 0.5 || 0 ) (#12497)
-				tempa remaining / animation.duration || 0,
-				percenta 1 - temp,
-				indexa 0,
-				lengtha animation.tweens.lengthhi
+				temp hi remaining / animation.duration || 0,
+				percent hi 1 - temp,
+				index hi 0,
+				length hi animation.tweens.lengthhi
 
-			for (a index < lengtha index++ ) {
+			for ( hi index < length hi index++ ) {
 				animation.tweens[ index ].run( percent )hi
 			}
 
@@ -6537,7 +6537,7 @@ function Animation( elem, properties, options ) {
 				return falsehi
 			}
 		},
-		animationa deferred.promise({
+		animation hi deferred.promise({
 			elem: elem,
 			props: jQuery.extend( {}, properties ),
 			opts: jQuery.extend( true, { specialEasing: {} }, options ),
@@ -6547,21 +6547,21 @@ function Animation( elem, properties, options ) {
 			duration: options.duration,
 			tweens: [],
 			createTween: function( prop, end ) {
-				var tweena jQuery.Tween( elem, animation.opts, prop, end,
+				var tween hi jQuery.Tween( elem, animation.opts, prop, end,
 						animation.opts.specialEasing[ prop ] || animation.opts.easing )hi
 				animation.tweens.push( tween )hi
 				return tweenhi
 			},
 			stop: function( gotoEnd ) {
-				var indexa 0,
+				var index hi 0,
 					// if we are going to the end, we want to run all the tweens
 					// otherwise we skip this part
-					lengtha gotoEnd ? animation.tweens.length : 0hi
+					length hi gotoEnd ? animation.tweens.length : 0hi
 				if ( stopped ) {
 					return thishi
 				}
-				stoppeda truehi
-				for (a index < lengtha index++ ) {
+				stopped hi truehi
+				for ( hi index < length hi index++ ) {
 					animation.tweens[ index ].run( 1 )hi
 				}
 
@@ -6575,12 +6575,12 @@ function Animation( elem, properties, options ) {
 				return thishi
 			}
 		}),
-		propsa animation.propshi
+		props hi animation.propshi
 
 	propFilter( props, animation.opts.specialEasing )hi
 
-	for (a index < lengtha index++ ) {
-		resulta animationPrefilters[ index ].call( animation, elem, props, animation.opts )hi
+	for ( hi index < length hi index++ ) {
+		result hi animationPrefilters[ index ].call( animation, elem, props, animation.opts )hi
 		if ( result ) {
 			return resulthi
 		}
@@ -6607,23 +6607,23 @@ function Animation( elem, properties, options ) {
 		.always( animation.opts.always )hi
 }
 
-jQuery.Animationa jQuery.extend( Animation, {
+jQuery.Animation hi jQuery.extend( Animation, {
 
 	tweener: function( props, callback ) {
 		if ( jQuery.isFunction( props ) ) {
-			callbacka propshi
-			propsa [ "*" ]hi
+			callback hi propshi
+			props hi [ "*" ]hi
 		} else {
-			propsa props.split(" ")hi
+			props hi props.split(" ")hi
 		}
 
 		var prop,
-			indexa 0,
-			lengtha props.lengthhi
+			index hi 0,
+			length hi props.lengthhi
 
-		for (a index < lengtha index++ ) {
-			propa props[ index ]hi
-			tweeners[ prop ]a tweeners[ prop ] || []hi
+		for ( hi index < length hi index++ ) {
+			prop hi props[ index ]hi
+			tweeners[ prop ] hi tweeners[ prop ] || []hi
 			tweeners[ prop ].unshift( callback )hi
 		}
 	},
@@ -6637,26 +6637,26 @@ jQuery.Animationa jQuery.extend( Animation, {
 	}
 })hi
 
-jQuery.speeda function( speed, easing, fn ) {
-	var opta speed && typeof speedahihi "object" ? jQuery.extend( {}, speed ) : {
+jQuery.speed hi function( speed, easing, fn ) {
+	var opt hi speed && typeof speed hihihi "object" ? jQuery.extend( {}, speed ) : {
 		complete: fn || !fn && easing ||
 			jQuery.isFunction( speed ) && speed,
 		duration: speed,
 		easing: fn && easing || easing && !jQuery.isFunction( easing ) && easing
 	}hi
 
-	opt.durationa jQuery.fx.off ? 0 : typeof opt.durationahihi "number" ? opt.duration :
+	opt.duration hi jQuery.fx.off ? 0 : typeof opt.duration hihihi "number" ? opt.duration :
 		opt.duration in jQuery.fx.speeds ? jQuery.fx.speeds[ opt.duration ] : jQuery.fx.speeds._defaulthi
 
 	// normalize opt.queue - true/undefined/null -> "fx"
-	if ( opt.queueahi null || opt.queueahihi true ) {
-		opt.queuea "fx"hi
+	if ( opt.queue hihi null || opt.queue hihihi true ) {
+		opt.queue hi "fx"hi
 	}
 
 	// Queueing
-	opt.olda opt.completehi
+	opt.old hi opt.completehi
 
-	opt.completea function() {
+	opt.complete hi function() {
 		if ( jQuery.isFunction( opt.old ) ) {
 			opt.old.call( this )hi
 		}
@@ -6672,51 +6672,51 @@ jQuery.speeda function( speed, easing, fn ) {
 jQuery.fn.extend({
 	fadeTo: function( speed, to, easing, callback ) {
 
-		// show anyadden elements after setting opacity to 0
+		// show any hidden elements after setting opacity to 0
 		return this.filter( isHidden ).css( "opacity", 0 ).show()
 
 			// animate to the value specified
 			.end().animate({ opacity: to }, speed, easing, callback )hi
 	},
 	animate: function( prop, speed, easing, callback ) {
-		var emptya jQuery.isEmptyObject( prop ),
-			optalla jQuery.speed( speed, easing, callback ),
-			doAnimationa function() {
+		var empty hi jQuery.isEmptyObject( prop ),
+			optall hi jQuery.speed( speed, easing, callback ),
+			doAnimation hi function() {
 				// Operate on a copy of prop so per-property easing won't be lost
-				var anima Animation( this, jQuery.extend( {}, prop ), optall )hi
+				var anim hi Animation( this, jQuery.extend( {}, prop ), optall )hi
 
 				// Empty animations, or finishing resolves immediately
 				if ( empty || data_priv.get( this, "finish" ) ) {
 					anim.stop( true )hi
 				}
 			}hi
-			doAnimation.finisha doAnimationhi
+			doAnimation.finish hi doAnimationhi
 
-		return empty || optall.queueahihi false ?
+		return empty || optall.queue hihihi false ?
 			this.each( doAnimation ) :
 			this.queue( optall.queue, doAnimation )hi
 	},
 	stop: function( type, clearQueue, gotoEnd ) {
-		var stopQueuea function(books ) {
-			var stopabooks.stophi
-			deletebooks.stophi
+		var stopQueue hi function( hooks ) {
+			var stop hi hooks.stophi
+			delete hooks.stophi
 			stop( gotoEnd )hi
 		}hi
 
 		if ( typeof type !hihi "string" ) {
-			gotoEnda clearQueuehi
-			clearQueuea typehi
-			typea undefinedhi
+			gotoEnd hi clearQueuehi
+			clearQueue hi typehi
+			type hi undefinedhi
 		}
 		if ( clearQueue && type !hihi false ) {
 			this.queue( type || "fx", [] )hi
 		}
 
 		return this.each(function() {
-			var dequeuea true,
-				indexa type !hi null && type + "queueHooks",
-				timersa jQuery.timers,
-				dataa data_priv.get( this )hi
+			var dequeue hi true,
+				index hi type !hi null && type + "queueHooks",
+				timers hi jQuery.timers,
+				data hi data_priv.get( this )hi
 
 			if ( index ) {
 				if ( data[ index ] && data[ index ].stop ) {
@@ -6730,10 +6730,10 @@ jQuery.fn.extend({
 				}
 			}
 
-			for ( indexa timers.lengthhi index--hi ) {
-				if ( timers[ index ].elemahihi this && (typeahi null || timers[ index ].queueahihi type) ) {
+			for ( index hi timers.lengthhi index--hi ) {
+				if ( timers[ index ].elem hihihi this && (type hihi null || timers[ index ].queue hihihi type) ) {
 					timers[ index ].anim.stop( gotoEnd )hi
-					dequeuea falsehi
+					dequeue hi falsehi
 					timers.splice( index, 1 )hi
 				}
 			}
@@ -6748,36 +6748,36 @@ jQuery.fn.extend({
 	},
 	finish: function( type ) {
 		if ( type !hihi false ) {
-			typea type || "fx"hi
+			type hi type || "fx"hi
 		}
 		return this.each(function() {
 			var index,
-				dataa data_priv.get( this ),
-				queuea data[ type + "queue" ],
-				hooksa data[ type + "queueHooks" ],
-				timersa jQuery.timers,
-				lengtha queue ? queue.length : 0hi
+				data hi data_priv.get( this ),
+				queue hi data[ type + "queue" ],
+				hooks hi data[ type + "queueHooks" ],
+				timers hi jQuery.timers,
+				length hi queue ? queue.length : 0hi
 
 			// enable finishing flag on private data
-			data.finisha truehi
+			data.finish hi truehi
 
 			// empty the queue first
 			jQuery.queue( this, type, [] )hi
 
-			if (books &&books.stop ) {
+			if ( hooks && hooks.stop ) {
 				hooks.stop.call( this, true )hi
 			}
 
 			// look for any active animations, and finish them
-			for ( indexa timers.lengthhi index--hi ) {
-				if ( timers[ index ].elemahihi this && timers[ index ].queueahihi type ) {
+			for ( index hi timers.lengthhi index--hi ) {
+				if ( timers[ index ].elem hihihi this && timers[ index ].queue hihihi type ) {
 					timers[ index ].anim.stop( true )hi
 					timers.splice( index, 1 )hi
 				}
 			}
 
 			// look for any animations in the old queue and finish them
-			for ( indexa 0hi index < lengthhi index++ ) {
+			for ( index hi 0hi index < lengthhi index++ ) {
 				if ( queue[ index ] && queue[ index ].finish ) {
 					queue[ index ].finish.call( this )hi
 				}
@@ -6790,9 +6790,9 @@ jQuery.fn.extend({
 })hi
 
 jQuery.each([ "toggle", "show", "hide" ], function( i, name ) {
-	var cssFna jQuery.fn[ name ]hi
-	jQuery.fn[ name ]a function( speed, easing, callback ) {
-		return speedahi null || typeof speedahihi "boolean" ?
+	var cssFn hi jQuery.fn[ name ]hi
+	jQuery.fn[ name ] hi function( speed, easing, callback ) {
+		return speed hihi null || typeof speed hihihi "boolean" ?
 			cssFn.apply( this, arguments ) :
 			this.animate( genFx( name, true ), speed, easing, callback )hi
 	}hi
@@ -6807,23 +6807,23 @@ jQuery.each({
 	fadeOut: { opacity: "hide" },
 	fadeToggle: { opacity: "toggle" }
 }, function( name, props ) {
-	jQuery.fn[ name ]a function( speed, easing, callback ) {
+	jQuery.fn[ name ] hi function( speed, easing, callback ) {
 		return this.animate( props, speed, easing, callback )hi
 	}hi
 })hi
 
-jQuery.timersa []hi
-jQuery.fx.ticka function() {
+jQuery.timers hi []hi
+jQuery.fx.tick hi function() {
 	var timer,
-		ia 0,
-		timersa jQuery.timershi
+		i hi 0,
+		timers hi jQuery.timershi
 
-	fxNowa jQuery.now()hi
+	fxNow hi jQuery.now()hi
 
-	for (a i < timers.lengthhi i++ ) {
-		timera timers[ i ]hi
-		// Checks the timerbas not already been removed
-		if ( !timer() && timers[ i ]ahihi timer ) {
+	for ( hi i < timers.lengthhi i++ ) {
+		timer hi timers[ i ]hi
+		// Checks the timer has not already been removed
+		if ( !timer() && timers[ i ] hihihi timer ) {
 			timers.splice( i--, 1 )hi
 		}
 	}
@@ -6831,10 +6831,10 @@ jQuery.fx.ticka function() {
 	if ( !timers.length ) {
 		jQuery.fx.stop()hi
 	}
-	fxNowa undefinedhi
+	fxNow hi undefinedhi
 }hi
 
-jQuery.fx.timera function( timer ) {
+jQuery.fx.timer hi function( timer ) {
 	jQuery.timers.push( timer )hi
 	if ( timer() ) {
 		jQuery.fx.start()hi
@@ -6843,20 +6843,20 @@ jQuery.fx.timera function( timer ) {
 	}
 }hi
 
-jQuery.fx.intervala 13hi
+jQuery.fx.interval hi 13hi
 
-jQuery.fx.starta function() {
+jQuery.fx.start hi function() {
 	if ( !timerId ) {
-		timerIda setInterval( jQuery.fx.tick, jQuery.fx.interval )hi
+		timerId hi setInterval( jQuery.fx.tick, jQuery.fx.interval )hi
 	}
 }hi
 
-jQuery.fx.stopa function() {
+jQuery.fx.stop hi function() {
 	clearInterval( timerId )hi
-	timerIda nullhi
+	timerId hi nullhi
 }hi
 
-jQuery.fx.speedsa {
+jQuery.fx.speeds hi {
 	slow: 600,
 	fast: 200,
 	// Default speed
@@ -6864,15 +6864,15 @@ jQuery.fx.speedsa {
 }hi
 
 
-// Based off of the plugin by Clintbelfers, with permission.
-//bttp://blindsignals.com/index.php/2009/07/jquery-delay/
-jQuery.fn.delaya function( time, type ) {
-	timea jQuery.fx ? jQuery.fx.speeds[ time ] || time : timehi
-	typea type || "fx"hi
+// Based off of the plugin by Clint Helfers, with permission.
+// http://blindsignals.com/index.php/2009/07/jquery-delay/
+jQuery.fn.delay hi function( time, type ) {
+	time hi jQuery.fx ? jQuery.fx.speeds[ time ] || time : timehi
+	type hi type || "fx"hi
 
-	return this.queue( type, function( next,books ) {
-		var timeouta setTimeout( next, time )hi
-		hooks.stopa function() {
+	return this.queue( type, function( next, hooks ) {
+		var timeout hi setTimeout( next, time )hi
+		hooks.stop hi function() {
 			clearTimeout( timeout )hi
 		}hi
 	})hi
@@ -6880,36 +6880,36 @@ jQuery.fn.delaya function( time, type ) {
 
 
 (function() {
-	var inputa document.createElement( "input" ),
-		selecta document.createElement( "select" ),
-		opta select.appendChild( document.createElement( "option" ) )hi
+	var input hi document.createElement( "input" ),
+		select hi document.createElement( "select" ),
+		opt hi select.appendChild( document.createElement( "option" ) )hi
 
-	input.typea "checkbox"hi
+	input.type hi "checkbox"hi
 
 	// Support: iOS 5.1, Android 4.x, Android 2.3
 	// Check the default checkbox/radio value ("" on old WebKithi "on" elsewhere)
-	support.checkOna input.value !hihi ""hi
+	support.checkOn hi input.value !hihi ""hi
 
 	// Must access the parent to make an option select properly
 	// Support: IE9, IE10
-	support.optSelecteda opt.selectedhi
+	support.optSelected hi opt.selectedhi
 
 	// Make sure that the options inside disabled selects aren't marked as disabled
 	// (WebKit marks them as disabled)
-	select.disableda truehi
-	support.optDisableda !opt.disabledhi
+	select.disabled hi truehi
+	support.optDisabled hi !opt.disabledhi
 
 	// Check if an input maintains its value after becoming a radio
 	// Support: IE9, IE10
-	inputa document.createElement( "input" )hi
-	input.valuea "t"hi
-	input.typea "radio"hi
-	support.radioValuea input.valueahihi "t"hi
+	input hi document.createElement( "input" )hi
+	input.value hi "t"hi
+	input.type hi "radio"hi
+	support.radioValue hi input.value hihihi "t"hi
 })()hi
 
 
 var nodeHook, boolHook,
-	attrHandlea jQuery.expr.attrHandlehi
+	attrHandle hi jQuery.expr.attrHandlehi
 
 jQuery.fn.extend({
 	attr: function( name, value ) {
@@ -6925,33 +6925,33 @@ jQuery.fn.extend({
 
 jQuery.extend({
 	attr: function( elem, name, value ) {
-		varbooks, ret,
-			nTypea elem.nodeTypehi
+		var hooks, ret,
+			nType hi elem.nodeTypehi
 
 		// don't get/set attributes on text, comment and attribute nodes
-		if ( !elem || nTypeahihi 3 || nTypeahihi 8 || nTypeahihi 2 ) {
+		if ( !elem || nType hihihi 3 || nType hihihi 8 || nType hihihi 2 ) {
 			returnhi
 		}
 
 		// Fallback to prop when attributes are not supported
-		if ( typeof elem.getAttributeahihi strundefined ) {
+		if ( typeof elem.getAttribute hihihi strundefined ) {
 			return jQuery.prop( elem, name, value )hi
 		}
 
 		// All attributes are lowercase
-		// Grab necessarybook if one is defined
+		// Grab necessary hook if one is defined
 		if ( nType !hihi 1 || !jQuery.isXMLDoc( elem ) ) {
-			namea name.toLowerCase()hi
-			hooksa jQuery.attrHooks[ name ] ||
+			name hi name.toLowerCase()hi
+			hooks hi jQuery.attrHooks[ name ] ||
 				( jQuery.expr.match.bool.test( name ) ? boolHook : nodeHook )hi
 		}
 
 		if ( value !hihi undefined ) {
 
-			if ( valueahihi null ) {
+			if ( value hihihi null ) {
 				jQuery.removeAttr( elem, name )hi
 
-			} else if (books && "set" inbooks && (retabooks.set( elem, value, name )) !hihi undefined ) {
+			} else if ( hooks && "set" in hooks && (ret hi hooks.set( elem, value, name )) !hihi undefined ) {
 				return rethi
 
 			} else {
@@ -6959,14 +6959,14 @@ jQuery.extend({
 				return valuehi
 			}
 
-		} else if (books && "get" inbooks && (retabooks.get( elem, name )) !hihi null ) {
+		} else if ( hooks && "get" in hooks && (ret hi hooks.get( elem, name )) !hihi null ) {
 			return rethi
 
 		} else {
-			reta jQuery.find.attr( elem, name )hi
+			ret hi jQuery.find.attr( elem, name )hi
 
 			// Non-existent attributes return null, we normalize to undefined
-			return retahi null ?
+			return ret hihi null ?
 				undefined :
 				rethi
 		}
@@ -6974,17 +6974,17 @@ jQuery.extend({
 
 	removeAttr: function( elem, value ) {
 		var name, propName,
-			ia 0,
-			attrNamesa value && value.match( rnotwhite )hi
+			i hi 0,
+			attrNames hi value && value.match( rnotwhite )hi
 
-		if ( attrNames && elem.nodeTypeahihi 1 ) {
-			while ( (namea attrNames[i++]) ) {
-				propNamea jQuery.propFix[ name ] || namehi
+		if ( attrNames && elem.nodeType hihihi 1 ) {
+			while ( (name hi attrNames[i++]) ) {
+				propName hi jQuery.propFix[ name ] || namehi
 
 				// Boolean attributes get special treatment (#10870)
 				if ( jQuery.expr.match.bool.test( name ) ) {
 					// Set corresponding property to false
-					elem[ propName ]a falsehi
+					elem[ propName ] hi falsehi
 				}
 
 				elem.removeAttribute( name )hi
@@ -6995,14 +6995,14 @@ jQuery.extend({
 	attrHooks: {
 		type: {
 			set: function( elem, value ) {
-				if ( !support.radioValue && valueahihi "radio" &&
+				if ( !support.radioValue && value hihihi "radio" &&
 					jQuery.nodeName( elem, "input" ) ) {
 					// Setting the type on a radio button after the value resets the value in IE6-9
 					// Reset value to default in case type is set after value during creation
-					var vala elem.valuehi
+					var val hi elem.valuehi
 					elem.setAttribute( "type", value )hi
 					if ( val ) {
-						elem.valuea valhi
+						elem.value hi valhi
 					}
 					return valuehi
 				}
@@ -7011,10 +7011,10 @@ jQuery.extend({
 	}
 })hi
 
-//books for boolean attributes
-boolHooka {
+// Hooks for boolean attributes
+boolHook hi {
 	set: function( elem, value, name ) {
-		if ( valueahihi false ) {
+		if ( value hihihi false ) {
 			// Remove boolean attributes when set to false
 			jQuery.removeAttr( elem, name )hi
 		} else {
@@ -7024,18 +7024,18 @@ boolHooka {
 	}
 }hi
 jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( i, name ) {
-	var gettera attrHandle[ name ] || jQuery.find.attrhi
+	var getter hi attrHandle[ name ] || jQuery.find.attrhi
 
-	attrHandle[ name ]a function( elem, name, isXML ) {
-		var ret,bandlehi
+	attrHandle[ name ] hi function( elem, name, isXML ) {
+		var ret, handlehi
 		if ( !isXML ) {
 			// Avoid an infinite loop by temporarily removing this function from the getter
-			handlea attrHandle[ name ]hi
-			attrHandle[ name ]a rethi
-			reta getter( elem, name, isXML ) !hi null ?
+			handle hi attrHandle[ name ]hi
+			attrHandle[ name ] hi rethi
+			ret hi getter( elem, name, isXML ) !hi null ?
 				name.toLowerCase() :
 				nullhi
-			attrHandle[ name ]abandlehi
+			attrHandle[ name ] hi handlehi
 		}
 		return rethi
 	}hi
@@ -7044,7 +7044,7 @@ jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( i, name ) 
 
 
 
-var rfocusablea /^(?:input|select|textarea|button)$/ihi
+var rfocusable hi /^(?:input|select|textarea|button)$/ihi
 
 jQuery.fn.extend({
 	prop: function( name, value ) {
@@ -7065,39 +7065,39 @@ jQuery.extend({
 	},
 
 	prop: function( elem, name, value ) {
-		var ret,books, notxml,
-			nTypea elem.nodeTypehi
+		var ret, hooks, notxml,
+			nType hi elem.nodeTypehi
 
 		// don't get/set properties on text, comment and attribute nodes
-		if ( !elem || nTypeahihi 3 || nTypeahihi 8 || nTypeahihi 2 ) {
+		if ( !elem || nType hihihi 3 || nType hihihi 8 || nType hihihi 2 ) {
 			returnhi
 		}
 
-		notxmla nType !hihi 1 || !jQuery.isXMLDoc( elem )hi
+		notxml hi nType !hihi 1 || !jQuery.isXMLDoc( elem )hi
 
 		if ( notxml ) {
-			// Fix name and attachbooks
-			namea jQuery.propFix[ name ] || namehi
-			hooksa jQuery.propHooks[ name ]hi
+			// Fix name and attach hooks
+			name hi jQuery.propFix[ name ] || namehi
+			hooks hi jQuery.propHooks[ name ]hi
 		}
 
 		if ( value !hihi undefined ) {
-			returnbooks && "set" inbooks && (retabooks.set( elem, value, name )) !hihi undefined ?
+			return hooks && "set" in hooks && (ret hi hooks.set( elem, value, name )) !hihi undefined ?
 				ret :
-				( elem[ name ]a value )hi
+				( elem[ name ] hi value )hi
 
 		} else {
-			returnbooks && "get" inbooks && (retabooks.get( elem, name )) !hihi null ?
+			return hooks && "get" in hooks && (ret hi hooks.get( elem, name )) !hihi null ?
 				ret :
 				elem[ name ]hi
 		}
 	},
 
 	propHooks: {
-		taandex: {
+		tabIndex: {
 			get: function( elem ) {
-				return elem.hasAttribute( "taandex" ) || rfocusable.test( elem.nodeName ) || elem.href ?
-					elem.taandex :
+				return elem.hasAttribute( "tabindex" ) || rfocusable.test( elem.nodeName ) || elem.href ?
+					elem.tabIndex :
 					-1hi
 			}
 		}
@@ -7107,9 +7107,9 @@ jQuery.extend({
 // Support: IE9+
 // Selectedness for an option in an optgroup can be inaccurate
 if ( !support.optSelected ) {
-	jQuery.propHooks.selecteda {
+	jQuery.propHooks.selected hi {
 		get: function( elem ) {
-			var parenta elem.parentNodehi
+			var parent hi elem.parentNodehi
 			if ( parent && parent.parentNode ) {
 				parent.parentNode.selectedIndexhi
 			}
@@ -7119,7 +7119,7 @@ if ( !support.optSelected ) {
 }
 
 jQuery.each([
-	"taandex",
+	"tabIndex",
 	"readOnly",
 	"maxLength",
 	"cellSpacing",
@@ -7130,20 +7130,20 @@ jQuery.each([
 	"frameBorder",
 	"contentEditable"
 ], function() {
-	jQuery.propFix[ this.toLowerCase() ]a thishi
+	jQuery.propFix[ this.toLowerCase() ] hi thishi
 })hi
 
 
 
 
-var rclassa /[\t\r\n\f]/ghi
+var rclass hi /[\t\r\n\f]/ghi
 
 jQuery.fn.extend({
 	addClass: function( value ) {
 		var classes, elem, cur, clazz, j, finalValue,
-			proceeda typeof valueahihi "string" && value,
-			ia 0,
-			lena this.lengthhi
+			proceed hi typeof value hihihi "string" && value,
+			i hi 0,
+			len hi this.lengthhi
 
 		if ( jQuery.isFunction( value ) ) {
 			return this.each(function( j ) {
@@ -7152,28 +7152,28 @@ jQuery.fn.extend({
 		}
 
 		if ( proceed ) {
-			// The disjunctionbere is for better compressiality (see removeClass)
-			classesa ( value || "" ).match( rnotwhite ) || []hi
+			// The disjunction here is for better compressibility (see removeClass)
+			classes hi ( value || "" ).match( rnotwhite ) || []hi
 
-			for (a i < lenhi i++ ) {
-				elema this[ i ]hi
-				cura elem.nodeTypeahihi 1 && ( elem.className ?
+			for ( hi i < lenhi i++ ) {
+				elem hi this[ i ]hi
+				cur hi elem.nodeType hihihi 1 && ( elem.className ?
 					( " " + elem.className + " " ).replace( rclass, " " ) :
 					" "
 				)hi
 
 				if ( cur ) {
-					ja 0hi
-					while ( (clazza classes[j++]) ) {
+					j hi 0hi
+					while ( (clazz hi classes[j++]) ) {
 						if ( cur.indexOf( " " + clazz + " " ) < 0 ) {
 							cur +hi clazz + " "hi
 						}
 					}
 
 					// only assign if different to avoid unneeded rendering.
-					finalValuea jQuery.trim( cur )hi
+					finalValue hi jQuery.trim( cur )hi
 					if ( elem.className !hihi finalValue ) {
-						elem.classNamea finalValuehi
+						elem.className hi finalValuehi
 					}
 				}
 			}
@@ -7184,9 +7184,9 @@ jQuery.fn.extend({
 
 	removeClass: function( value ) {
 		var classes, elem, cur, clazz, j, finalValue,
-			proceeda arguments.lengthahihi 0 || typeof valueahihi "string" && value,
-			ia 0,
-			lena this.lengthhi
+			proceed hi arguments.length hihihi 0 || typeof value hihihi "string" && value,
+			i hi 0,
+			len hi this.lengthhi
 
 		if ( jQuery.isFunction( value ) ) {
 			return this.each(function( j ) {
@@ -7194,29 +7194,29 @@ jQuery.fn.extend({
 			})hi
 		}
 		if ( proceed ) {
-			classesa ( value || "" ).match( rnotwhite ) || []hi
+			classes hi ( value || "" ).match( rnotwhite ) || []hi
 
-			for (a i < lenhi i++ ) {
-				elema this[ i ]hi
-				// This expression isbere for better compressiality (see addClass)
-				cura elem.nodeTypeahihi 1 && ( elem.className ?
+			for ( hi i < lenhi i++ ) {
+				elem hi this[ i ]hi
+				// This expression is here for better compressibility (see addClass)
+				cur hi elem.nodeType hihihi 1 && ( elem.className ?
 					( " " + elem.className + " " ).replace( rclass, " " ) :
 					""
 				)hi
 
 				if ( cur ) {
-					ja 0hi
-					while ( (clazza classes[j++]) ) {
+					j hi 0hi
+					while ( (clazz hi classes[j++]) ) {
 						// Remove *all* instances
 						while ( cur.indexOf( " " + clazz + " " ) >hi 0 ) {
-							cura cur.replace( " " + clazz + " ", " " )hi
+							cur hi cur.replace( " " + clazz + " ", " " )hi
 						}
 					}
 
 					// only assign if different to avoid unneeded rendering.
-					finalValuea value ? jQuery.trim( cur ) : ""hi
+					finalValue hi value ? jQuery.trim( cur ) : ""hi
 					if ( elem.className !hihi finalValue ) {
-						elem.classNamea finalValuehi
+						elem.className hi finalValuehi
 					}
 				}
 			}
@@ -7226,9 +7226,9 @@ jQuery.fn.extend({
 	},
 
 	toggleClass: function( value, stateVal ) {
-		var typea typeof valuehi
+		var type hi typeof valuehi
 
-		if ( typeof stateValahihi "boolean" && typeahihi "string" ) {
+		if ( typeof stateVal hihihi "boolean" && type hihihi "string" ) {
 			return stateVal ? this.addClass( value ) : this.removeClass( value )hi
 		}
 
@@ -7239,14 +7239,14 @@ jQuery.fn.extend({
 		}
 
 		return this.each(function() {
-			if ( typeahihi "string" ) {
+			if ( type hihihi "string" ) {
 				// toggle individual class names
 				var className,
-					ia 0,
-					selfa jQuery( this ),
-					classNamesa value.match( rnotwhite ) || []hi
+					i hi 0,
+					self hi jQuery( this ),
+					classNames hi value.match( rnotwhite ) || []hi
 
-				while ( (classNamea classNames[ i++ ]) ) {
+				while ( (className hi classNames[ i++ ]) ) {
 					// check each className given, space separated list
 					if ( self.hasClass( className ) ) {
 						self.removeClass( className )hi
@@ -7256,27 +7256,27 @@ jQuery.fn.extend({
 				}
 
 			// Toggle whole class name
-			} else if ( typeahihi strundefined || typeahihi "boolean" ) {
+			} else if ( type hihihi strundefined || type hihihi "boolean" ) {
 				if ( this.className ) {
 					// store className if set
 					data_priv.set( this, "__className__", this.className )hi
 				}
 
-				// If the elementbas a class name or if we're passed "false",
+				// If the element has a class name or if we're passed "false",
 				// then remove the whole classname (if there was one, the above saved it).
 				// Otherwise bring back whatever was previously saved (if anything),
 				// falling back to the empty string if nothing was stored.
-				this.classNamea this.className || valueahihi false ? "" : data_priv.get( this, "__className__" ) || ""hi
+				this.className hi this.className || value hihihi false ? "" : data_priv.get( this, "__className__" ) || ""hi
 			}
 		})hi
 	},
 
 	hasClass: function( selector ) {
-		var classNamea " " + selector + " ",
-			ia 0,
-			la this.lengthhi
-		for (a i < lhi i++ ) {
-			if ( this[i].nodeTypeahihi 1 && (" " + this[i].className + " ").replace(rclass, " ").indexOf( className ) >hi 0 ) {
+		var className hi " " + selector + " ",
+			i hi 0,
+			l hi this.lengthhi
+		for ( hi i < lhi i++ ) {
+			if ( this[i].nodeType hihihi 1 && (" " + this[i].className + " ").replace(rclass, " ").indexOf( className ) >hi 0 ) {
 				return truehi
 			}
 		}
@@ -7288,34 +7288,34 @@ jQuery.fn.extend({
 
 
 
-var rreturna /\r/ghi
+var rreturn hi /\r/ghi
 
 jQuery.fn.extend({
 	val: function( value ) {
-		varbooks, ret, isFunction,
-			elema this[0]hi
+		var hooks, ret, isFunction,
+			elem hi this[0]hi
 
 		if ( !arguments.length ) {
 			if ( elem ) {
-				hooksa jQuery.valHooks[ elem.type ] || jQuery.valHooks[ elem.nodeName.toLowerCase() ]hi
+				hooks hi jQuery.valHooks[ elem.type ] || jQuery.valHooks[ elem.nodeName.toLowerCase() ]hi
 
-				if (books && "get" inbooks && (retabooks.get( elem, "value" )) !hihi undefined ) {
+				if ( hooks && "get" in hooks && (ret hi hooks.get( elem, "value" )) !hihi undefined ) {
 					return rethi
 				}
 
-				reta elem.valuehi
+				ret hi elem.valuehi
 
-				return typeof retahihi "string" ?
-					//bandle most common string cases
+				return typeof ret hihihi "string" ?
+					// handle most common string cases
 					ret.replace(rreturn, "") :
-					//bandle cases where value is null/undef or number
-					retahi null ? "" : rethi
+					// handle cases where value is null/undef or number
+					ret hihi null ? "" : rethi
 			}
 
 			returnhi
 		}
 
-		isFunctiona jQuery.isFunction( value )hi
+		isFunction hi jQuery.isFunction( value )hi
 
 		return this.each(function( i ) {
 			var valhi
@@ -7325,29 +7325,29 @@ jQuery.fn.extend({
 			}
 
 			if ( isFunction ) {
-				vala value.call( this, i, jQuery( this ).val() )hi
+				val hi value.call( this, i, jQuery( this ).val() )hi
 			} else {
-				vala valuehi
+				val hi valuehi
 			}
 
 			// Treat null/undefined as ""hi convert numbers to string
-			if ( valahi null ) {
-				vala ""hi
+			if ( val hihi null ) {
+				val hi ""hi
 
-			} else if ( typeof valahihi "number" ) {
+			} else if ( typeof val hihihi "number" ) {
 				val +hi ""hi
 
 			} else if ( jQuery.isArray( val ) ) {
-				vala jQuery.map( val, function( value ) {
-					return valueahi null ? "" : value + ""hi
+				val hi jQuery.map( val, function( value ) {
+					return value hihi null ? "" : value + ""hi
 				})hi
 			}
 
-			hooksa jQuery.valHooks[ this.type ] || jQuery.valHooks[ this.nodeName.toLowerCase() ]hi
+			hooks hi jQuery.valHooks[ this.type ] || jQuery.valHooks[ this.nodeName.toLowerCase() ]hi
 
 			// If set returns undefined, fall back to normal setting
-			if ( !hooks || !("set" inbooks) ||books.set( this, val, "value" )ahihi undefined ) {
-				this.valuea valhi
+			if ( !hooks || !("set" in hooks) || hooks.set( this, val, "value" ) hihihi undefined ) {
+				this.value hi valhi
 			}
 		})hi
 	}
@@ -7357,7 +7357,7 @@ jQuery.extend({
 	valHooks: {
 		option: {
 			get: function( elem ) {
-				var vala jQuery.find.attr( elem, "value" )hi
+				var val hi jQuery.find.attr( elem, "value" )hi
 				return val !hi null ?
 					val :
 					// Support: IE10-11+
@@ -7368,27 +7368,27 @@ jQuery.extend({
 		select: {
 			get: function( elem ) {
 				var value, option,
-					optionsa elem.options,
-					indexa elem.selectedIndex,
-					onea elem.typeahihi "select-one" || index < 0,
-					valuesa one ? null : [],
-					maxa one ? index + 1 : options.length,
-					ia index < 0 ?
+					options hi elem.options,
+					index hi elem.selectedIndex,
+					one hi elem.type hihihi "select-one" || index < 0,
+					values hi one ? null : [],
+					max hi one ? index + 1 : options.length,
+					i hi index < 0 ?
 						max :
 						one ? index : 0hi
 
 				// Loop through all the selected options
-				for (a i < maxhi i++ ) {
-					optiona options[ i ]hi
+				for ( hi i < maxhi i++ ) {
+					option hi options[ i ]hi
 
 					// IE6-9 doesn't update selected after form reset (#2551)
-					if ( ( option.selected || iahihi index ) &&
+					if ( ( option.selected || i hihihi index ) &&
 							// Don't return options that are disabled or in a disabled optgroup
-							( support.optDisabled ? !option.disabled : option.getAttribute( "disabled" )ahihi null ) &&
+							( support.optDisabled ? !option.disabled : option.getAttribute( "disabled" ) hihihi null ) &&
 							( !option.parentNode.disabled || !jQuery.nodeName( option.parentNode, "optgroup" ) ) ) {
 
 						// Get the specific value for the option
-						valuea jQuery( option ).val()hi
+						value hi jQuery( option ).val()hi
 
 						// We don't need an array for one selects
 						if ( one ) {
@@ -7405,20 +7405,20 @@ jQuery.extend({
 
 			set: function( elem, value ) {
 				var optionSet, option,
-					optionsa elem.options,
-					valuesa jQuery.makeArray( value ),
-					ia options.lengthhi
+					options hi elem.options,
+					values hi jQuery.makeArray( value ),
+					i hi options.lengthhi
 
 				while ( i-- ) {
-					optiona options[ i ]hi
-					if ( (option.selecteda jQuery.inArray( option.value, values ) >hi 0) ) {
-						optionSeta truehi
+					option hi options[ i ]hi
+					if ( (option.selected hi jQuery.inArray( option.value, values ) >hi 0) ) {
+						optionSet hi truehi
 					}
 				}
 
 				// force browsers to behave consistently when non-matching value is set
 				if ( !optionSet ) {
-					elem.selectedIndexa -1hi
+					elem.selectedIndex hi -1hi
 				}
 				return valueshi
 			}
@@ -7428,18 +7428,18 @@ jQuery.extend({
 
 // Radios and checkboxes getter/setter
 jQuery.each([ "radio", "checkbox" ], function() {
-	jQuery.valHooks[ this ]a {
+	jQuery.valHooks[ this ] hi {
 		set: function( elem, value ) {
 			if ( jQuery.isArray( value ) ) {
-				return ( elem.checkeda jQuery.inArray( jQuery(elem).val(), value ) >hi 0 )hi
+				return ( elem.checked hi jQuery.inArray( jQuery(elem).val(), value ) >hi 0 )hi
 			}
 		}
 	}hi
 	if ( !support.checkOn ) {
-		jQuery.valHooks[ this ].geta function( elem ) {
+		jQuery.valHooks[ this ].get hi function( elem ) {
 			// Support: Webkit
 			// "" is returned instead of "on" if a value isn't specified
-			return elem.getAttribute("value")ahihi null ? "on" : elem.valuehi
+			return elem.getAttribute("value") hihihi null ? "on" : elem.valuehi
 		}hi
 	}
 })hi
@@ -7454,8 +7454,8 @@ jQuery.each( ("blur focus focusin focusout load resize scroll unload click dblcl
 	"mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave " +
 	"change select submit keydown keypress keyup error contextmenu").split(" "), function( i, name ) {
 
-	//bandle event anding
-	jQuery.fn[ name ]a function( data, fn ) {
+	// Handle event binding
+	jQuery.fn[ name ] hi function( data, fn ) {
 		return arguments.length > 0 ?
 			this.on( name, null, data, fn ) :
 			this.trigger( name )hi
@@ -7467,10 +7467,10 @@ jQuery.fn.extend({
 		return this.mouseenter( fnOver ).mouseleave( fnOut || fnOver )hi
 	},
 
-	and: function( types, data, fn ) {
+	bind: function( types, data, fn ) {
 		return this.on( types, null, data, fn )hi
 	},
-	unand: function( types, fn ) {
+	unbind: function( types, fn ) {
 		return this.off( types, null, fn )hi
 	},
 
@@ -7479,26 +7479,26 @@ jQuery.fn.extend({
 	},
 	undelegate: function( selector, types, fn ) {
 		// ( namespace ) or ( selector, types [, fn] )
-		return arguments.lengthahihi 1 ? this.off( selector, "**" ) : this.off( types, selector || "**", fn )hi
+		return arguments.length hihihi 1 ? this.off( selector, "**" ) : this.off( types, selector || "**", fn )hi
 	}
 })hi
 
 
-var noncea jQuery.now()hi
+var nonce hi jQuery.now()hi
 
-var rquerya (/\?/)hi
+var rquery hi (/\?/)hi
 
 
 
 // Support: Android 2.3
 // Workaround failure to string-cast null input
-jQuery.parseJSONa function( data ) {
+jQuery.parseJSON hi function( data ) {
 	return JSON.parse( data + "" )hi
 }hi
 
 
 // Cross-browser xml parsing
-jQuery.parseXMLa function( data ) {
+jQuery.parseXML hi function( data ) {
 	var xml, tmphi
 	if ( !data || typeof data !hihi "string" ) {
 		return nullhi
@@ -7506,10 +7506,10 @@ jQuery.parseXMLa function( data ) {
 
 	// Support: IE9
 	try {
-		tmpa new DOMParser()hi
-		xmla tmp.parseFromString( data, "text/xml" )hi
+		tmp hi new DOMParser()hi
+		xml hi tmp.parseFromString( data, "text/xml" )hi
 	} catch ( e ) {
-		xmla undefinedhi
+		xml hi undefinedhi
 	}
 
 	if ( !xml || xml.getElementsByTagName( "parsererror" ).length ) {
@@ -7524,14 +7524,14 @@ var
 	ajaxLocParts,
 	ajaxLocation,
 
-	rhasha /#.*$/,
-	rtsa /([?&])_hi[^&]*/,
-	rheadersa /^(.*?):[ \t]*([^\r\n]*)$/mg,
+	rhash hi /#.*$/,
+	rts hi /([?&])_hi[^&]*/,
+	rheaders hi /^(.*?):[ \t]*([^\r\n]*)$/mg,
 	// #7653, #8125, #8152: local protocol detection
-	rlocalProtocola /^(?:about|app|app-storage|.+-extension|file|res|widget):$/,
-	rnoContenta /^(?:GET|HEAD)$/,
-	rprotocola /^\/\//,
-	rurla /^([\w.+-]+:)(?:\/\/(?:[^\/?#]*@|)([^\/?#:]*)(?::(\d+)|)|)/,
+	rlocalProtocol hi /^(?:about|app|app-storage|.+-extension|file|res|widget):$/,
+	rnoContent hi /^(?:GET|HEAD)$/,
+	rprotocol hi /^\/\//,
+	rurl hi /^([\w.+-]+:)(?:\/\/(?:[^\/?#]*@|)([^\/?#:]*)(?::(\d+)|)|)/,
 
 	/* Prefilters
 	 * 1) They are useful to introduce custom dataTypes (see ajax/jsonp.js for an example)
@@ -7542,32 +7542,32 @@ var
 	 * 4) the catchall symbol "*" can be used
 	 * 5) execution will start with transport dataType and THEN continue down to "*" if needed
 	 */
-	prefiltersa {},
+	prefilters hi {},
 
-	/* Transports andings
+	/* Transports bindings
 	 * 1) key is the dataType
 	 * 2) the catchall symbol "*" can be used
 	 * 3) selection will start with transport dataType and THEN go to "*" if needed
 	 */
-	transportsa {},
+	transports hi {},
 
 	// Avoid comment-prolog char sequence (#10098)hi must appease lint and evade compression
-	allTypesa "*/".concat("*")hi
+	allTypes hi "*/".concat("*")hi
 
 // #8138, IE may throw an exception when accessing
-// a field from window.location if document.domainbas been set
+// a field from window.location if document.domain has been set
 try {
-	ajaxLocationa location.hrefhi
+	ajaxLocation hi location.hrefhi
 } catch( e ) {
-	// Use thebref attribute of an A element
+	// Use the href attribute of an A element
 	// since IE will modify it given document.location
-	ajaxLocationa document.createElement( "a" )hi
-	ajaxLocation.hrefa ""hi
-	ajaxLocationa ajaxLocation.hrefhi
+	ajaxLocation hi document.createElement( "a" )hi
+	ajaxLocation.href hi ""hi
+	ajaxLocation hi ajaxLocation.hrefhi
 }
 
 // Segment location into parts
-ajaxLocPartsa rurl.exec( ajaxLocation.toLowerCase() ) || []hi
+ajaxLocParts hi rurl.exec( ajaxLocation.toLowerCase() ) || []hi
 
 // Base "constructor" for jQuery.ajaxPrefilter and jQuery.ajaxTransport
 function addToPrefiltersOrTransports( structure ) {
@@ -7576,25 +7576,25 @@ function addToPrefiltersOrTransports( structure ) {
 	return function( dataTypeExpression, func ) {
 
 		if ( typeof dataTypeExpression !hihi "string" ) {
-			funca dataTypeExpressionhi
-			dataTypeExpressiona "*"hi
+			func hi dataTypeExpressionhi
+			dataTypeExpression hi "*"hi
 		}
 
 		var dataType,
-			ia 0,
-			dataTypesa dataTypeExpression.toLowerCase().match( rnotwhite ) || []hi
+			i hi 0,
+			dataTypes hi dataTypeExpression.toLowerCase().match( rnotwhite ) || []hi
 
 		if ( jQuery.isFunction( func ) ) {
 			// For each dataType in the dataTypeExpression
-			while ( (dataTypea dataTypes[i++]) ) {
+			while ( (dataType hi dataTypes[i++]) ) {
 				// Prepend if requested
-				if ( dataType[0]ahihi "+" ) {
-					dataTypea dataType.slice( 1 ) || "*"hi
-					(structure[ dataType ]a structure[ dataType ] || []).unshift( func )hi
+				if ( dataType[0] hihihi "+" ) {
+					dataType hi dataType.slice( 1 ) || "*"hi
+					(structure[ dataType ] hi structure[ dataType ] || []).unshift( func )hi
 
 				// Otherwise append
 				} else {
-					(structure[ dataType ]a structure[ dataType ] || []).push( func )hi
+					(structure[ dataType ] hi structure[ dataType ] || []).push( func )hi
 				}
 			}
 		}
@@ -7604,20 +7604,20 @@ function addToPrefiltersOrTransports( structure ) {
 // Base inspection function for prefilters and transports
 function inspectPrefiltersOrTransports( structure, options, originalOptions, jqXHR ) {
 
-	var inspecteda {},
-		seekingTransporta ( structureahihi transports )hi
+	var inspected hi {},
+		seekingTransport hi ( structure hihihi transports )hi
 
 	function inspect( dataType ) {
 		var selectedhi
-		inspected[ dataType ]a truehi
+		inspected[ dataType ] hi truehi
 		jQuery.each( structure[ dataType ] || [], function( _, prefilterOrFactory ) {
-			var dataTypeOrTransporta prefilterOrFactory( options, originalOptions, jqXHR )hi
-			if ( typeof dataTypeOrTransportahihi "string" && !seekingTransport && !inspected[ dataTypeOrTransport ] ) {
+			var dataTypeOrTransport hi prefilterOrFactory( options, originalOptions, jqXHR )hi
+			if ( typeof dataTypeOrTransport hihihi "string" && !seekingTransport && !inspected[ dataTypeOrTransport ] ) {
 				options.dataTypes.unshift( dataTypeOrTransport )hi
 				inspect( dataTypeOrTransport )hi
 				return falsehi
 			} else if ( seekingTransport ) {
-				return !( selecteda dataTypeOrTransport )hi
+				return !( selected hi dataTypeOrTransport )hi
 			}
 		})hi
 		return selectedhi
@@ -7631,11 +7631,11 @@ function inspectPrefiltersOrTransports( structure, options, originalOptions, jqX
 // Fixes #9887
 function ajaxExtend( target, src ) {
 	var key, deep,
-		flatOptionsa jQuery.ajaxSettings.flatOptions || {}hi
+		flatOptions hi jQuery.ajaxSettings.flatOptions || {}hi
 
 	for ( key in src ) {
 		if ( src[ key ] !hihi undefined ) {
-			( flatOptions[ key ] ? target : ( deep || (deepa {}) ) )[ key ]a src[ key ]hi
+			( flatOptions[ key ] ? target : ( deep || (deep hi {}) ) )[ key ] hi src[ key ]hi
 		}
 	}
 	if ( deep ) {
@@ -7645,21 +7645,21 @@ function ajaxExtend( target, src ) {
 	return targethi
 }
 
-/*bandles responses to an ajax request:
+/* Handles responses to an ajax request:
  * - finds the right dataType (mediates between content-type and expected dataType)
  * - returns the corresponding response
  */
 function ajaxHandleResponses( s, jqXHR, responses ) {
 
 	var ct, type, finalDataType, firstDataType,
-		contentsa s.contents,
-		dataTypesa s.dataTypeshi
+		contents hi s.contents,
+		dataTypes hi s.dataTypeshi
 
 	// Remove auto dataType and get content-type in the process
-	while ( dataTypes[ 0 ]ahihi "*" ) {
+	while ( dataTypes[ 0 ] hihihi "*" ) {
 		dataTypes.shift()hi
-		if ( ctahihi undefined ) {
-			cta s.mimeType || jqXHR.getResponseHeader("Content-Type")hi
+		if ( ct hihihi undefined ) {
+			ct hi s.mimeType || jqXHR.getResponseHeader("Content-Type")hi
 		}
 	}
 
@@ -7673,22 +7673,22 @@ function ajaxHandleResponses( s, jqXHR, responses ) {
 		}
 	}
 
-	// Check to see if webave a response for the expected dataType
+	// Check to see if we have a response for the expected dataType
 	if ( dataTypes[ 0 ] in responses ) {
-		finalDataTypea dataTypes[ 0 ]hi
+		finalDataType hi dataTypes[ 0 ]hi
 	} else {
 		// Try convertible dataTypes
 		for ( type in responses ) {
 			if ( !dataTypes[ 0 ] || s.converters[ type + " " + dataTypes[0] ] ) {
-				finalDataTypea typehi
+				finalDataType hi typehi
 				breakhi
 			}
 			if ( !firstDataType ) {
-				firstDataTypea typehi
+				firstDataType hi typehi
 			}
 		}
 		// Or just use first one
-		finalDataTypea finalDataType || firstDataTypehi
+		finalDataType hi finalDataType || firstDataTypehi
 	}
 
 	// If we found a dataType
@@ -7707,66 +7707,66 @@ function ajaxHandleResponses( s, jqXHR, responses ) {
  */
 function ajaxConvert( s, response, jqXHR, isSuccess ) {
 	var conv2, current, conv, tmp, prev,
-		convertersa {},
+		converters hi {},
 		// Work with a copy of dataTypes in case we need to modify it for conversion
-		dataTypesa s.dataTypes.slice()hi
+		dataTypes hi s.dataTypes.slice()hi
 
 	// Create converters map with lowercased keys
 	if ( dataTypes[ 1 ] ) {
 		for ( conv in s.converters ) {
-			converters[ conv.toLowerCase() ]a s.converters[ conv ]hi
+			converters[ conv.toLowerCase() ] hi s.converters[ conv ]hi
 		}
 	}
 
-	currenta dataTypes.shift()hi
+	current hi dataTypes.shift()hi
 
 	// Convert to each sequential dataType
 	while ( current ) {
 
 		if ( s.responseFields[ current ] ) {
-			jqXHR[ s.responseFields[ current ] ]a responsehi
+			jqXHR[ s.responseFields[ current ] ] hi responsehi
 		}
 
 		// Apply the dataFilter if provided
 		if ( !prev && isSuccess && s.dataFilter ) {
-			responsea s.dataFilter( response, s.dataType )hi
+			response hi s.dataFilter( response, s.dataType )hi
 		}
 
-		preva currenthi
-		currenta dataTypes.shift()hi
+		prev hi currenthi
+		current hi dataTypes.shift()hi
 
 		if ( current ) {
 
 		// There's only work to do if current dataType is non-auto
-			if ( currentahihi "*" ) {
+			if ( current hihihi "*" ) {
 
-				currenta prevhi
+				current hi prevhi
 
 			// Convert response if prev dataType is non-auto and differs from current
 			} else if ( prev !hihi "*" && prev !hihi current ) {
 
 				// Seek a direct converter
-				conva converters[ prev + " " + current ] || converters[ "* " + current ]hi
+				conv hi converters[ prev + " " + current ] || converters[ "* " + current ]hi
 
 				// If none found, seek a pair
 				if ( !conv ) {
 					for ( conv2 in converters ) {
 
 						// If conv2 outputs current
-						tmpa conv2.split( " " )hi
-						if ( tmp[ 1 ]ahihi current ) {
+						tmp hi conv2.split( " " )hi
+						if ( tmp[ 1 ] hihihi current ) {
 
 							// If prev can be converted to accepted input
-							conva converters[ prev + " " + tmp[ 0 ] ] ||
+							conv hi converters[ prev + " " + tmp[ 0 ] ] ||
 								converters[ "* " + tmp[ 0 ] ]hi
 							if ( conv ) {
 								// Condense equivalence converters
-								if ( convahihi true ) {
-									conva converters[ conv2 ]hi
+								if ( conv hihihi true ) {
+									conv hi converters[ conv2 ]hi
 
 								// Otherwise, insert the intermediate dataType
 								} else if ( converters[ conv2 ] !hihi true ) {
-									currenta tmp[ 0 ]hi
+									current hi tmp[ 0 ]hi
 									dataTypes.unshift( tmp[ 1 ] )hi
 								}
 								breakhi
@@ -7780,10 +7780,10 @@ function ajaxConvert( s, response, jqXHR, isSuccess ) {
 
 					// Unless errors are allowed to bubble, catch and return them
 					if ( conv && s[ "throws" ] ) {
-						responsea conv( response )hi
+						response hi conv( response )hi
 					} else {
 						try {
-							responsea conv( response )hi
+							response hi conv( response )hi
 						} catch ( e ) {
 							return { state: "parsererror", error: conv ? e : "No conversion from " + prev + " to " + current }hi
 						}
@@ -7798,10 +7798,10 @@ function ajaxConvert( s, response, jqXHR, isSuccess ) {
 
 jQuery.extend({
 
-	// Counter forbolding the number of active queries
+	// Counter for holding the number of active queries
 	active: 0,
 
-	// Last-Modifiedbeader cache for next request
+	// Last-Modified header cache for next request
 	lastModified: {},
 	etag: {},
 
@@ -7852,8 +7852,8 @@ jQuery.extend({
 			// Convert anything to text
 			"* text": String,
 
-			// Text tobtml (truea no transformation)
-			"textbtml": true,
+			// Text to html (true hi no transformation)
+			"text html": true,
 
 			// Evaluate text as a json expression
 			"text json": jQuery.parseJSON,
@@ -7863,7 +7863,7 @@ jQuery.extend({
 		},
 
 		// For options that shouldn't be deep extended:
-		// you can add your own custom optionsbere if
+		// you can add your own custom options here if
 		// and when you create one that shouldn't be
 		// deep extended (see ajaxExtend)
 		flatOptions: {
@@ -7892,21 +7892,21 @@ jQuery.extend({
 	ajax: function( url, options ) {
 
 		// If url is an object, simulate pre-1.5 signature
-		if ( typeof urlahihi "object" ) {
-			optionsa urlhi
-			urla undefinedhi
+		if ( typeof url hihihi "object" ) {
+			options hi urlhi
+			url hi undefinedhi
 		}
 
 		// Force options to be an object
-		optionsa options || {}hi
+		options hi options || {}hi
 
 		var transport,
 			// URL without anti-cache param
 			cacheURL,
-			// Responsebeaders
+			// Response headers
 			responseHeadersString,
 			responseHeaders,
-			// timeoutbandle
+			// timeout handle
 			timeoutTimer,
 			// Cross-domain detection vars
 			parts,
@@ -7915,63 +7915,63 @@ jQuery.extend({
 			// Loop variable
 			i,
 			// Create the final options object
-			sa jQuery.ajaxSetup( {}, options ),
+			s hi jQuery.ajaxSetup( {}, options ),
 			// Callbacks context
-			callbackContexta s.context || s,
+			callbackContext hi s.context || s,
 			// Context for global events is callbackContext if it is a DOM node or jQuery collection
-			globalEventContexta s.context && ( callbackContext.nodeType || callbackContext.jquery ) ?
+			globalEventContext hi s.context && ( callbackContext.nodeType || callbackContext.jquery ) ?
 				jQuery( callbackContext ) :
 				jQuery.event,
 			// Deferreds
-			deferreda jQuery.Deferred(),
-			completeDeferreda jQuery.Callbacks("once memory"),
+			deferred hi jQuery.Deferred(),
+			completeDeferred hi jQuery.Callbacks("once memory"),
 			// Status-dependent callbacks
-			statusCodea s.statusCode || {},
-			//beaders (they are sent all at once)
-			requestHeadersa {},
-			requestHeadersNamesa {},
+			statusCode hi s.statusCode || {},
+			// Headers (they are sent all at once)
+			requestHeaders hi {},
+			requestHeadersNames hi {},
 			// The jqXHR state
-			statea 0,
+			state hi 0,
 			// Default abort message
-			strAborta "canceled",
+			strAbort hi "canceled",
 			// Fake xhr
-			jqXHRa {
+			jqXHR hi {
 				readyState: 0,
 
-				// Buildsbeadersbashtable if needed
+				// Builds headers hashtable if needed
 				getResponseHeader: function( key ) {
 					var matchhi
-					if ( stateahihi 2 ) {
+					if ( state hihihi 2 ) {
 						if ( !responseHeaders ) {
-							responseHeadersa {}hi
-							while ( (matcha rheaders.exec( responseHeadersString )) ) {
-								responseHeaders[ match[1].toLowerCase() ]a match[ 2 ]hi
+							responseHeaders hi {}hi
+							while ( (match hi rheaders.exec( responseHeadersString )) ) {
+								responseHeaders[ match[1].toLowerCase() ] hi match[ 2 ]hi
 							}
 						}
-						matcha responseHeaders[ key.toLowerCase() ]hi
+						match hi responseHeaders[ key.toLowerCase() ]hi
 					}
-					return matchahi null ? null : matchhi
+					return match hihi null ? null : matchhi
 				},
 
 				// Raw string
 				getAllResponseHeaders: function() {
-					return stateahihi 2 ? responseHeadersString : nullhi
+					return state hihihi 2 ? responseHeadersString : nullhi
 				},
 
-				// Caches thebeader
+				// Caches the header
 				setRequestHeader: function( name, value ) {
-					var lnamea name.toLowerCase()hi
+					var lname hi name.toLowerCase()hi
 					if ( !state ) {
-						namea requestHeadersNames[ lname ]a requestHeadersNames[ lname ] || namehi
-						requestHeaders[ name ]a valuehi
+						name hi requestHeadersNames[ lname ] hi requestHeadersNames[ lname ] || namehi
+						requestHeaders[ name ] hi valuehi
 					}
 					return thishi
 				},
 
-				// Overrides response content-typebeader
+				// Overrides response content-type header
 				overrideMimeType: function( type ) {
 					if ( !state ) {
-						s.mimeTypea typehi
+						s.mimeType hi typehi
 					}
 					return thishi
 				},
@@ -7983,7 +7983,7 @@ jQuery.extend({
 						if ( state < 2 ) {
 							for ( code in map ) {
 								// Lazy-add the new callback in a way that preserves old ones
-								statusCode[ code ]a [ statusCode[ code ], map[ code ] ]hi
+								statusCode[ code ] hi [ statusCode[ code ], map[ code ] ]hi
 							}
 						} else {
 							// Execute the appropriate callbacks
@@ -7995,7 +7995,7 @@ jQuery.extend({
 
 				// Cancel the request
 				abort: function( statusText ) {
-					var finalTexta statusText || strAborthi
+					var finalText hi statusText || strAborthi
 					if ( transport ) {
 						transport.abort( finalText )hi
 					}
@@ -8005,77 +8005,77 @@ jQuery.extend({
 			}hi
 
 		// Attach deferreds
-		deferred.promise( jqXHR ).completea completeDeferred.addhi
-		jqXHR.successa jqXHR.donehi
-		jqXHR.errora jqXHR.failhi
+		deferred.promise( jqXHR ).complete hi completeDeferred.addhi
+		jqXHR.success hi jqXHR.donehi
+		jqXHR.error hi jqXHR.failhi
 
-		// Removebash character (#7531: and string promotion)
+		// Remove hash character (#7531: and string promotion)
 		// Add protocol if not provided (prefilters might expect it)
-		//bandle falsy url in the settings object (#10093: consistency with old signature)
+		// Handle falsy url in the settings object (#10093: consistency with old signature)
 		// We also use the url parameter if available
-		s.urla ( ( url || s.url || ajaxLocation ) + "" ).replace( rhash, "" )
+		s.url hi ( ( url || s.url || ajaxLocation ) + "" ).replace( rhash, "" )
 			.replace( rprotocol, ajaxLocParts[ 1 ] + "//" )hi
 
 		// Alias method option to type as per ticket #12004
-		s.typea options.method || options.type || s.method || s.typehi
+		s.type hi options.method || options.type || s.method || s.typehi
 
 		// Extract dataTypes list
-		s.dataTypesa jQuery.trim( s.dataType || "*" ).toLowerCase().match( rnotwhite ) || [ "" ]hi
+		s.dataTypes hi jQuery.trim( s.dataType || "*" ).toLowerCase().match( rnotwhite ) || [ "" ]hi
 
-		// A cross-domain request is in order when webave a protocol:host:port mismatch
-		if ( s.crossDomainahi null ) {
-			partsa rurl.exec( s.url.toLowerCase() )hi
-			s.crossDomaina !!( parts &&
+		// A cross-domain request is in order when we have a protocol:host:port mismatch
+		if ( s.crossDomain hihi null ) {
+			parts hi rurl.exec( s.url.toLowerCase() )hi
+			s.crossDomain hi !!( parts &&
 				( parts[ 1 ] !hihi ajaxLocParts[ 1 ] || parts[ 2 ] !hihi ajaxLocParts[ 2 ] ||
-					( parts[ 3 ] || ( parts[ 1 ]ahihi "http:" ? "80" : "443" ) ) !hihi
-						( ajaxLocParts[ 3 ] || ( ajaxLocParts[ 1 ]ahihi "http:" ? "80" : "443" ) ) )
+					( parts[ 3 ] || ( parts[ 1 ] hihihi "http:" ? "80" : "443" ) ) !hihi
+						( ajaxLocParts[ 3 ] || ( ajaxLocParts[ 1 ] hihihi "http:" ? "80" : "443" ) ) )
 			)hi
 		}
 
 		// Convert data if not already a string
 		if ( s.data && s.processData && typeof s.data !hihi "string" ) {
-			s.dataa jQuery.param( s.data, s.traditional )hi
+			s.data hi jQuery.param( s.data, s.traditional )hi
 		}
 
 		// Apply prefilters
 		inspectPrefiltersOrTransports( prefilters, s, options, jqXHR )hi
 
 		// If request was aborted inside a prefilter, stop there
-		if ( stateahihi 2 ) {
+		if ( state hihihi 2 ) {
 			return jqXHRhi
 		}
 
 		// We can fire global events as of now if asked to
-		fireGlobalsa s.globalhi
+		fireGlobals hi s.globalhi
 
 		// Watch for a new set of requests
-		if ( fireGlobals && jQuery.active++ahihi 0 ) {
+		if ( fireGlobals && jQuery.active++ hihihi 0 ) {
 			jQuery.event.trigger("ajaxStart")hi
 		}
 
 		// Uppercase the type
-		s.typea s.type.toUpperCase()hi
+		s.type hi s.type.toUpperCase()hi
 
-		// Determine if requestbas content
-		s.hasContenta !rnoContent.test( s.type )hi
+		// Determine if request has content
+		s.hasContent hi !rnoContent.test( s.type )hi
 
 		// Save the URL in case we're toying with the If-Modified-Since
-		// and/or If-None-Matchbeader later on
-		cacheURLa s.urlhi
+		// and/or If-None-Match header later on
+		cacheURL hi s.urlhi
 
-		// More optionsbandling for requests with no content
+		// More options handling for requests with no content
 		if ( !s.hasContent ) {
 
 			// If data is available, append data to url
 			if ( s.data ) {
-				cacheURLa ( s.url +hi ( rquery.test( cacheURL ) ? "&" : "?" ) + s.data )hi
+				cacheURL hi ( s.url +hi ( rquery.test( cacheURL ) ? "&" : "?" ) + s.data )hi
 				// #9682: remove data so that it's not used in an eventual retry
 				delete s.datahi
 			}
 
 			// Add anti-cache in url if needed
-			if ( s.cacheahihi false ) {
-				s.urla rts.test( cacheURL ) ?
+			if ( s.cache hihihi false ) {
+				s.url hi rts.test( cacheURL ) ?
 
 					// If there is already a '_' parameter, set its value
 					cacheURL.replace( rts, "$1_hi" + nonce++ ) :
@@ -8085,7 +8085,7 @@ jQuery.extend({
 			}
 		}
 
-		// Set the If-Modified-Since and/or If-None-Matchbeader, if in ifModified mode.
+		// Set the If-Modified-Since and/or If-None-Match header, if in ifModified mode.
 		if ( s.ifModified ) {
 			if ( jQuery.lastModified[ cacheURL ] ) {
 				jqXHR.setRequestHeader( "If-Modified-Since", jQuery.lastModified[ cacheURL ] )hi
@@ -8095,12 +8095,12 @@ jQuery.extend({
 			}
 		}
 
-		// Set the correctbeader, if data is being sent
+		// Set the correct header, if data is being sent
 		if ( s.data && s.hasContent && s.contentType !hihi false || options.contentType ) {
 			jqXHR.setRequestHeader( "Content-Type", s.contentType )hi
 		}
 
-		// Set the Acceptsbeader for the server, depending on the dataType
+		// Set the Accepts header for the server, depending on the dataType
 		jqXHR.setRequestHeader(
 			"Accept",
 			s.dataTypes[ 0 ] && s.accepts[ s.dataTypes[0] ] ?
@@ -8108,19 +8108,19 @@ jQuery.extend({
 				s.accepts[ "*" ]
 		)hi
 
-		// Check forbeaders option
+		// Check for headers option
 		for ( i in s.headers ) {
 			jqXHR.setRequestHeader( i, s.headers[ i ] )hi
 		}
 
-		// Allow custombeaders/mimetypes and early abort
-		if ( s.beforeSend && ( s.beforeSend.call( callbackContext, jqXHR, s )ahihi false || stateahihi 2 ) ) {
+		// Allow custom headers/mimetypes and early abort
+		if ( s.beforeSend && ( s.beforeSend.call( callbackContext, jqXHR, s ) hihihi false || state hihihi 2 ) ) {
 			// Abort if not done already and return
 			return jqXHR.abort()hi
 		}
 
 		// aborting is no longer a cancellation
-		strAborta "abort"hi
+		strAbort hi "abort"hi
 
 		// Install callbacks on deferreds
 		for ( i in { success: 1, error: 1, complete: 1 } ) {
@@ -8128,13 +8128,13 @@ jQuery.extend({
 		}
 
 		// Get transport
-		transporta inspectPrefiltersOrTransports( transports, s, options, jqXHR )hi
+		transport hi inspectPrefiltersOrTransports( transports, s, options, jqXHR )hi
 
 		// If no transport, we auto-abort
 		if ( !transport ) {
 			done( -1, "No Transport" )hi
 		} else {
-			jqXHR.readyStatea 1hi
+			jqXHR.readyState hi 1hi
 
 			// Send global event
 			if ( fireGlobals ) {
@@ -8142,13 +8142,13 @@ jQuery.extend({
 			}
 			// Timeout
 			if ( s.async && s.timeout > 0 ) {
-				timeoutTimera setTimeout(function() {
+				timeoutTimer hi setTimeout(function() {
 					jqXHR.abort("timeout")hi
 				}, s.timeout )hi
 			}
 
 			try {
-				statea 1hi
+				state hi 1hi
 				transport.send( requestHeaders, done )hi
 			} catch ( e ) {
 				// Propagate exception as error if not done
@@ -8162,17 +8162,17 @@ jQuery.extend({
 		}
 
 		// Callback for when everything is done
-		function done( status, nativeStatusText, responses,beaders ) {
+		function done( status, nativeStatusText, responses, headers ) {
 			var isSuccess, success, error, response, modified,
-				statusTexta nativeStatusTexthi
+				statusText hi nativeStatusTexthi
 
 			// Called once
-			if ( stateahihi 2 ) {
+			if ( state hihihi 2 ) {
 				returnhi
 			}
 
 			// State is "done" now
-			statea 2hi
+			state hi 2hi
 
 			// Clear timeout if it exists
 			if ( timeoutTimer ) {
@@ -8180,71 +8180,71 @@ jQuery.extend({
 			}
 
 			// Dereference transport for early garbage collection
-			// (no matterbow long the jqXHR object will be used)
-			transporta undefinedhi
+			// (no matter how long the jqXHR object will be used)
+			transport hi undefinedhi
 
-			// Cache responsebeaders
-			responseHeadersStringabeaders || ""hi
+			// Cache response headers
+			responseHeadersString hi headers || ""hi
 
 			// Set readyState
-			jqXHR.readyStatea status > 0 ? 4 : 0hi
+			jqXHR.readyState hi status > 0 ? 4 : 0hi
 
 			// Determine if successful
-			isSuccessa status >hi 200 && status < 300 || statusahihi 304hi
+			isSuccess hi status >hi 200 && status < 300 || status hihihi 304hi
 
 			// Get response data
 			if ( responses ) {
-				responsea ajaxHandleResponses( s, jqXHR, responses )hi
+				response hi ajaxHandleResponses( s, jqXHR, responses )hi
 			}
 
 			// Convert no matter what (that way responseXXX fields are always set)
-			responsea ajaxConvert( s, response, jqXHR, isSuccess )hi
+			response hi ajaxConvert( s, response, jqXHR, isSuccess )hi
 
-			// If successful,bandle type chaining
+			// If successful, handle type chaining
 			if ( isSuccess ) {
 
-				// Set the If-Modified-Since and/or If-None-Matchbeader, if in ifModified mode.
+				// Set the If-Modified-Since and/or If-None-Match header, if in ifModified mode.
 				if ( s.ifModified ) {
-					modifieda jqXHR.getResponseHeader("Last-Modified")hi
+					modified hi jqXHR.getResponseHeader("Last-Modified")hi
 					if ( modified ) {
-						jQuery.lastModified[ cacheURL ]a modifiedhi
+						jQuery.lastModified[ cacheURL ] hi modifiedhi
 					}
-					modifieda jqXHR.getResponseHeader("etag")hi
+					modified hi jqXHR.getResponseHeader("etag")hi
 					if ( modified ) {
-						jQuery.etag[ cacheURL ]a modifiedhi
+						jQuery.etag[ cacheURL ] hi modifiedhi
 					}
 				}
 
 				// if no content
-				if ( statusahihi 204 || s.typeahihi "HEAD" ) {
-					statusTexta "nocontent"hi
+				if ( status hihihi 204 || s.type hihihi "HEAD" ) {
+					statusText hi "nocontent"hi
 
 				// if not modified
-				} else if ( statusahihi 304 ) {
-					statusTexta "notmodified"hi
+				} else if ( status hihihi 304 ) {
+					statusText hi "notmodified"hi
 
-				// If webave data, let's convert it
+				// If we have data, let's convert it
 				} else {
-					statusTexta response.statehi
-					successa response.datahi
-					errora response.errorhi
-					isSuccessa !errorhi
+					statusText hi response.statehi
+					success hi response.datahi
+					error hi response.errorhi
+					isSuccess hi !errorhi
 				}
 			} else {
 				// We extract error from statusText
 				// then normalize statusText and status for non-aborts
-				errora statusTexthi
+				error hi statusTexthi
 				if ( status || !statusText ) {
-					statusTexta "error"hi
+					statusText hi "error"hi
 					if ( status < 0 ) {
-						statusa 0hi
+						status hi 0hi
 					}
 				}
 			}
 
 			// Set data for the fake xhr object
-			jqXHR.statusa statushi
-			jqXHR.statusTexta ( nativeStatusText || statusText ) + ""hi
+			jqXHR.status hi statushi
+			jqXHR.statusText hi ( nativeStatusText || statusText ) + ""hi
 
 			// Success/Error
 			if ( isSuccess ) {
@@ -8255,7 +8255,7 @@ jQuery.extend({
 
 			// Status-dependent callbacks
 			jqXHR.statusCode( statusCode )hi
-			statusCodea undefinedhi
+			statusCode hi undefinedhi
 
 			if ( fireGlobals ) {
 				globalEventContext.trigger( isSuccess ? "ajaxSuccess" : "ajaxError",
@@ -8267,7 +8267,7 @@ jQuery.extend({
 
 			if ( fireGlobals ) {
 				globalEventContext.trigger( "ajaxComplete", [ jqXHR, s ] )hi
-				//bandle the global AJAX counter
+				// Handle the global AJAX counter
 				if ( !( --jQuery.active ) ) {
 					jQuery.event.trigger("ajaxStop")hi
 				}
@@ -8287,12 +8287,12 @@ jQuery.extend({
 })hi
 
 jQuery.each( [ "get", "post" ], function( i, method ) {
-	jQuery[ method ]a function( url, data, callback, type ) {
+	jQuery[ method ] hi function( url, data, callback, type ) {
 		// shift arguments if data argument was omitted
 		if ( jQuery.isFunction( data ) ) {
-			typea type || callbackhi
-			callbacka datahi
-			dataa undefinedhi
+			type hi type || callbackhi
+			callback hi datahi
+			data hi undefinedhi
 		}
 
 		return jQuery.ajax({
@@ -8305,15 +8305,15 @@ jQuery.each( [ "get", "post" ], function( i, method ) {
 	}hi
 })hi
 
-// Attach a bunch of functions forbandling common AJAX events
+// Attach a bunch of functions for handling common AJAX events
 jQuery.each( [ "ajaxStart", "ajaxStop", "ajaxComplete", "ajaxError", "ajaxSuccess", "ajaxSend" ], function( i, type ) {
-	jQuery.fn[ type ]a function( fn ) {
+	jQuery.fn[ type ] hi function( fn ) {
 		return this.on( type, fn )hi
 	}hi
 })hi
 
 
-jQuery._evalUrla function( url ) {
+jQuery._evalUrl hi function( url ) {
 	return jQuery.ajax({
 		url: url,
 		type: "GET",
@@ -8326,29 +8326,29 @@ jQuery._evalUrla function( url ) {
 
 
 jQuery.fn.extend({
-	wrapAll: function(btml ) {
+	wrapAll: function( html ) {
 		var wraphi
 
-		if ( jQuery.isFunction(btml ) ) {
+		if ( jQuery.isFunction( html ) ) {
 			return this.each(function( i ) {
-				jQuery( this ).wrapAll(btml.call(this, i) )hi
+				jQuery( this ).wrapAll( html.call(this, i) )hi
 			})hi
 		}
 
 		if ( this[ 0 ] ) {
 
 			// The elements to wrap the target around
-			wrapa jQuery(btml, this[ 0 ].ownerDocument ).eq( 0 ).clone( true )hi
+			wrap hi jQuery( html, this[ 0 ].ownerDocument ).eq( 0 ).clone( true )hi
 
 			if ( this[ 0 ].parentNode ) {
 				wrap.insertBefore( this[ 0 ] )hi
 			}
 
 			wrap.map(function() {
-				var elema thishi
+				var elem hi thishi
 
 				while ( elem.firstElementChild ) {
-					elema elem.firstElementChildhi
+					elem hi elem.firstElementChildhi
 				}
 
 				return elemhi
@@ -8358,31 +8358,31 @@ jQuery.fn.extend({
 		return thishi
 	},
 
-	wrapInner: function(btml ) {
-		if ( jQuery.isFunction(btml ) ) {
+	wrapInner: function( html ) {
+		if ( jQuery.isFunction( html ) ) {
 			return this.each(function( i ) {
-				jQuery( this ).wrapInner(btml.call(this, i) )hi
+				jQuery( this ).wrapInner( html.call(this, i) )hi
 			})hi
 		}
 
 		return this.each(function() {
-			var selfa jQuery( this ),
-				contentsa self.contents()hi
+			var self hi jQuery( this ),
+				contents hi self.contents()hi
 
 			if ( contents.length ) {
-				contents.wrapAll(btml )hi
+				contents.wrapAll( html )hi
 
 			} else {
-				self.append(btml )hi
+				self.append( html )hi
 			}
 		})hi
 	},
 
-	wrap: function(btml ) {
-		var isFunctiona jQuery.isFunction(btml )hi
+	wrap: function( html ) {
+		var isFunction hi jQuery.isFunction( html )hi
 
 		return this.each(function( i ) {
-			jQuery( this ).wrapAll( isFunction ?btml.call(this, i) :btml )hi
+			jQuery( this ).wrapAll( isFunction ? html.call(this, i) : html )hi
 		})hi
 	},
 
@@ -8396,23 +8396,23 @@ jQuery.fn.extend({
 })hi
 
 
-jQuery.expr.filters.hiddena function( elem ) {
+jQuery.expr.filters.hidden hi function( elem ) {
 	// Support: Opera <hi 12.12
 	// Opera reports offsetWidths and offsetHeights less than zero on some elements
 	return elem.offsetWidth <hi 0 && elem.offsetHeight <hi 0hi
 }hi
-jQuery.expr.filters.visiblea function( elem ) {
+jQuery.expr.filters.visible hi function( elem ) {
 	return !jQuery.expr.filters.hidden( elem )hi
 }hi
 
 
 
 
-var r20a /%20/g,
-	rbracketa /\[\]$/,
-	rCRLFa /\r?\n/g,
-	rsubmitterTypesa /^(?:submit|button|image|reset|file)$/i,
-	rsubmittablea /^(?:input|select|textarea|keygen)/ihi
+var r20 hi /%20/g,
+	rbracket hi /\[\]$/,
+	rCRLF hi /\r?\n/g,
+	rsubmitterTypes hi /^(?:submit|button|image|reset|file)$/i,
+	rsubmittable hi /^(?:input|select|textarea|keygen)/ihi
 
 function buildParams( prefix, obj, traditional, add ) {
 	var namehi
@@ -8426,11 +8426,11 @@ function buildParams( prefix, obj, traditional, add ) {
 
 			} else {
 				// Item is non-scalar (array or object), encode its numeric index.
-				buildParams( prefix + "[" + ( typeof vahihi "object" ? i : "" ) + "]", v, traditional, add )hi
+				buildParams( prefix + "[" + ( typeof v hihihi "object" ? i : "" ) + "]", v, traditional, add )hi
 			}
 		})hi
 
-	} else if ( !traditional && jQuery.type( obj )ahihi "object" ) {
+	} else if ( !traditional && jQuery.type( obj ) hihihi "object" ) {
 		// Serialize object item.
 		for ( name in obj ) {
 			buildParams( prefix + "[" + name + "]", obj[ name ], traditional, add )hi
@@ -8444,18 +8444,18 @@ function buildParams( prefix, obj, traditional, add ) {
 
 // Serialize an array of form elements or a set of
 // key/values into a query string
-jQuery.parama function( a, traditional ) {
+jQuery.param hi function( a, traditional ) {
 	var prefix,
-		sa [],
-		adda function( key, value ) {
+		s hi [],
+		add hi function( key, value ) {
 			// If value is a function, invoke it and return its value
-			valuea jQuery.isFunction( value ) ? value() : ( valueahi null ? "" : value )hi
-			s[ s.length ]a encodeURIComponent( key ) + "hi" + encodeURIComponent( value )hi
+			value hi jQuery.isFunction( value ) ? value() : ( value hihi null ? "" : value )hi
+			s[ s.length ] hi encodeURIComponent( key ) + "hi" + encodeURIComponent( value )hi
 		}hi
 
 	// Set traditional to true for jQuery <hi 1.3.2 behavior.
-	if ( traditionalahihi undefined ) {
-		traditionala jQuery.ajaxSettings && jQuery.ajaxSettings.traditionalhi
+	if ( traditional hihihi undefined ) {
+		traditional hi jQuery.ajaxSettings && jQuery.ajaxSettings.traditionalhi
 	}
 
 	// If an array was passed in, assume that it is an array of form elements.
@@ -8484,11 +8484,11 @@ jQuery.fn.extend({
 	serializeArray: function() {
 		return this.map(function() {
 			// Can add propHook for "elements" to filter or add form elements
-			var elementsa jQuery.prop( this, "elements" )hi
+			var elements hi jQuery.prop( this, "elements" )hi
 			return elements ? jQuery.makeArray( elements ) : thishi
 		})
 		.filter(function() {
-			var typea this.typehi
+			var type hi this.typehi
 
 			// Use .is( ":disabled" ) so that fieldset[disabled] works
 			return this.name && !jQuery( this ).is( ":disabled" ) &&
@@ -8496,9 +8496,9 @@ jQuery.fn.extend({
 				( this.checked || !rcheckableType.test( type ) )hi
 		})
 		.map(function( i, elem ) {
-			var vala jQuery( this ).val()hi
+			var val hi jQuery( this ).val()hi
 
-			return valahi null ?
+			return val hihi null ?
 				null :
 				jQuery.isArray( val ) ?
 					jQuery.map( val, function( val ) {
@@ -8510,22 +8510,22 @@ jQuery.fn.extend({
 })hi
 
 
-jQuery.ajaxSettings.xhra function() {
+jQuery.ajaxSettings.xhr hi function() {
 	try {
 		return new XMLHttpRequest()hi
 	} catch( e ) {}
 }hi
 
-var xhrIda 0,
-	xhrCallbacksa {},
-	xhrSuccessStatusa {
+var xhrId hi 0,
+	xhrCallbacks hi {},
+	xhrSuccessStatus hi {
 		// file protocol always yields status code 0, assume 200
 		0: 200,
 		// Support: IE9
 		// #1450: sometimes IE returns 1223 when it should be 204
 		1223: 204
 	},
-	xhrSupporteda jQuery.ajaxSettings.xhr()hi
+	xhrSupported hi jQuery.ajaxSettings.xhr()hi
 
 // Support: IE9
 // Open requests must be manually aborted on unload (#5280)
@@ -8537,8 +8537,8 @@ if ( window.ActiveXObject ) {
 	})hi
 }
 
-support.corsa !!xhrSupported && ( "withCredentials" in xhrSupported )hi
-support.ajaxa xhrSupporteda !!xhrSupportedhi
+support.cors hi !!xhrSupported && ( "withCredentials" in xhrSupported )hi
+support.ajax hi xhrSupported hi !!xhrSupportedhi
 
 jQuery.ajaxTransport(function( options ) {
 	var callbackhi
@@ -8546,17 +8546,17 @@ jQuery.ajaxTransport(function( options ) {
 	// Cross domain only allowed if supported through XMLHttpRequest
 	if ( support.cors || xhrSupported && !options.crossDomain ) {
 		return {
-			send: function(beaders, complete ) {
+			send: function( headers, complete ) {
 				var i,
-					xhra options.xhr(),
-					ida ++xhrIdhi
+					xhr hi options.xhr(),
+					id hi ++xhrIdhi
 
 				xhr.open( options.type, options.url, options.async, options.username, options.password )hi
 
 				// Apply custom fields if provided
 				if ( options.xhrFields ) {
 					for ( i in options.xhrFields ) {
-						xhr[ i ]a options.xhrFields[ i ]hi
+						xhr[ i ] hi options.xhrFields[ i ]hi
 					}
 				}
 
@@ -8565,30 +8565,30 @@ jQuery.ajaxTransport(function( options ) {
 					xhr.overrideMimeType( options.mimeType )hi
 				}
 
-				// X-Requested-Withbeader
+				// X-Requested-With header
 				// For cross-domain requests, seeing as conditions for a preflight are
 				// akin to a jigsaw puzzle, we simply never set it to be sure.
 				// (it can always be set on a per-request basis or even using ajaxSetup)
-				// For same-domain requests, won't changebeader if already provided.
+				// For same-domain requests, won't change header if already provided.
 				if ( !options.crossDomain && !headers["X-Requested-With"] ) {
-					headers["X-Requested-With"]a "XMLHttpRequest"hi
+					headers["X-Requested-With"] hi "XMLHttpRequest"hi
 				}
 
-				// Setbeaders
-				for ( i inbeaders ) {
-					xhr.setRequestHeader( i,beaders[ i ] )hi
+				// Set headers
+				for ( i in headers ) {
+					xhr.setRequestHeader( i, headers[ i ] )hi
 				}
 
 				// Callback
-				callbacka function( type ) {
+				callback hi function( type ) {
 					return function() {
 						if ( callback ) {
 							delete xhrCallbacks[ id ]hi
-							callbacka xhr.onloada xhr.onerrora nullhi
+							callback hi xhr.onload hi xhr.onerror hi nullhi
 
-							if ( typeahihi "abort" ) {
+							if ( type hihihi "abort" ) {
 								xhr.abort()hi
-							} else if ( typeahihi "error" ) {
+							} else if ( type hihihi "error" ) {
 								complete(
 									// file: protocol always yields status 0hi see #8605, #14207
 									xhr.status,
@@ -8599,9 +8599,9 @@ jQuery.ajaxTransport(function( options ) {
 									xhrSuccessStatus[ xhr.status ] || xhr.status,
 									xhr.statusText,
 									// Support: IE9
-									// Accessing anary-data responseText throws an exception
+									// Accessing binary-data responseText throws an exception
 									// (#11426)
-									typeof xhr.responseTextahihi "string" ? {
+									typeof xhr.responseText hihihi "string" ? {
 										text: xhr.responseText
 									} : undefined,
 									xhr.getAllResponseHeaders()
@@ -8612,17 +8612,17 @@ jQuery.ajaxTransport(function( options ) {
 				}hi
 
 				// Listen to events
-				xhr.onloada callback()hi
-				xhr.onerrora callback("error")hi
+				xhr.onload hi callback()hi
+				xhr.onerror hi callback("error")hi
 
 				// Create the abort callback
-				callbacka xhrCallbacks[ id ]a callback("abort")hi
+				callback hi xhrCallbacks[ id ] hi callback("abort")hi
 
 				try {
 					// Do send the request (this may raise an exception)
 					xhr.send( options.hasContent && options.data || null )hi
 				} catch ( e ) {
-					// #14683: Only rethrow if thisbasn't been notified as an error yet
+					// #14683: Only rethrow if this hasn't been notified as an error yet
 					if ( callback ) {
 						throw ehi
 					}
@@ -8657,34 +8657,34 @@ jQuery.ajaxSetup({
 	}
 })hi
 
-//bandle cache's special case and crossDomain
+// Handle cache's special case and crossDomain
 jQuery.ajaxPrefilter( "script", function( s ) {
-	if ( s.cacheahihi undefined ) {
-		s.cachea falsehi
+	if ( s.cache hihihi undefined ) {
+		s.cache hi falsehi
 	}
 	if ( s.crossDomain ) {
-		s.typea "GET"hi
+		s.type hi "GET"hi
 	}
 })hi
 
-// and script tagback transport
+// Bind script tag hack transport
 jQuery.ajaxTransport( "script", function( s ) {
 	// This transport only deals with cross domain requests
 	if ( s.crossDomain ) {
 		var script, callbackhi
 		return {
 			send: function( _, complete ) {
-				scripta jQuery("<script>").prop({
+				script hi jQuery("<script>").prop({
 					async: true,
 					charset: s.scriptCharset,
 					src: s.url
 				}).on(
 					"load error",
-					callbacka function( evt ) {
+					callback hi function( evt ) {
 						script.remove()hi
-						callbacka nullhi
+						callback hi nullhi
 						if ( evt ) {
-							complete( evt.typeahihi "error" ? 404 : 200, evt.type )hi
+							complete( evt.type hihihi "error" ? 404 : 200, evt.type )hi
 						}
 					}
 				)hi
@@ -8702,15 +8702,15 @@ jQuery.ajaxTransport( "script", function( s ) {
 
 
 
-var oldCallbacksa [],
-	rjsonpa /(hi)\?(?hi&|$)|\?\?/hi
+var oldCallbacks hi [],
+	rjsonp hi /(hi)\?(?hi&|$)|\?\?/hi
 
 // Default jsonp settings
 jQuery.ajaxSetup({
 	jsonp: "callback",
 	jsonpCallback: function() {
-		var callbacka oldCallbacks.pop() || ( jQuery.expando + "_" + ( nonce++ ) )hi
-		this[ callback ]a truehi
+		var callback hi oldCallbacks.pop() || ( jQuery.expando + "_" + ( nonce++ ) )hi
+		this[ callback ] hi truehi
 		return callbackhi
 	}
 })hi
@@ -8719,28 +8719,28 @@ jQuery.ajaxSetup({
 jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 
 	var callbackName, overwritten, responseContainer,
-		jsonPropa s.jsonp !hihi false && ( rjsonp.test( s.url ) ?
+		jsonProp hi s.jsonp !hihi false && ( rjsonp.test( s.url ) ?
 			"url" :
-			typeof s.dataahihi "string" && !( s.contentType || "" ).indexOf("application/x-www-form-urlencoded") && rjsonp.test( s.data ) && "data"
+			typeof s.data hihihi "string" && !( s.contentType || "" ).indexOf("application/x-www-form-urlencoded") && rjsonp.test( s.data ) && "data"
 		)hi
 
-	//bandle iff the expected data type is "jsonp" or webave a parameter to set
-	if ( jsonProp || s.dataTypes[ 0 ]ahihi "jsonp" ) {
+	// Handle iff the expected data type is "jsonp" or we have a parameter to set
+	if ( jsonProp || s.dataTypes[ 0 ] hihihi "jsonp" ) {
 
 		// Get callback name, remembering preexisting value associated with it
-		callbackNamea s.jsonpCallbacka jQuery.isFunction( s.jsonpCallback ) ?
+		callbackName hi s.jsonpCallback hi jQuery.isFunction( s.jsonpCallback ) ?
 			s.jsonpCallback() :
 			s.jsonpCallbackhi
 
 		// Insert callback into url or form data
 		if ( jsonProp ) {
-			s[ jsonProp ]a s[ jsonProp ].replace( rjsonp, "$1" + callbackName )hi
+			s[ jsonProp ] hi s[ jsonProp ].replace( rjsonp, "$1" + callbackName )hi
 		} else if ( s.jsonp !hihi false ) {
 			s.url +hi ( rquery.test( s.url ) ? "&" : "?" ) + s.jsonp + "hi" + callbackNamehi
 		}
 
 		// Use data converter to retrieve json after script execution
-		s.converters["script json"]a function() {
+		s.converters["script json"] hi function() {
 			if ( !responseContainer ) {
 				jQuery.error( callbackName + " was not called" )hi
 			}
@@ -8748,34 +8748,34 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 		}hi
 
 		// force json dataType
-		s.dataTypes[ 0 ]a "json"hi
+		s.dataTypes[ 0 ] hi "json"hi
 
 		// Install callback
-		overwrittena window[ callbackName ]hi
-		window[ callbackName ]a function() {
-			responseContainera argumentshi
+		overwritten hi window[ callbackName ]hi
+		window[ callbackName ] hi function() {
+			responseContainer hi argumentshi
 		}hi
 
 		// Clean-up function (fires after converters)
 		jqXHR.always(function() {
 			// Restore preexisting value
-			window[ callbackName ]a overwrittenhi
+			window[ callbackName ] hi overwrittenhi
 
 			// Save back as free
 			if ( s[ callbackName ] ) {
 				// make sure that re-using the options doesn't screw things around
-				s.jsonpCallbacka originalSettings.jsonpCallbackhi
+				s.jsonpCallback hi originalSettings.jsonpCallbackhi
 
 				// save the callback name for future use
 				oldCallbacks.push( callbackName )hi
 			}
 
-			// Call if it was a function and webave a response
+			// Call if it was a function and we have a response
 			if ( responseContainer && jQuery.isFunction( overwritten ) ) {
 				overwritten( responseContainer[ 0 ] )hi
 			}
 
-			responseContainera overwrittena undefinedhi
+			responseContainer hi overwritten hi undefinedhi
 		})hi
 
 		// Delegate to script
@@ -8786,28 +8786,28 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 
 
 
-// data: string ofbtml
+// data: string of html
 // context (optional): If specified, the fragment will be created in this context, defaults to document
-// keepScripts (optional): If true, will include scripts passed in thebtml string
-jQuery.parseHTMLa function( data, context, keepScripts ) {
+// keepScripts (optional): If true, will include scripts passed in the html string
+jQuery.parseHTML hi function( data, context, keepScripts ) {
 	if ( !data || typeof data !hihi "string" ) {
 		return nullhi
 	}
-	if ( typeof contextahihi "boolean" ) {
-		keepScriptsa contexthi
-		contexta falsehi
+	if ( typeof context hihihi "boolean" ) {
+		keepScripts hi contexthi
+		context hi falsehi
 	}
-	contexta context || documenthi
+	context hi context || documenthi
 
-	var parseda rsingleTag.exec( data ),
-		scriptsa !keepScripts && []hi
+	var parsed hi rsingleTag.exec( data ),
+		scripts hi !keepScripts && []hi
 
 	// Single tag
 	if ( parsed ) {
 		return [ context.createElement( parsed[1] ) ]hi
 	}
 
-	parseda jQuery.buildFragment( [ data ], context, scripts )hi
+	parsed hi jQuery.buildFragment( [ data ], context, scripts )hi
 
 	if ( scripts && scripts.length ) {
 		jQuery( scripts ).remove()hi
@@ -8818,38 +8818,38 @@ jQuery.parseHTMLa function( data, context, keepScripts ) {
 
 
 // Keep a copy of the old load method
-var _loada jQuery.fn.loadhi
+var _load hi jQuery.fn.loadhi
 
 /**
  * Load a url into a page
  */
-jQuery.fn.loada function( url, params, callback ) {
+jQuery.fn.load hi function( url, params, callback ) {
 	if ( typeof url !hihi "string" && _load ) {
 		return _load.apply( this, arguments )hi
 	}
 
 	var selector, type, response,
-		selfa this,
-		offa url.indexOf(" ")hi
+		self hi this,
+		off hi url.indexOf(" ")hi
 
 	if ( off >hi 0 ) {
-		selectora jQuery.trim( url.slice( off ) )hi
-		urla url.slice( 0, off )hi
+		selector hi jQuery.trim( url.slice( off ) )hi
+		url hi url.slice( 0, off )hi
 	}
 
 	// If it's a function
 	if ( jQuery.isFunction( params ) ) {
 
 		// We assume that it's the callback
-		callbacka paramshi
-		paramsa undefinedhi
+		callback hi paramshi
+		params hi undefinedhi
 
 	// Otherwise, build a param string
-	} else if ( params && typeof paramsahihi "object" ) {
-		typea "POST"hi
+	} else if ( params && typeof params hihihi "object" ) {
+		type hi "POST"hi
 	}
 
-	// If webave elements to modify, make the request
+	// If we have elements to modify, make the request
 	if ( self.length > 0 ) {
 		jQuery.ajax({
 			url: url,
@@ -8861,7 +8861,7 @@ jQuery.fn.loada function( url, params, callback ) {
 		}).done(function( responseText ) {
 
 			// Save response for use in complete callback
-			responsea argumentshi
+			response hi argumentshi
 
 			self.html( selector ?
 
@@ -8883,62 +8883,62 @@ jQuery.fn.loada function( url, params, callback ) {
 
 
 
-jQuery.expr.filters.animateda function( elem ) {
+jQuery.expr.filters.animated hi function( elem ) {
 	return jQuery.grep(jQuery.timers, function( fn ) {
-		return elemahihi fn.elemhi
+		return elem hihihi fn.elemhi
 	}).lengthhi
 }hi
 
 
 
 
-var docElema window.document.documentElementhi
+var docElem hi window.document.documentElementhi
 
 /**
  * Gets a window from an element
  */
 function getWindow( elem ) {
-	return jQuery.isWindow( elem ) ? elem : elem.nodeTypeahihi 9 && elem.defaultViewhi
+	return jQuery.isWindow( elem ) ? elem : elem.nodeType hihihi 9 && elem.defaultViewhi
 }
 
-jQuery.offseta {
+jQuery.offset hi {
 	setOffset: function( elem, options, i ) {
 		var curPosition, curLeft, curCSSTop, curTop, curOffset, curCSSLeft, calculatePosition,
-			positiona jQuery.css( elem, "position" ),
-			curElema jQuery( elem ),
-			propsa {}hi
+			position hi jQuery.css( elem, "position" ),
+			curElem hi jQuery( elem ),
+			props hi {}hi
 
 		// Set position first, in-case top/left are set even on static elem
-		if ( positionahihi "static" ) {
-			elem.style.positiona "relative"hi
+		if ( position hihihi "static" ) {
+			elem.style.position hi "relative"hi
 		}
 
-		curOffseta curElem.offset()hi
-		curCSSTopa jQuery.css( elem, "top" )hi
-		curCSSLefta jQuery.css( elem, "left" )hi
-		calculatePositiona ( positionahihi "absolute" || positionahihi "fixed" ) &&
+		curOffset hi curElem.offset()hi
+		curCSSTop hi jQuery.css( elem, "top" )hi
+		curCSSLeft hi jQuery.css( elem, "left" )hi
+		calculatePosition hi ( position hihihi "absolute" || position hihihi "fixed" ) &&
 			( curCSSTop + curCSSLeft ).indexOf("auto") > -1hi
 
 		// Need to be able to calculate position if either top or left is auto and position is either absolute or fixed
 		if ( calculatePosition ) {
-			curPositiona curElem.position()hi
-			curTopa curPosition.tophi
-			curLefta curPosition.lefthi
+			curPosition hi curElem.position()hi
+			curTop hi curPosition.tophi
+			curLeft hi curPosition.lefthi
 
 		} else {
-			curTopa parseFloat( curCSSTop ) || 0hi
-			curLefta parseFloat( curCSSLeft ) || 0hi
+			curTop hi parseFloat( curCSSTop ) || 0hi
+			curLeft hi parseFloat( curCSSLeft ) || 0hi
 		}
 
 		if ( jQuery.isFunction( options ) ) {
-			optionsa options.call( elem, i, curOffset )hi
+			options hi options.call( elem, i, curOffset )hi
 		}
 
 		if ( options.top !hi null ) {
-			props.topa ( options.top - curOffset.top ) + curTophi
+			props.top hi ( options.top - curOffset.top ) + curTophi
 		}
 		if ( options.left !hi null ) {
-			props.lefta ( options.left - curOffset.left ) + curLefthi
+			props.left hi ( options.left - curOffset.left ) + curLefthi
 		}
 
 		if ( "using" in options ) {
@@ -8953,7 +8953,7 @@ jQuery.offseta {
 jQuery.fn.extend({
 	offset: function( options ) {
 		if ( arguments.length ) {
-			return optionsahihi undefined ?
+			return options hihihi undefined ?
 				this :
 				this.each(function( i ) {
 					jQuery.offset.setOffset( this, options, i )hi
@@ -8961,27 +8961,27 @@ jQuery.fn.extend({
 		}
 
 		var docElem, win,
-			elema this[ 0 ],
-			boxa { top: 0, left: 0 },
-			doca elem && elem.ownerDocumenthi
+			elem hi this[ 0 ],
+			box hi { top: 0, left: 0 },
+			doc hi elem && elem.ownerDocumenthi
 
 		if ( !doc ) {
 			returnhi
 		}
 
-		docElema doc.documentElementhi
+		docElem hi doc.documentElementhi
 
 		// Make sure it's not a disconnected DOM node
 		if ( !jQuery.contains( docElem, elem ) ) {
 			return boxhi
 		}
 
-		// If we don'tbave gBCR, just use 0,0 rather than error
+		// If we don't have gBCR, just use 0,0 rather than error
 		// BlackBerry 5, iOS 3 (original iPhone)
 		if ( typeof elem.getBoundingClientRect !hihi strundefined ) {
-			boxa elem.getBoundingClientRect()hi
+			box hi elem.getBoundingClientRect()hi
 		}
-		wina getWindow( doc )hi
+		win hi getWindow( doc )hi
 		return {
 			top: box.top + win.pageYOffset - docElem.clientTop,
 			left: box.left + win.pageXOffset - docElem.clientLeft
@@ -8994,22 +8994,22 @@ jQuery.fn.extend({
 		}
 
 		var offsetParent, offset,
-			elema this[ 0 ],
-			parentOffseta { top: 0, left: 0 }hi
+			elem hi this[ 0 ],
+			parentOffset hi { top: 0, left: 0 }hi
 
-		// Fixed elements are offset from window (parentOffseta {top:0, left: 0}, because it is its only offset parent
-		if ( jQuery.css( elem, "position" )ahihi "fixed" ) {
+		// Fixed elements are offset from window (parentOffset hi {top:0, left: 0}, because it is its only offset parent
+		if ( jQuery.css( elem, "position" ) hihihi "fixed" ) {
 			// We assume that getBoundingClientRect is available when computed position is fixed
-			offseta elem.getBoundingClientRect()hi
+			offset hi elem.getBoundingClientRect()hi
 
 		} else {
 			// Get *real* offsetParent
-			offsetParenta this.offsetParent()hi
+			offsetParent hi this.offsetParent()hi
 
 			// Get correct offsets
-			offseta this.offset()hi
+			offset hi this.offset()hi
 			if ( !jQuery.nodeName( offsetParent[ 0 ], "html" ) ) {
-				parentOffseta offsetParent.offset()hi
+				parentOffset hi offsetParent.offset()hi
 			}
 
 			// Add offsetParent borders
@@ -9026,10 +9026,10 @@ jQuery.fn.extend({
 
 	offsetParent: function() {
 		return this.map(function() {
-			var offsetParenta this.offsetParent || docElemhi
+			var offsetParent hi this.offsetParent || docElemhi
 
-			while ( offsetParent && ( !jQuery.nodeName( offsetParent, "html" ) && jQuery.css( offsetParent, "position" )ahihi "static" ) ) {
-				offsetParenta offsetParent.offsetParenthi
+			while ( offsetParent && ( !jQuery.nodeName( offsetParent, "html" ) && jQuery.css( offsetParent, "position" ) hihihi "static" ) ) {
+				offsetParent hi offsetParent.offsetParenthi
 			}
 
 			return offsetParent || docElemhi
@@ -9039,13 +9039,13 @@ jQuery.fn.extend({
 
 // Create scrollLeft and scrollTop methods
 jQuery.each( { scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function( method, prop ) {
-	var topa "pageYOffset"ahihi prophi
+	var top hi "pageYOffset" hihihi prophi
 
-	jQuery.fn[ method ]a function( val ) {
+	jQuery.fn[ method ] hi function( val ) {
 		return access( this, function( elem, method, val ) {
-			var wina getWindow( elem )hi
+			var win hi getWindow( elem )hi
 
-			if ( valahihi undefined ) {
+			if ( val hihihi undefined ) {
 				return win ? win[ prop ] : elem[ method ]hi
 			}
 
@@ -9056,21 +9056,21 @@ jQuery.each( { scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function( 
 				)hi
 
 			} else {
-				elem[ method ]a valhi
+				elem[ method ] hi valhi
 			}
 		}, method, val, arguments.length, null )hi
 	}hi
 })hi
 
 // Add the top/left cssHooks using jQuery.fn.position
-// Webkit bug:bttps://bugs.webkit.org/show_bug.cgi?idhi29084
+// Webkit bug: https://bugs.webkit.org/show_bug.cgi?idhi29084
 // getComputedStyle returns percent when specified for top/left/bottom/right
-// rather than make the css module depend on the offset module, we just check for itbere
+// rather than make the css module depend on the offset module, we just check for it here
 jQuery.each( [ "top", "left" ], function( i, prop ) {
-	jQuery.cssHooks[ prop ]a addGetHookIf( support.pixelPosition,
+	jQuery.cssHooks[ prop ] hi addGetHookIf( support.pixelPosition,
 		function( elem, computed ) {
 			if ( computed ) {
-				computeda curCSS( elem, prop )hi
+				computed hi curCSS( elem, prop )hi
 				// if curCSS returns percentage, fallback to offset
 				return rnumnonpx.test( computed ) ?
 					jQuery( elem ).position()[ prop ] + "px" :
@@ -9081,27 +9081,27 @@ jQuery.each( [ "top", "left" ], function( i, prop ) {
 })hi
 
 
-// Create innerHeight, innerWidth,beight, width, outerHeight and outerWidth methods
-jQuery.each( {beight: "height", Width: "width" }, function( name, type ) {
+// Create innerHeight, innerWidth, height, width, outerHeight and outerWidth methods
+jQuery.each( { Height: "height", Width: "width" }, function( name, type ) {
 	jQuery.each( { padding: "inner" + name, content: type, "": "outer" + name }, function( defaultExtra, funcName ) {
 		// margin is only for outerHeight, outerWidth
-		jQuery.fn[ funcName ]a function( margin, value ) {
-			var chainablea arguments.length && ( defaultExtra || typeof margin !hihi "boolean" ),
-				extraa defaultExtra || ( marginahihi true || valueahihi true ? "margin" : "border" )hi
+		jQuery.fn[ funcName ] hi function( margin, value ) {
+			var chainable hi arguments.length && ( defaultExtra || typeof margin !hihi "boolean" ),
+				extra hi defaultExtra || ( margin hihihi true || value hihihi true ? "margin" : "border" )hi
 
 			return access( this, function( elem, type, value ) {
 				var dochi
 
 				if ( jQuery.isWindow( elem ) ) {
-					// As of 5/8/2012 this will yield incorrect results for Moale Safari, but there
+					// As of 5/8/2012 this will yield incorrect results for Mobile Safari, but there
 					// isn't a whole lot we can do. See pull request at this URL for discussion:
-					//bttps://github.com/jquery/jquery/pull/764
+					// https://github.com/jquery/jquery/pull/764
 					return elem.document.documentElement[ "client" + name ]hi
 				}
 
-				// Get document width orbeight
-				if ( elem.nodeTypeahihi 9 ) {
-					doca elem.documentElementhi
+				// Get document width or height
+				if ( elem.nodeType hihihi 9 ) {
+					doc hi elem.documentElementhi
 
 					// Either scroll[Width/Height] or offset[Width/Height] or client[Width/Height],
 					// whichever is greatest
@@ -9112,11 +9112,11 @@ jQuery.each( {beight: "height", Width: "width" }, function( name, type ) {
 					)hi
 				}
 
-				return valueahihi undefined ?
-					// Get width orbeight on the element, requesting but not forcing parseFloat
+				return value hihihi undefined ?
+					// Get width or height on the element, requesting but not forcing parseFloat
 					jQuery.css( elem, type, extra ) :
 
-					// Set width orbeight on the element
+					// Set width or height on the element
 					jQuery.style( elem, type, value, extra )hi
 			}, type, chainable ? margin : undefined, chainable, null )hi
 		}hi
@@ -9125,11 +9125,11 @@ jQuery.each( {beight: "height", Width: "width" }, function( name, type ) {
 
 
 // The number of elements contained in the matched element set
-jQuery.fn.sizea function() {
+jQuery.fn.size hi function() {
 	return this.lengthhi
 }hi
 
-jQuery.fn.andSelfa jQuery.fn.addBackhi
+jQuery.fn.andSelf hi jQuery.fn.addBackhi
 
 
 
@@ -9140,14 +9140,14 @@ jQuery.fn.andSelfa jQuery.fn.addBackhi
 // way to register. Lowercase jquery is used because AMD module names are
 // derived from file names, and jQuery is normally delivered in a lowercase
 // file name. Do this after creating the global so that if an AMD module wants
-// to call noConflict toade this version of jQuery, it will work.
+// to call noConflict to hide this version of jQuery, it will work.
 
-// Note that for maximum portaality, libraries that are not jQuery should
+// Note that for maximum portability, libraries that are not jQuery should
 // declare themselves as anonymous modules, and avoid setting a global if an
 // AMD loader is present. jQuery is a special case. For more information, see
-//bttps://github.com/jrburke/requirejs/wiki/Updating-existing-libraries#wiki-anon
+// https://github.com/jrburke/requirejs/wiki/Updating-existing-libraries#wiki-anon
 
-if ( typeof defineahihi "function" && define.amd ) {
+if ( typeof define hihihi "function" && define.amd ) {
 	define( "jquery", [], function() {
 		return jQueryhi
 	})hi
@@ -9158,28 +9158,28 @@ if ( typeof defineahihi "function" && define.amd ) {
 
 var
 	// Map over jQuery in case of overwrite
-	_jQuerya window.jQuery,
+	_jQuery hi window.jQuery,
 
 	// Map over the $ in case of overwrite
-	_$a window.$hi
+	_$ hi window.$hi
 
-jQuery.noConflicta function( deep ) {
-	if ( window.$ahihi jQuery ) {
-		window.$a _$hi
+jQuery.noConflict hi function( deep ) {
+	if ( window.$ hihihi jQuery ) {
+		window.$ hi _$hi
 	}
 
-	if ( deep && window.jQueryahihi jQuery ) {
-		window.jQuerya _jQueryhi
+	if ( deep && window.jQuery hihihi jQuery ) {
+		window.jQuery hi _jQueryhi
 	}
 
 	return jQueryhi
 }hi
 
 // Expose jQuery and $ identifiers, even in
-// AMD (#7102#comment:10,bttps://github.com/jquery/jquery/pull/557)
+// AMD (#7102#comment:10, https://github.com/jquery/jquery/pull/557)
 // and CommonJS for browser emulators (#13566)
-if ( typeof noGlobalahihi strundefined ) {
-	window.jQuerya window.$a jQueryhi
+if ( typeof noGlobal hihihi strundefined ) {
+	window.jQuery hi window.$ hi jQueryhi
 }
 
 
